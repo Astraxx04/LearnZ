@@ -80,7 +80,7 @@
                             <button class="btn transparent" id="sign-in-button">Sign In</button>
                         </div>
 
-                        <img src="../images/login.png" class ="image" alt="">
+                        <img src="../images/login.png" class ="image" alt="" id="loginimg">
                     </div>
                 </div>
             </div>
@@ -89,48 +89,47 @@
         <script src="../js/script.js"></script>
         <script>
             var login_bttn = document.getElementById("Login");
-  const WrongPass = document.getElementById("WrongPass");
-  login_bttn.addEventListener("click", ()=>{
-      var User = document.getElementById("HospitalName").value;
-      let HospitalIndex = Hospital[User][1];
-      var Password = document.getElementById("Password");
-      var Pass = Password.value;
-      var ReqPass = Hospital[User][0];
-      if (Pass == ReqPass) {
-          setCookie("User",HospitalIndex,1);//Cokie name "User" with hospital index with 1 day expiry
-          window.location.href="{{url_for('welcome')}}";
+            const WrongPass = document.getElementById("WrongPass");
+            login_bttn.addEventListener("click", ()=>{
+            var User = document.getElementById("HospitalName").value;
+            let HospitalIndex = Hospital[User][1];
+            var Password = document.getElementById("Password");
+            var Pass = Password.value;
+            var ReqPass = Hospital[User][0];
+            if (Pass == ReqPass) {
+                setCookie("User",HospitalIndex,1);//Cokie name "User" with hospital index with 1 day expiry
+                window.location.href="{{url_for('welcome')}}";
 
-      }
-      else{
-          // Password giggle animation
-          Password.classList.add("wrong");
-          window.setTimeout(() => {
-              Password.classList.remove("wrong");
-          }, 1000);
-          //Wrong Password Display
-          WrongPass.innerHTML="Wrong Password";
-        }
-    });
-    function myfunction() {
+            }
+            else{
+                // Password giggle animation
+                Password.classList.add("wrong");
+                window.setTimeout(() => {
+                    Password.classList.remove("wrong");
+                }, 1000);
+                //Wrong Password Display
+                WrongPass.innerHTML="Wrong Password";
+                }
+            });
+            function myfunction() {
+                const NewhosName = document.getElementById("NewhosName").value;
+                const NewEmail = document.getElementById("NewEmail").value;
+                const NewPass = document.getElementById("NewPass").value;
+                const ConfiPass = document.getElementById("ConfiPass").value;
 
-const NewhosName = document.getElementById("NewhosName").value;
-const NewEmail = document.getElementById("NewEmail").value;
-const NewPass = document.getElementById("NewPass").value;
-const ConfiPass = document.getElementById("ConfiPass").value;
+                if (ConfiPass != NewPass) {
+                    return;
+                }
 
-if (ConfiPass != NewPass) {
-    return;
-}
-
-const dict_values = {NewhosName, NewEmail,NewPass} //Pass the javascript variables to a dictionary.
-const s = JSON.stringify(dict_values); // Stringify converts a JavaScript object or value to a JSON string
-$.ajax({
-    url:"/SignUp",
-    type:"POST",
-    contentType: "application/json",
-    data: JSON.stringify(s)});
-window.location.href-"{{url_for('index')}}"
-}
+                const dict_values = {NewhosName, NewEmail,NewPass} //Pass the javascript variables to a dictionary.
+                const s = JSON.stringify(dict_values); // Stringify converts a JavaScript object or value to a JSON string
+                $.ajax({
+                    url:"/SignUp",
+                    type:"POST",
+                    contentType: "application/json",
+                    data: JSON.stringify(s)});
+                    window.location.href-"{{url_for('index')}}"
+            }
         </script>
     </body>
 </html>
