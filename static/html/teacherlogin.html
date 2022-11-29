@@ -5,12 +5,12 @@
         <meta http-equiv="X-UA-Compatible" >
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/36bed4b74a.js" crossorigin="anonymous"></script>
-        <title>LearnZ Student</title>
+        <title>LearnZ Teacher</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script >
             var Hospital = {{Hospital | tojson}};
         </script>
-        <link rel="stylesheet" href="../css/login.css">
+        <link rel="stylesheet" href="../css/teacherlogin.css">
     </head>
     <body >
         <div class = "container">
@@ -26,13 +26,13 @@
                         </div>
                         <div class="input-field">
                             <i class="fa fa-id-card"></i>
-                            <input type="usn" placeholder="USN" id="Newusn" required>
+                            <input type="teachid" placeholder="Teacher ID" id="Newteachid" required>
                         </div>
                         <div class="input-field">
                             <i class="fa fa-lock"></i>
                             <input type="password" class="" placeholder="Password" id="Password" required>
                         </div>
-                        <div class="teachlog"><a href="../html/teacherlogin.html">Not a Student?</a></div>
+                        <div class="studlog"><a href="../html/index.html">Not a Teacher?</a></div>
                         <input type="submit" id="Login" value="Login" class="btn solid" onclick="SignIn();">
                         <div class="WrongPass" ><h3 id="WrongPass"></h3></div>
                     </form>
@@ -55,7 +55,7 @@
                         </div>
                         <div class="input-field">
                             <i class="fa fa-id-card"></i>
-                            <input type="usn" placeholder="USN" id="Newusn" required>
+                            <input type="teachid" placeholder="Teacher ID" id="Newteachid" required>
                         </div>
                         <div class="input-field">
                             <i class="fa fa-lock"></i>
@@ -77,7 +77,7 @@
                             <button class="btn transparent" id="sign-up-button">Sign Up</button>
                         </div>
 
-                        <img src="../images/signup.png" class ="image" alt="">
+                        <img src="../images/teachersignup.png" class ="image" alt="">
                     </div>
 
                     <div class="panel right-panel">
@@ -86,7 +86,7 @@
                             <button class="btn transparent" id="sign-in-button">Sign In</button>
                         </div>
 
-                        <img src="../images/login.png" class ="image" alt="" id="loginimg">
+                        <img src="../images/teacherlogin.png" class ="image" alt="" id="loginimg">
                     </div>
                 </div>
             </div>

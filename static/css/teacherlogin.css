@@ -22,7 +22,7 @@ body, input{
     width: 2000px;
     height: 2000px;
     border-radius:50%;
-    background: linear-gradient(-45deg, #4481eb, #04befe);
+    background: linear-gradient(-45deg, #ff8c00, #ffa600);
     top: -10%;
     right:48%;
     transform: translateY(-50%);
@@ -142,7 +142,7 @@ input[type=password].wrong {
     outline:none;
     border-radius: 50px;
     cursor: pointer;
-    background-color: #5995fd;
+    background-color: #ff8c00;
     color:#fff;
     text-transform: uppercase;
     font-weight: 600;
@@ -151,7 +151,7 @@ input[type=password].wrong {
 }
 
 .btn:hover{
-    background-color:#192bc2;
+    background-color:#ff5900;
 }
 .WrongPass h3{
     color:red;
@@ -207,7 +207,7 @@ input[type=password].wrong {
 
 
 .image{
-    width: 100%;
+    width: 110%;
     transition: .9s .6s ease-in-out;
 }
 
@@ -359,17 +359,16 @@ input[type=password].wrong {
 }
 
 .btn.transparent:hover{
-    background-color: #192bc2;
+    background-color: #ff5900;
 }
 
-
-.teachlog a:link {
+.studlog a:link {
     text-decoration: none;
     color: black;
 }
 
-.teachlog a:hover {
-    color: #4481eb;
+.studlog a:hover {
+    color: #ff5900;
     background-color: transparent;
     text-decoration: none;
 }
