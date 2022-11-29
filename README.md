@@ -1,5 +1,5 @@
 # Devops-Project
-E-learning platform to help students organise their work.
+E-learning platform to help students organise their work and help them with the right study material.
 
 # Contributers
 This project is success/failure because of the following people:
