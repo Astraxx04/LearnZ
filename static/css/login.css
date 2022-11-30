@@ -7,6 +7,8 @@
 
 body, input{
     font-family: 'Poppins', sans-serif;
+    animation: transitionIn 0.6s;
+    animation-timing-function: ease-in;
 }
 
 .container{
@@ -373,3 +375,21 @@ input[type=password].wrong {
     background-color: transparent;
     text-decoration: none;
 }
+
+/* Animation function for login page loading */
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+        /* comment the following line to remove the background color transition and delete this comment */
+        background-color: #192bc2;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        background-color: None;
+    }
+}
+
+
+
