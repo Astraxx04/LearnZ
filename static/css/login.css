@@ -381,13 +381,10 @@ input[type=password].wrong {
     from {
         opacity: 0;
         transform: translateY(-30px);
-        /* comment the following line to remove the background color transition and delete this comment */
-        background-color: #192bc2;
     }
     to {
         opacity: 1;
         transform: translateY(0);
-        background-color: None;
     }
 }
 
