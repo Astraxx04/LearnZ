@@ -1,141 +1,271 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset = "UTF-8" >
-        <meta http-equiv="X-UA-Compatible" >
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://kit.fontawesome.com/36bed4b74a.js" crossorigin="anonymous"></script>
-        <title>LearnZ Student</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script >
-            var Hospital = {{Hospital | tojson}};
-        </script>
-        <link rel="stylesheet" href="../css/login.css">
-    </head>
-    <body >
-        <div class = "container">
-            <div class="forms-container">
-                <div class="signin-signup">
-                    <form action="" class="sign-in-form form" id = "sign-in-form">
-                        <h2 class="title">Sign In</h2>
-                        <div class="input-field">
-                            <i class="fa fa-building"></i>
-                            <select name="CollegeName" id="CollegeName"  required>
-                                <option disabled value="" selected hidden>Select College</option>
-                            </select>
-                        </div>
-                        <div class="input-field">
-                            <i class="fa fa-id-card"></i>
-                            <input type="usn" placeholder="USN" id="Newusn" required>
-                        </div>
-                        <div class="input-field">
-                            <i class="fa fa-lock"></i>
-                            <input type="password" class="" placeholder="Password" id="Password" required>
-                        </div>
-                        <div class="teachlog"><a href="../html/teacherlogin.html">Not a Student?</a></div>
-                        <input type="submit" id="Login" value="Login" class="btn solid" onclick="SignIn();">
-                        <div class="WrongPass" ><h3 id="WrongPass"></h3></div>
-                    </form>
-                    
-                    <form action="" class="sign-up-form form">
-                        <h2 class="title">Sign Up</h2>
-                        <div class="input-field">
-                            <i class="fa fa-building"></i>
-                            <select name="CollegeName" id="CollegeName"  required>
-                                <option disabled value="" selected hidden>Select College</option>
-                            </select>
-                        </div>
-                        <div class="input-field">
-                            <i class="fa fa-user"></i>
-                            <input type="name" placeholder="Name" id="Newname" required>
-                        </div>
-                        <div class="input-field">
-                            <i class="fa fa-envelope"></i>
-                            <input type="email" placeholder="Email" id="NewEmail" required>
-                        </div>
-                        <div class="input-field">
-                            <i class="fa fa-id-card"></i>
-                            <input type="usn" placeholder="USN" id="Newusn" required>
-                        </div>
-                        <div class="input-field">
-                            <i class="fa fa-lock"></i>
-                            <input type="password" placeholder="Password" id="NewPass" required>
-                        </div>
-                        <div class="input-field">
-                            <i class="fa fa-lock"></i>
-                            <input type="password" placeholder="Confirm Password"id="ConfiPass" required>
-                        </div>
-                        <input type="submit" value="Sign up" class="btn solid" id="SignUpBtn">
-                    
-                    </form>
-                </div>
+<html>
+<head>
+	<link rel="shortcut icon" type="png" href="images/icon/favicon.png">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Comaptible" content="IE=edge">
+	<title>LearnZ</title>
+	<link rel="shortcut icon" type="png" href="../images/icon/logo.png">
+	<meta name="desciption" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../css/index.css">
+	<script type="text/javascript" src="../js/script.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script>
+		$(window).on('scroll', function(){
+  			if($(window).scrollTop()){
+  			  $('nav').addClass('black');
+ 			 }else {
+ 		   $('nav').removeClass('black');
+ 		 }
+		})
+	</script>
+</head>
+<body>
+<!-- Navigation Bar -->
+	<header id="header">
+		<nav>
+			<!-- PC nav -->
+			<div class="logo"><a href="../html/index.html"><img src="../images/icon/logo_full.png" alt="logo"></a></div>
+				<ul>
+					<li><a href="">Home</a></li>
+					<li><a href="#team_section">Team</a></li>
+					<li><a href="#services_section">Services</a></li>
+					<li><a href="#contactus_section">Contact</a></li>
+				</ul>
+			<div class="srch"><input type="text" class="search" placeholder="Search here..."><img src="../images/icon/search.png" alt="search" onclick=slide()></div>
+			<a class="get-started" href="../html/student_login.html">Get Started</a>
+			<img src="../images/icon/menu.png" class="menu" onclick="sideMenu(0)" alt="menu">
+		</nav>
+		<!-- HOME -->
+		<div class="head-container">
+			<div class="quote">
+				<p>The beautiful thing about learning is that nobody can take it away from you</p>
+				<h5>Education is the process of facilitating learning, or the acquisition of knowledge, skills, values, beliefs, and habits. Educational methods include teaching, training, storytelling, discussion and directed research!</h5>
+			</div>
+			<div class="svg-image">
+				<img src="../images/extra/svg1.jpg" alt="svg">
+			</div>
+		</div>
+		<!-- mobile nav -->
+		<div class="side-menu" id="side-menu">
+			<div class="close" onclick="sideMenu(1)"><img src="../images/icon/close.png" alt="close"></div>
+			<div class="user" class="logo"><a href="../html/index.html"><img src="../images/icon/logo_full.png" alt="logo"></a></div>
+			<ul>
+				<li><a href="">Home</a></li>
+				<li><a href="#about_section">About</a></li>
+				<li><a href="#team_section">Team</a></li>
+				<li><a href="#contactus_section">Contact</a></li>
+			</ul>
+		</div>
+	</header>
+
+    <div class="diffSection" id="team_section">
+        <center>
+            <p style="font-size: 50px; padding-top: 100px; padding-bottom: 60px;">We're the Creators</p>
+        </center>
+        <div class="totalcard">
+            <div class="card">
+                <center><img src="../images/creator/Aditi.jpg"></center>
+                <center>
+                    <div class="card-title">Gagan S</div>
+                    <h4>PRODUCT OWNER</h4><br>
+                    <div id="detail">
+                        <!-- <p>“ You can teach a student a lesson for a day; but if you can teach him to learn by creating
+                            curiosity, he will continue the learning process as long as he lives “</p> -->
+                        <div class="duty"></div>
+                    </div>
+                </center>
             </div>
-            <div class="panels-container">
-                    <div class="panel left-panel">
-                        <div class="content">
-                            <h3>New here?</h3>
-                            <button class="btn transparent" id="sign-up-button">Sign Up</button>
-                        </div>
-
-                        <img src="../images/signup.png" class ="image" alt="">
+            <div class="card">
+                <center><img src="../images/creator/Aditi.jpg"></center>
+                <center>
+                    <div class="card-title">Lakshitha R</div>
+                    <h4>SCRUM MASTER</h4><br>
+                    <div id="detail">
+                        <!-- <p>“ You can teach a student a lesson for a day; but if you can teach him to learn by creating
+                            curiosity, he will continue the learning process as long as he lives “</p> -->
+                        <div class="duty"></div>
                     </div>
-
-                    <div class="panel right-panel">
-                        <div class="content">
-                            <h3>One of us?</h3>
-                            <button class="btn transparent" id="sign-in-button">Sign In</button>
-                        </div>
-
-                        <img src="../images/login.png" class ="image" alt="" id="loginimg">
-                    </div>
-                </div>
+                </center>
             </div>
         </div>
-        <script src="../js/login.js"></script>
-        <script src="../js/script.js"></script>
-        <script>
-            var login_bttn = document.getElementById("Login");
-            const WrongPass = document.getElementById("WrongPass");
-            login_bttn.addEventListener("click", ()=>{
-            var User = document.getElementById("HospitalName").value;
-            let HospitalIndex = Hospital[User][1];
-            var Password = document.getElementById("Password");
-            var Pass = Password.value;
-            var ReqPass = Hospital[User][0];
-            if (Pass == ReqPass) {
-                setCookie("User",HospitalIndex,1);//Cokie name "User" with hospital index with 1 day expiry
-                window.location.href="{{url_for('welcome')}}";
+    </div>
+	<div class="diffSection" id="team">
+		<!-- <center><p style="font-size: 50px; padding-top: 100px; padding-bottom: 60px;">Team</p></center> -->
+		<div class="totalcard">
+			<div class="card">
+				<center><img src="../images/creator/Aditi.jpg"></center>
+				<center><div class="card-title">Aditi Pandey</div>
+				<div id="detail">
+					<!-- <p>“ You can teach a student a lesson for a day; but if you can teach him to learn by creating
+                            curiosity, he will continue the learning process as long as he lives “</p> -->
+					<div class="duty"></div>
+				</div>
+				</center>
+			</div>
+            <div class="card">
+				<center><img src="../images/creator/Aditi.jpg"></center>
+				<center><div class="card-title">Ayushi Sah</div>
+				<div id="detail">
+					<!-- <p>“ You can teach a student a lesson for a day; but if you can teach him to learn by creating
+                            curiosity, he will continue the learning process as long as he lives “</p> -->
+					<div class="duty"></div>
+				</div>
+				</center>
+			</div>
+            <div class="card">
+				<center><img src="../images/creator/Aditi.jpg"></center>
+				<center><div class="card-title">Anujna GK</div>
+				<div id="detail">
+					<!-- <p>“ You can teach a student a lesson for a day; but if you can teach him to learn by creating
+                            curiosity, he will continue the learning process as long as he lives “</p> -->
+					<div class="duty"></div>
+				</div>
+				</center>
+			</div>
+            <div class="card">
+				<center><img src="../images/creator/Aditi.jpg"></center>
+				<center><div class="card-title">Akash Sil</div>
+				<div id="detail">
+					<!-- <p>“ You can teach a student a lesson for a day; but if you can teach him to learn by creating
+                            curiosity, he will continue the learning process as long as he lives “</p> -->
+					<div class="duty"></div>
+				</div>
+				</center>
+			</div>
+            <div class="card">
+				<center><img src="../images/creator/Aditi.jpg"></center>
+				<center><div class="card-title">Ahmed Fadil</div>
+				<div id="detail">
+					<!-- <p>“ You can teach a student a lesson for a day; but if you can teach him to learn by creating
+                            curiosity, he will continue the learning process as long as he lives “</p> -->
+					<div class="duty"></div>
+				</div>
+				</center>
+			</div>
+            <div class="card">
+				<center><img src="../images/creator/Aditi.jpg"></center>
+				<center><div class="card-title">Bhawesh Agarwal</div>
+				<div id="detail">
+					<!-- <p>“ You can teach a student a lesson for a day; but if you can teach him to learn by creating
+                            curiosity, he will continue the learning process as long as he lives “</p> -->
+					<div class="duty"></div>
+				</div>
+				</center>
+			</div>
+            <div class="card">
+				<center><img src="../images/creator/Aditi.jpg"></center>
+				<center><div class="card-title">Janesh Walia</div>
+				<div id="detail">
+					<!-- <p>“ You can teach a student a lesson for a day; but if you can teach him to learn by creating
+                            curiosity, he will continue the learning process as long as he lives “</p> -->
+					<div class="duty"></div>
+				</div>
+				</center>
+			</div>
+            <div class="card">
+				<center><img src="../images/creator/Aditi.jpg"></center>
+				<center><div class="card-title">Konjeti Nidhi</div>
+				<div id="detail">
+					<!-- <p>“ You can teach a student a lesson for a day; but if you can teach him to learn by creating
+                            curiosity, he will continue the learning process as long as he lives “</p> -->
+					<div class="duty"></div>
+				</div>
+				</center>
+			</div>
+		</div>
+	</div>
 
-            }
-            else{
-                // Password giggle animation
-                Password.classList.add("wrong");
-                window.setTimeout(() => {
-                    Password.classList.remove("wrong");
-                }, 1000);
-                //Wrong Password Display
-                WrongPass.innerHTML="Wrong Password";
-                }
-            });
-            function myfunction() {
-                const NewhosName = document.getElementById("NewhosName").value;
-                const NewEmail = document.getElementById("NewEmail").value;
-                const NewPass = document.getElementById("NewPass").value;
-                const ConfiPass = document.getElementById("ConfiPass").value;
 
-                if (ConfiPass != NewPass) {
-                    return;
-                }
+<!-- SERVICES -->
+	<div class="service-swipe">
+		<div class="diffSection" id="services_section">
+		<center><p style="font-size: 50px; padding: 100px; padding-bottom: 40px; color: #fff;">Services</p></center>
+		</div>
+		<a href="#"><div class="s-card"><img src="../images/icon/online-tutorials.png"><p>Online Video Lectures</p></div></a>
+		<a href="subjects/jee.html#sample_papers"><div class="s-card"><img src="../images/icon/papers.jpg"><p>Sample Papers for Exams</p></div></a>
+		<!-- <a href="#contactus_section"><div class="s-card"><img src="images/icon/discussion.png"><p>Discussion with Our Tutors & Mentors</p></div></a> -->
+		<a href="subjects/quiz.html"><div class="s-card"><img src="../images/icon/q1.png"><p>Brain teasing quizzes</p></div></a>
+	</div>
 
-                const dict_values = {NewhosName, NewEmail,NewPass} //Pass the javascript variables to a dictionary.
-                const s = JSON.stringify(dict_values); // Stringify converts a JavaScript object or value to a JSON string
-                $.ajax({
-                    url:"/SignUp",
-                    type:"POST",
-                    contentType: "application/json",
-                    data: JSON.stringify(s)});
-                    window.location.href-"{{url_for('index')}}"
-            }
-        </script>
-    </body>
+<!-- CONTACT US -->
+	<div class="diffSection" id="contactus_section">
+		<center><p style="font-size: 50px; padding: 100px">Contact Us</p></center>
+		<div class="csec"></div>
+		<div class="back-contact">
+			<div class="cc">
+			<form action="mailto:roshank9419@gmail.com" method="post" enctype="text/plain">
+				<label>First Name <span class="imp">*</span></label><label style="margin-left: 185px">Last Name <span class="imp">*</span></label><br>
+				<center>
+				<input type="text" name="" style="margin-right: 10px; width: 175px" required="required"><input type="text" name="lname" style="width: 175px" required="required"><br>
+				</center>
+				<label>Email <span class="imp">*</span></label><br>
+				<input type="email" name="mail" style="width: 100%" required="required"><br>
+				<label>Message <span class="imp">*</span></label><br>
+				<input type="text" name="message" style="width: 100%" required="required"><br>
+				<label>Additional Details</label><br>
+				<textarea name="addtional"></textarea><br>
+				<button type="submit" id="csubmit">Send Message</button>
+			</form>
+			</div>
+		</div>
+	</div>
+
+
+<!-- FEEDBACK -->
+	<div class="title2" id="feedBACK">
+		<span>Give Feedback</span>
+		<div class="shortdesc2">
+			<p>Please share your valuable feedback to us</p>
+		</div>
+	</div>
+
+	<div class="feedbox">
+		<div class="feed">
+			<form action="mailto:roshank9419@gmail.com" method="post" enctype="text/plain">
+				<label>Your Name</label><br>
+				<input type="text" name="" class="fname" required="required"><br>
+				<label>Email</label><br>
+				<input type="email" name="mail" required="required"><br>
+				<label>Additional Details</label><br>
+				<textarea name="addtional"></textarea><br>
+				<button type="submit" id="csubmit">Send Message</button>
+			</form>
+		</div>
+	</div>
+
+<!-- Sliding Information -->
+	<marquee style="background: linear-gradient(to right, #5995fd, rgb(10, 122, 192)); margin-top: 50px;" direction="left" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="20"><div class="marqu">“Education is the passport to the future, for tomorrow belongs to those who prepare for it today.” “Your attitude, not your aptitude, will determine your altitude.” “If you think education is expensive, try ignorance.” “The only person who is educated is the one who has learned how to learn …and change.”</div></marquee>
+
+<!-- FOOTER -->
+	<footer>
+		<div class="footer-container">
+			<div class="left-col">
+				<!-- <img src="images/icon/logo - Copy.png" style="width: 200px;"> -->
+				<div class="logo"></div>
+				<!-- <div class="social-media">
+					<a href="#"><img src="images/icon\fb.png"></a>
+					<a href="#"><img src="images/icon\insta.png"></a>
+					<a href="#"><img src="images/icon\tt.png"></a>
+					<a href="#"><img src="images/icon\ytube.png"></a>
+					<a href="#"><img src="images/icon\linkedin.png"></a>
+				</div><br><br> -->
+				<!-- <p class="rights-text">Copyright © 2021 Created By Roshan Kumar, Abhishek Dulat All Rights Reserved.</p> -->
+				<br><p><img src="../images/icon/location.png"> Dayananda Sagar College of Engineering<br>Bangalore, Karnataka-560078</p><br>
+				<!-- <p><img src="images/icon/phone.png"> +91-1234-567-890<br><img src="images/icon/mail.png">&nbsp; learnedonline9419@gmail.com</p> -->
+			</div>
+			<div class="right-col">
+				<h1 style="color: #fff">Our Newsletter</h1>
+				<div class="border"></div><br>
+				<p>Enter Your Email to get our News and updates.</p>
+				<form class="newsletter-form">
+					<input class="txtb" type="email" placeholder="Enter Your Email">
+					<input class="btn" type="submit" value="Submit">
+				</form>
+			</div>
+		</div>
+	</footer>
+
+</body>
 </html>

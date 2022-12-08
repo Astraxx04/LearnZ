@@ -11,7 +11,96 @@ body, input{
     animation-timing-function: ease-in;
 }
 
+header {
+	height: 10vh;
+	/* background: #000; */
+}
+
+nav {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	top: 0;
+	position: fixed;
+	display: flex;
+	width: 100%;
+	z-index: 1000;
+	background: #fff;
+	justify-content: space-around;
+	transition: 1.5s;
+	align-items: center;
+}
+nav ul {
+	display: flex;
+	align-items: center;
+}
+nav ul li {
+	list-style: none;
+	margin: 5px 10px;
+}
+nav ul li a {
+	padding: 2px 10px;
+	color: #989494;
+	cursor: pointer;
+	transition: .5s;
+	text-decoration: none;
+}
+nav ul li a:hover {
+	color: #ffffff;
+	border-radius: 5px;
+	background: #5d00ff;
+}
+.active {
+	color: #ffffff;
+	border-radius: 5px;
+	background: #5d00ff;
+}
+.srch {
+	padding: 2px 10px;
+	display: flex;
+	/* align-items: center; */
+	justify-content: center;
+	/* background: #0066ff; */
+	border: 1px solid;
+	border-radius: 20px;
+}
+.srch img {
+	width: 25px;
+	cursor: pointer;
+}
+.srch .search {
+	/* padding: 2px 10px; */
+	outline: none;
+	border: none;
+	background: transparent;
+}
+
+.get-started {
+	margin-left: 50px;
+	padding: 5px 20px;
+	border: 2px solid #ff8c00;
+	border-radius: 20px;
+	text-decoration: none;
+	
+	transition: .5s;
+	background-color: #ff8c00;
+	color: #fff;
+}
+.get-started:hover {
+	color: #fff;
+	background: rgb(65, 147, 219);
+}
+.logo img{
+    position: relative;
+    padding-top: 10px;
+    padding-left: 20px;
+	width: 120px;
+	cursor: pointer;
+	transition: all 1s;
+    z-index: 100;
+}
+
 .container{
+    /* margin-top: 50px; */
     position:relative;
     width:100%;
     min-height: 100vh;
@@ -24,7 +113,7 @@ body, input{
     width: 2000px;
     height: 2000px;
     border-radius:50%;
-    background: linear-gradient(-45deg, #4481eb, #04befe);
+    background: linear-gradient(-45deg, #0134ff, #ff8c00);
     top: -10%;
     right:48%;
     transform: translateY(-50%);
@@ -144,7 +233,7 @@ input[type=password].wrong {
     outline:none;
     border-radius: 50px;
     cursor: pointer;
-    background-color: #5995fd;
+    background-color: #7200f4;
     color:#fff;
     text-transform: uppercase;
     font-weight: 600;
@@ -153,7 +242,11 @@ input[type=password].wrong {
 }
 
 .btn:hover{
-    background-color:#192bc2;
+    background-color:#5d00ff;
+}
+
+#sign-in-button:hover{
+    background-color: #ca5f0d;
 }
 .WrongPass h3{
     color:red;
@@ -209,7 +302,7 @@ input[type=password].wrong {
 
 
 .image{
-    width: 100%;
+    width: 110%;
     transition: .9s .6s ease-in-out;
 }
 
@@ -361,22 +454,21 @@ input[type=password].wrong {
 }
 
 .btn.transparent:hover{
-    background-color: #192bc2;
+    background-color: #5d00ff;
 }
 
-
-.teachlog a:link {
+.studlog a:link {
     text-decoration: none;
     color: black;
 }
 
-.teachlog a:hover {
-    color: #4481eb;
+.studlog a:hover {
+    color: #5d00ff;
     background-color: transparent;
     text-decoration: none;
 }
 
-/* Animation function for login page loading */
+/* Animation function for teacher's login page loading */
 @keyframes transitionIn {
     from {
         opacity: 0;
@@ -387,6 +479,5 @@ input[type=password].wrong {
         transform: translateY(0);
     }
 }
-
 
 

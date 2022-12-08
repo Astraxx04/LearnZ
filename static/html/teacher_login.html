@@ -5,15 +5,27 @@
         <meta http-equiv="X-UA-Compatible" >
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/36bed4b74a.js" crossorigin="anonymous"></script>
-        <title>LearnZ Teacher</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script >
-            var Hospital = {{Hospital | tojson}};
-        </script>
-        <link rel="stylesheet" href="../css/teacherlogin.css">
+        <title>Teacher Login</title>
+        <link rel="shortcut icon" type="png" href="../images/icon/logo.png">        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="../css/teacher_login.css">
     </head>
     <body >
+        <!-- Navigation Bar -->
+        <!-- <header id="header">
+            <nav>
+                <div class="logo"><a href="../html/index.html"><img src="../images/icon/logo_full.png" alt="logo"></a></div>
+                <ul>
+                    <li><a href="../html/index.html">Home</a></li>
+                    <li><a href="../html/index.html">Team</a></li>
+                    <li><a href="../html/index.html">Services</a></li>
+                    <li><a href="../html/index.html">Contact</a></li>
+                </ul>
+                <div class="srch"><input type="text" class="search" placeholder="Search here..."><img src="../images/icon/search.png" alt="search" onclick=slide()></div>
+                <a class="get-started" href="../html/student_login.html">Get Started</a>
+            </nav>
+        </header> -->
         <div class = "container">
+            <div class="logo"><a href="../html/index.html"><img src="../images/icon/logo_full.png" alt="logo"></a></div>
             <div class="forms-container">
                 <div class="signin-signup">
                     <form action="" class="sign-in-form form" id = "sign-in-form">
@@ -32,7 +44,7 @@
                             <i class="fa fa-lock"></i>
                             <input type="password" class="" placeholder="Password" id="Password" required>
                         </div>
-                        <div class="studlog"><a href="../html/index.html">Not a Teacher?</a></div>
+                        <div class="studlog"><a href="../html/student_login.html">Not a Teacher?</a></div>
                         <input type="submit" id="Login" value="Login" class="btn solid" onclick="SignIn();">
                         <div class="WrongPass" ><h3 id="WrongPass"></h3></div>
                     </form>
@@ -65,6 +77,7 @@
                             <i class="fa fa-lock"></i>
                             <input type="password" placeholder="Confirm Password"id="ConfiPass" required>
                         </div>
+                        <div class="studlog"><a href="../html/student_login.html">Not a Teacher?</a></div>
                         <input type="submit" value="Sign up" class="btn solid" id="SignUpBtn">
                     
                     </form>
