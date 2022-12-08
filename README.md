@@ -13,3 +13,7 @@ Gagan S
 Janesh Walia
 Konjeti Nidhi
 Lakshita R
+
+
+https://astraxx04.github.io/Devops/static/html/index.html
+Click to view
