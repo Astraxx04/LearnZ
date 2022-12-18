@@ -14,15 +14,6 @@ SignInBtn.addEventListener("click", () =>
     }
 );
 
-Hospital_Name = Object.keys(Hospital);
-Hospital_Name.forEach(nam => {
-    var HospitalList = document.getElementById("HospitalName");
-    var option = document.createElement("option");
-    let NameOfHospital = nam;
-    option.text = NameOfHospital;
-    option.value = NameOfHospital;
-    HospitalList.add(option);
-});
 
 //Cokkie for login
 

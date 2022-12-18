@@ -244,6 +244,9 @@ input[type=password].wrong {
 .btn:hover{
     background-color:#192bc2;
 }
+#sign-in-button:hover{
+    background-color: #5d00ff;
+}
 .WrongPass h3{
     color:red;
 }
@@ -463,18 +466,6 @@ input[type=password].wrong {
     color: #4481eb;
     background-color: transparent;
     text-decoration: none;
-}
-
-/* Animation function for login page loading */
-@keyframes transitionIn {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 

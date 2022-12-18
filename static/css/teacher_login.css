@@ -12,13 +12,13 @@ body, input{
 }
 
 header {
-	height: 10vh;
-	/* background: #000; */
+	height: 8vh;
+	background: #000;
 }
 
 nav {
 	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-bottom: 10px;
 	top: 0;
 	position: fixed;
 	display: flex;
@@ -77,12 +77,12 @@ nav ul li a:hover {
 .get-started {
 	margin-left: 50px;
 	padding: 5px 20px;
-	border: 2px solid #ff8c00;
+	border: 2px solid #5d00ff;
 	border-radius: 20px;
 	text-decoration: none;
 	
 	transition: .5s;
-	background-color: #ff8c00;
+	background-color: #5d00ff;
 	color: #fff;
 }
 .get-started:hover {
@@ -113,7 +113,7 @@ nav ul li a:hover {
     width: 2000px;
     height: 2000px;
     border-radius:50%;
-    background: linear-gradient(-45deg, #0134ff, #ff8c00);
+    background: linear-gradient(-45deg, #5d00ff, #0134ff);
     top: -10%;
     right:48%;
     transform: translateY(-50%);
@@ -244,9 +244,8 @@ input[type=password].wrong {
 .btn:hover{
     background-color:#5d00ff;
 }
-
 #sign-in-button:hover{
-    background-color: #ca5f0d;
+    background-color: #5d00ff;
 }
 .WrongPass h3{
     color:red;
@@ -302,7 +301,7 @@ input[type=password].wrong {
 
 
 .image{
-    width: 110%;
+    width: 100%;
     transition: .9s .6s ease-in-out;
 }
 
@@ -468,16 +467,6 @@ input[type=password].wrong {
     text-decoration: none;
 }
 
-/* Animation function for teacher's login page loading */
-@keyframes transitionIn {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+
 
 
