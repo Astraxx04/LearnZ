@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="png" href="images/icon/favicon.png">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Comaptible" content="IE=edge">
+	<title>LearnZ</title>
+	<link rel="shortcut icon" type="png" href="../images/icon/logo.png">
+	<meta name="desciption" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../css/index.css">
+	<script type="text/javascript" src="../js/script.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script>
+		$(window).on('scroll', function(){
+  			if($(window).scrollTop()){
+  			  $('nav').addClass('black');
+ 			 }else {
+ 		   $('nav').removeClass('black');
+ 		 }
+		})
+	</script>
+</head>
+<body>
+<!-- Navigation Bar -->
+	<header id="header">
+		<nav>
+			<!-- PC nav -->
+			<div class="logo"><a href="../html/index.html"><img src="../images/icon/logo_full.png" alt="logo"></a></div>
+				<ul>
+					<li><a href="">Home</a></li>
+					<li><a href="#team_section">Team</a></li>
+					<li><a href="#services_section">Services</a></li>
+					<li><a href="#contactus_section">Contact</a></li>
+				</ul>
+			<div class="srch"><input type="text" class="search" placeholder="Search here..."><img src="../images/icon/search.png" alt="search" onclick=slide()></div>
+			<a class="get-started" href="../html/student_login.html">Get Started</a>
+			<img src="../images/icon/menu.png" class="menu" onclick="sideMenu(0)" alt="menu">
+		</nav>
+		<!-- HOME -->
+		<div class="head-container">
+			<div class="quote">
+				<p>The beautiful thing about learning is that nobody can take it away from you</p>
+				<h5>Education is the process of facilitating learning, or the acquisition of knowledge, skills, values, beliefs, and habits. Educational methods include teaching, training, storytelling, discussion and directed research!</h5>
+			</div>
+			<div class="svg-image">
+				<img src="../images/extra/svg1.jpg" alt="svg">
+			</div>
+		</div>
+		<!-- mobile nav -->
+		<div class="side-menu" id="side-menu">
+			<div class="close" onclick="sideMenu(1)"><img src="../images/icon/close.png" alt="close"></div>
+			<div class="user" class="logo"><a href="../html/index.html"><img src="../images/icon/logo_full.png" alt="logo"></a></div>
+			<ul>
+				<li><a href="">Home</a></li>
+				<li><a href="#about_section">About</a></li>
+				<li><a href="#team_section">Team</a></li>
+				<li><a href="#contactus_section">Contact</a></li>
+			</ul>
+		</div>
+	</header>
+
+    <div class="diffSection" id="team_section">
+        <center>
+            <p style="font-size: 50px; padding-top: 100px; padding-bottom: 60px;">We're the Creators</p>
+        </center>
+        <div class="totalcard">
+            <div class="card">
+                <center><img src="../images/creator/Aditi.jpg"></center>
+                <center>
+                    <div class="card-title">Gagan S</div>
+                    <h4>PRODUCT OWNER</h4><br>
+                    <div id="detail">
+                        <!-- <p>“ You can teach a student a lesson for a day; but if you can teach him to learn by creating
+                            curiosity, he will continue the learning process as long as he lives “</p> -->
+                        <div class="duty"></div>
+                    </div>
+                </center>
+            </div>
+            <div class="card">
+                <center><img src="../images/creator/Aditi.jpg"></center>
+                <center>
+                    <div class="card-title">Lakshitha R</div>
+                    <h4>SCRUM MASTER</h4><br>
+                    <div id="detail">
+                        <!-- <p>“ You can teach a student a lesson for a day; but if you can teach him to learn by creating
+                            curiosity, he will continue the learning process as long as he lives “</p> -->
+                        <div class="duty"></div>
+                    </div>
+                </center>
+            </div>
+        </div>
+    </div>
+	<div class="diffSection" id="team">
+		<!-- <center><p style="font-size: 50px; padding-top: 100px; padding-bottom: 60px;">Team</p></center> -->
+		<div class="totalcard">
+			<div class="card">
+				<center><img src="../images/creator/Aditi.jpg"></center>
+				<center><div class="card-title">Aditi Pandey</div>
+				<div id="detail">
+					<!-- <p>“ You can teach a student a lesson for a day; but if you can teach him to learn by creating
+                            curiosity, he will continue the learning process as long as he lives “</p> -->
+					<div class="duty"></div>
+				</div>
+				</center>
+			</div>
+            <div class="card">
+				<center><img src="../images/creator/Aditi.jpg"></center>
+				<center><div class="card-title">Ayushi Sah</div>
+				<div id="detail">
+					<!-- <p>“ You can teach a student a lesson for a day; but if you can teach him to learn by creating
+                            curiosity, he will continue the learning process as long as he lives “</p> -->
+					<div class="duty"></div>
+				</div>
+				</center>
+			</div>
+            <div class="card">
+				<center><img src="../images/creator/Aditi.jpg"></center>
+				<center><div class="card-title">Anujna GK</div>
+				<div id="detail">
+					<!-- <p>“ You can teach a student a lesson for a day; but if you can teach him to learn by creating
+                            curiosity, he will continue the learning process as long as he lives “</p> -->
+					<div class="duty"></div>
+				</div>
+				</center>
+			</div>
+            <div class="card">
+				<center><img src="../images/creator/Aditi.jpg"></center>
+				<center><div class="card-title">Akash Sil</div>
+				<div id="detail">
+					<!-- <p>“ You can teach a student a lesson for a day; but if you can teach him to learn by creating
+                            curiosity, he will continue the learning process as long as he lives “</p> -->
+					<div class="duty"></div>
+				</div>
+				</center>
+			</div>
+            <div class="card">
+				<center><img src="../images/creator/Aditi.jpg"></center>
+				<center><div class="card-title">Ahmed Fadil</div>
+				<div id="detail">
+					<!-- <p>“ You can teach a student a lesson for a day; but if you can teach him to learn by creating
+                            curiosity, he will continue the learning process as long as he lives “</p> -->
+					<div class="duty"></div>
+				</div>
+				</center>
+			</div>
+            <div class="card">
+				<center><img src="../images/creator/Aditi.jpg"></center>
+				<center><div class="card-title">Bhawesh Agarwal</div>
+				<div id="detail">
+					<!-- <p>“ You can teach a student a lesson for a day; but if you can teach him to learn by creating
+                            curiosity, he will continue the learning process as long as he lives “</p> -->
+					<div class="duty"></div>
+				</div>
+				</center>
+			</div>
+            <div class="card">
+				<center><img src="../images/creator/Aditi.jpg"></center>
+				<center><div class="card-title">Janesh Walia</div>
+				<div id="detail">
+					<!-- <p>“ You can teach a student a lesson for a day; but if you can teach him to learn by creating
+                            curiosity, he will continue the learning process as long as he lives “</p> -->
+					<div class="duty"></div>
+				</div>
+				</center>
+			</div>
+            <div class="card">
+				<center><img src="../images/creator/Aditi.jpg"></center>
+				<center><div class="card-title">Konjeti Nidhi</div>
+				<div id="detail">
+					<!-- <p>“ You can teach a student a lesson for a day; but if you can teach him to learn by creating
+                            curiosity, he will continue the learning process as long as he lives “</p> -->
+					<div class="duty"></div>
+				</div>
+				</center>
+			</div>
+		</div>
+	</div>
+
+
+<!-- SERVICES -->
+	<div class="service-swipe">
+		<div class="diffSection" id="services_section">
+		<center><p style="font-size: 50px; padding: 100px; padding-bottom: 40px; color: #fff;">Services</p></center>
+		</div>
+		<a href="#"><div class="s-card"><img src="../images/icon/online-tutorials.png"><p>Online Video Lectures</p></div></a>
+		<a href="subjects/jee.html#sample_papers"><div class="s-card"><img src="../images/icon/papers.jpg"><p>Sample Papers for Exams</p></div></a>
+		<!-- <a href="#contactus_section"><div class="s-card"><img src="images/icon/discussion.png"><p>Discussion with Our Tutors & Mentors</p></div></a> -->
+		<a href="subjects/quiz.html"><div class="s-card"><img src="../images/icon/q1.png"><p>Brain teasing quizzes</p></div></a>
+	</div>
+
+<!-- CONTACT US -->
+	<div class="diffSection" id="contactus_section">
+		<center><p style="font-size: 50px; padding: 100px">Contact Us</p></center>
+		<div class="csec"></div>
+		<div class="back-contact">
+			<div class="cc">
+			<form action="mailto:roshank9419@gmail.com" method="post" enctype="text/plain">
+				<label>First Name <span class="imp">*</span></label><label style="margin-left: 185px">Last Name <span class="imp">*</span></label><br>
+				<center>
+				<input type="text" name="" style="margin-right: 10px; width: 175px" required="required"><input type="text" name="lname" style="width: 175px" required="required"><br>
+				</center>
+				<label>Email <span class="imp">*</span></label><br>
+				<input type="email" name="mail" style="width: 100%" required="required"><br>
+				<label>Message <span class="imp">*</span></label><br>
+				<input type="text" name="message" style="width: 100%" required="required"><br>
+				<label>Additional Details</label><br>
+				<textarea name="addtional"></textarea><br>
+				<button type="submit" id="csubmit">Send Message</button>
+			</form>
+			</div>
+		</div>
+	</div>
+
+
+<!-- FEEDBACK -->
+	<div class="title2" id="feedBACK">
+		<span>Give Feedback</span>
+		<div class="shortdesc2">
+			<p>Please share your valuable feedback to us</p>
+		</div>
+	</div>
+
+	<div class="feedbox">
+		<div class="feed">
+			<form action="mailto:roshank9419@gmail.com" method="post" enctype="text/plain">
+				<label>Your Name</label><br>
+				<input type="text" name="" class="fname" required="required"><br>
+				<label>Email</label><br>
+				<input type="email" name="mail" required="required"><br>
+				<label>Additional Details</label><br>
+				<textarea name="addtional"></textarea><br>
+				<button type="submit" id="csubmit">Send Message</button>
+			</form>
+		</div>
+	</div>
+
+<!-- Sliding Information -->
+	<marquee style="background: linear-gradient(to right, #5995fd, rgb(10, 122, 192)); margin-top: 50px;" direction="left" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="20"><div class="marqu">“Education is the passport to the future, for tomorrow belongs to those who prepare for it today.” “Your attitude, not your aptitude, will determine your altitude.” “If you think education is expensive, try ignorance.” “The only person who is educated is the one who has learned how to learn …and change.”</div></marquee>
+
+<!-- FOOTER -->
+	<footer>
+		<div class="footer-container">
+			<div class="left-col">
+				<!-- <img src="images/icon/logo - Copy.png" style="width: 200px;"> -->
+				<div class="logo"></div>
+				<!-- <div class="social-media">
+					<a href="#"><img src="images/icon\fb.png"></a>
+					<a href="#"><img src="images/icon\insta.png"></a>
+					<a href="#"><img src="images/icon\tt.png"></a>
+					<a href="#"><img src="images/icon\ytube.png"></a>
+					<a href="#"><img src="images/icon\linkedin.png"></a>
+				</div><br><br> -->
+				<!-- <p class="rights-text">Copyright © 2021 Created By Roshan Kumar, Abhishek Dulat All Rights Reserved.</p> -->
+				<br><p><img src="../images/icon/location.png"> Dayananda Sagar College of Engineering<br>Bangalore, Karnataka-560078</p><br>
+				<!-- <p><img src="images/icon/phone.png"> +91-1234-567-890<br><img src="images/icon/mail.png">&nbsp; learnedonline9419@gmail.com</p> -->
+			</div>
+			<div class="right-col">
+				<h1 style="color: #fff">Our Newsletter</h1>
+				<div class="border"></div><br>
+				<p>Enter Your Email to get our News and updates.</p>
+				<form class="newsletter-form">
+					<input class="txtb" type="email" placeholder="Enter Your Email">
+					<input class="btn" type="submit" value="Submit">
+				</form>
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>
