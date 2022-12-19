@@ -98,11 +98,13 @@ a, button {
 	text-align: center;
 }
 .head-container {
-	margin-top: 245px;
+	margin-top:200px;
+	margin-bottom:120px;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-around;
+	
 }
 .quote {
 	width: 600px;
@@ -284,6 +286,7 @@ footer {
 	color: #E5E8EF;
 	background: #000D;
 	padding: 50px 0; 
+	
 }
 footer .footer-container {
 	max-width: 1300px;
@@ -294,19 +297,18 @@ footer .footer-container {
 	align-items: center;
 	flex-wrap: wrap-reverse;
 }
-footer .social-media img{
-	width: 22px;
+
+footer .left-col .footer_header{
+	transform: translateY(-12px);
+	margin-bottom: 10px;
 }
-footer .logo {
-	width: 180px;
-	color: #fff;
+footer p{
+	margin-top: 7px;
 }
-footer .social-media a{
-	margin-right: 10px;
-	font-size: 22px;
-	text-decoration: none;
+footer p i{
+	margin-right: 3px;
 }
-footer .right-col h1{
+footer .footer_header{
 	font-size: 26px;
 }
 footer .border{
@@ -314,6 +316,20 @@ footer .border{
 	height: 4px;
 	background: linear-gradient(to right, #27a9a6, #27a9a6);
 	margin: 2px;
+}
+footer .mid-col .footer_header{
+	transform: translateY(-20px);
+}
+footer .mid-col .links{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-transform: capitalize;
+}
+footer a{
+	
+	color:#fff;
 }
 footer .newsletter-form {
 	display: flex;
