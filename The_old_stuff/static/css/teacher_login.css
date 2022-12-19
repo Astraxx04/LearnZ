@@ -168,7 +168,6 @@ input[type=password].wrong {
     color: #fff;
 }
 #sign-in-button:hover{
-    background-color: #ccc;
     color: black;
 }
 .WrongPass h3{
@@ -427,7 +426,7 @@ body, input{
     width: 2000px;
     height: 2000px;
     border-radius:50%;
-    background: #57c7d4;
+    background: #39808b;
     top: -10%;
     right:48%;
     transform: translateY(-50%);
@@ -609,7 +608,7 @@ input[type=password].wrong {
 
 }
 .btn.transparent:hover{
-    background-color: #39808b;
+    background-color: #57c7d4;
     letter-spacing: 2px;
     color: black;
 }
