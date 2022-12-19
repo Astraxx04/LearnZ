@@ -48,11 +48,13 @@ nav ul li {
 	margin: 5px 10px;
 }
 nav ul li a {
-	padding: 2px 10px;
-	color: #989494;
+	padding: 2px 2rem;
+	color: black;
+	font-size: 16px;
 	cursor: pointer;
 	transition: .5s;
-	text-decoration: none;
+	letter-spacing: 2px;
+	font-weight: bold;
 }
 nav ul li a:hover {
 	color: #ffffff;
@@ -87,20 +89,20 @@ nav ul li a:hover {
 .get-started {
 	margin-left: 50px;
 	padding: 5px 20px;
-	border: 2px solid #27a9a6;
 	border-radius: 20px;
 	text-decoration: none;
 	
 	transition: .5s;
 	background-color: #27a9a6;
-	color: #fff;
+	color: black;
 }
 .get-started:hover {
-	color: #fff;
-	background: rgb(65, 147, 219);
+	color:#fff;
+	letter-spacing: 2px;
 }
 .logo img{
-	width: 120px;
+	width: 80px;
+	aspect-ratio: 1;
 	cursor: pointer;
 	transition: all 1s;
 }
