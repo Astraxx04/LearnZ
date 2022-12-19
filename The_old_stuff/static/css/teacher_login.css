@@ -214,10 +214,12 @@ input[type=password].wrong {
 }
 
 .btn:hover{
-    background-color:#39808b;;
+    background-color:#39808b;
+    color: #fff;
 }
 #sign-in-button:hover{
-    background-color: #39808b;
+    background-color: #ccc;
+    color: black;
 }
 .WrongPass h3{
     color:red;
@@ -425,7 +427,8 @@ input[type=password].wrong {
 }
 
 .btn.transparent:hover{
-    background-color: #39808b;;
+    background-color: #ccc;
+    color: black;
 }
 
 .studlog a:link {
