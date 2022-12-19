@@ -66,25 +66,6 @@ nav ul li a:hover {
 	border-radius: 5px;
 	background: #27a9a6;
 }
-.srch {
-	padding: 2px 10px;
-	display: flex;
-	/* align-items: center; */
-	justify-content: center;
-	/* background: #0066ff; */
-	border: 1px solid;
-	border-radius: 20px;
-}
-.srch img {
-	width: 25px;
-	cursor: pointer;
-}
-.srch .search {
-	/* padding: 2px 10px; */
-	outline: none;
-	border: none;
-	background: transparent;
-}
 
 .get-started {
 	margin-left: 50px;
