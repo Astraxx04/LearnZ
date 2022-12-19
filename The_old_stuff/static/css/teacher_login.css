@@ -35,7 +35,7 @@ body, input{
     width: 2000px;
     height: 2000px;
     border-radius:50%;
-    background: #27a9a6;
+    background: #57c7d4;
     top: -10%;
     right:48%;
     transform: translateY(-50%);
@@ -222,7 +222,11 @@ input[type=password].wrong {
     font-size: 0.8rem;
 
 }
-
+.btn.transparent:hover{
+    background-color: #57c7d4;
+    color: black;
+    letter-spacing: 2px;
+}
 
 .image{
     width: 100%;
@@ -423,7 +427,7 @@ body, input{
     width: 2000px;
     height: 2000px;
     border-radius:50%;
-    background: linear-gradient(-45deg, #4481eb, #04befe);
+    background: #57c7d4;
     top: -10%;
     right:48%;
     transform: translateY(-50%);
@@ -605,7 +609,8 @@ input[type=password].wrong {
 
 }
 .btn.transparent:hover{
-    background-color: #ccc;
+    background-color: #39808b;
+    letter-spacing: 2px;
     color: black;
 }
 
@@ -786,7 +791,7 @@ footer p i{
 	margin-right: 3px;
 }
 footer .left-col{
-    transform: translateX(350px);
+    transform: translateX(250px);
 }
 footer .footer_header{
 	font-size: 26px;
@@ -809,7 +814,7 @@ footer .mid-col .links{
     transform: translateY(-15px)
 }
 footer .mid-col{
-    transform: translateX(-400px);
+    transform: translateX(-300px);
 }
 footer a{
 	
