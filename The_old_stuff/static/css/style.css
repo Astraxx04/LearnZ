@@ -7,6 +7,9 @@
 	margin: 0;
 	padding: 0;
 }
+:root{
+	--cyan:#baf8f8;
+}
 
 html {
 	scroll-behavior: smooth;
@@ -17,7 +20,7 @@ body {
 }
 
 header {
-	height: 90vh;
+	background: #baf8f8;
 	/* background: #000; */
 }
 .black {
@@ -31,7 +34,7 @@ nav {
 	display: flex;
 	width: 100%;
 	z-index: 1000;
-	background: #fff;
+	background: var(--cyan);
 	justify-content: space-around;
 	transition: 1.5s;
 	align-items: center;
