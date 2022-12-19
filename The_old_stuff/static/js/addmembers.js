@@ -1,6 +1,11 @@
+
+//Person Name - Key,, github - 0 index,, linkdin - 1 index,, imagepath - 2 index
+
 const Peoples={"Bhawesh Agarwal": ["FrontEnd","https://github.com/Bhawesh02","https://www.linkedin.com/in/bhawesh-agarwal-70b98b113/","../images/creator/me.jpg"],
 "Nidhi":["Frontend","https://github.com/Sonuuuuuuu","https://www.linkedin.com/in/konjeti-nidhi-96245a226/","../images/creator/me.jpg"]
 };
+
+
 const CardContainer = document.getElementById("CardContainer");  
 //For Every person insert card 
 Object.keys(Peoples).forEach(People => {
