@@ -330,6 +330,7 @@ footer .mid-col .links{
 footer a{
 	
 	color:#fff;
+	cursor:pointer;
 }
 footer .newsletter-form {
 	display: flex;
