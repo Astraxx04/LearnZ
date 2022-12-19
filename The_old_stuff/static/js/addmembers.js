@@ -1,0 +1,36 @@
+const Peoples={"Bhawesh Agarwal": ["FrontEnd","https://github.com/Bhawesh02","https://www.linkedin.com/in/bhawesh-agarwal-70b98b113/","../images/creator/me.jpg"],
+"Nidhi":["Frontend","https://github.com/Sonuuuuuuu","https://www.linkedin.com/in/konjeti-nidhi-96245a226/","../images/creator/me.jpg"]
+};
+const CardContainer = document.getElementById("CardContainer");  
+//For Every person insert card 
+Object.keys(Peoples).forEach(People => {
+    //console.log(Peoples[People][1]);
+    var div = document.createElement('div');
+    div.classList.add("card");
+    CardContainer.appendChild(div);
+    var div1 = document.createElement('div');
+    div1.classList.add("content");
+    div.appendChild(div1);
+    var div2 = document.createElement('div');
+    div2.classList.add("imgBx");
+    div1.appendChild(div2);
+    var img = document.createElement('img');
+    img.setAttribute("src",Peoples[People][3]);
+    div2.appendChild(img);
+    var div4 = document.createElement('div');
+    div4.classList.add("contentBx");
+    div4.innerHTML="<h3>"+People+"<br /><span>"+Peoples[People][0]+"</span></h3>";
+    div1.appendChild(div4);
+    var ul = document.createElement('ul');
+    ul.classList.add("sci");
+    div.appendChild(ul);
+    var li = document.createElement('li');
+    li.setAttribute("style","\"--i: 1\"")
+    li.innerHTML="<a href=\""+Peoples[People][1]+"\"><i class=\"fa-brands fa-github\"></i></a>";
+    ul.appendChild(li);
+    var li1 = document.createElement('li');
+    li1.setAttribute("style","\"--i: 1\"")
+    li1.innerHTML="<a href=\""+Peoples[People][2]+"\"><i class=\"fa-brands fa-linkedin\"></i></a>";
+    ul.appendChild(li1);
+
+  });
