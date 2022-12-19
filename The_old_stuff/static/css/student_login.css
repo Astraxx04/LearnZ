@@ -5,98 +5,69 @@
     box-sizing: border-box;
 }
 
-body, input{
-    font-family: 'Poppins', sans-serif;
-    animation: transitionIn 0.6s;
-    animation-timing-function: ease-in;
+.logo{
+	transform: translateX(-150px);
 }
-
-header {
-	height: 8vh;
-	background: #000;
-} 
-
+.logo img{
+	width: 50px;
+}
 nav {
 	padding-top: 20px;
-	padding-bottom: 10px;
+	padding-bottom: 20px;
 	top: 0;
 	position: fixed;
 	display: flex;
-	width: 100%; 
+	width: 100%;
 	z-index: 1000;
-	background: #fff;
+	background: #CCC;
 	justify-content: space-around;
 	transition: 1.5s;
-	align-items: center; 
+	align-items: center;
 }
 nav ul {
 	display: flex;
 	align-items: center;
+	transform: translateX(70px);
 }
 nav ul li {
 	list-style: none;
 	margin: 5px 10px;
 }
 nav ul li a {
-	padding: 2px 10px;
-	color: #989494;
+	padding: 2px 2rem;
+	color: black;
+	font-size: 16px;
 	cursor: pointer;
 	transition: .5s;
-	text-decoration: none;
+	letter-spacing: 2px;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 nav ul li a:hover {
 	color: #ffffff;
 	border-radius: 5px;
-	background: #4481eb;
+	background: #27a9a6;
 }
 .active {
 	color: #ffffff;
 	border-radius: 5px;
-	background: #4481eb;
-}
-.srch {
-	padding: 2px 10px;
-	display: flex;
-	/* align-items: center; */
-	justify-content: center;
-	/* background: #0066ff; */
-	border: 1px solid;
-	border-radius: 20px;
-}
-.srch img {
-	width: 25px;
-	cursor: pointer;
-}
-.srch .search {
-	/* padding: 2px 10px; */
-	outline: none;
-	border: none;
-	background: transparent;
+	background: #27a9a6;
 }
 
-.get-started {
-	margin-left: 50px;
-	padding: 5px 20px;
-	border: 2px solid #4481eb;
-	border-radius: 20px;
+a {
+	float: left;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	font-size: 15px;
+	color: #2E3D49;
+	display: block;
 	text-decoration: none;
-	
-	transition: .5s;
-	background-color: #4481eb;
-	color: #fff;
+	text-align: center;
 }
-.get-started:hover {
-	color: #fff;
-	background: rgb(65, 147, 219);
-}
-.logo img{
-    position: relative;
-    padding-top: 10px;
-    padding-left: 20px;
-	width: 120px;
-	cursor: pointer;
-	transition: all 1s;
-    z-index: 100;
+body, input{
+    font-family: 'Poppins', sans-serif;
+    animation: transitionIn 0.6s;
+    animation-timing-function: ease-in;
 }
 
 .container{
@@ -113,7 +84,7 @@ nav ul li a:hover {
     width: 2000px;
     height: 2000px;
     border-radius:50%;
-    background: linear-gradient(-45deg, #4481eb, #04befe);
+    background: #27a9a6;
     top: -10%;
     right:48%;
     transform: translateY(-50%);
@@ -233,7 +204,7 @@ input[type=password].wrong {
     outline:none;
     border-radius: 50px;
     cursor: pointer;
-    background-color: #5995fd;
+    background-color: #27a9a6;
     color:#fff;
     text-transform: uppercase;
     font-weight: 600;
@@ -242,10 +213,7 @@ input[type=password].wrong {
 }
 
 .btn:hover{
-    background-color:#192bc2;
-}
-#sign-in-button:hover{
-    background-color: #5d00ff;
+    background-color:#39808b;
 }
 .WrongPass h3{
     color:red;
@@ -453,7 +421,8 @@ input[type=password].wrong {
 }
 
 .btn.transparent:hover{
-    background-color: #192bc2;
+    background-color: #ccc;
+    color:black;
 }
 
 
