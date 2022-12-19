@@ -27,9 +27,7 @@ body {
 	transform: translateX(-150px);
 }
 .logo img{
-	width: 80px;
-	aspect-ratio: 1;
-
+	width: 50px;
 }
 nav {
 	padding-top: 20px;
@@ -61,6 +59,7 @@ nav ul li a {
 	transition: .5s;
 	letter-spacing: 2px;
 	font-weight: bold;
+	text-transform: uppercase;
 }
 nav ul li a:hover {
 	color: #ffffff;
@@ -77,8 +76,7 @@ nav ul li a:hover {
 	margin-left: 50px;
 	padding: 5px 20px;
 	border-radius: 20px;
-	text-decoration: none;
-	
+	text-transform: uppercase;
 	transition: .5s;
 	background-color: #27a9a6;
 	color: black;
@@ -174,58 +172,49 @@ a, button {
 	padding-top: 1.2rem;
 	letter-spacing: 1.2px;
 	font-weight: bold;
+	color: #2E3D49;
+	font-size: 45px;
+	font-weight: 800;
 }
 .cardContainer{
 	
 	justify-content: center;
 	align-items: center;
 	display: flex;
-	flex-wrap: wrap;
+	transform: translateX(-45px);
 }
-.cardContainer .s-card img {
-	width: 100px;
+.cardContainer .s-card{
+	margin-left:85px;
 }
+
 .cardContainer a {
 	padding: 0;
 	margin: 40px 10px;
 }
 .cardContainer .s-card {
-	display: flex;
-	justify-content: space-around;
+	
 	padding: 10px;
-	align-items: center;
-	text-align: center;
 	width: 350px;
-	height: 200px;
-	box-shadow: inset 0 0 20px rgba(255,255,255,0.05),
-					0 0 50px rgba(0,0,0,0.8);
+	height: 250px;
+	box-shadow: 0 5px 25px rgb(1 1 1 / 25%);
 	border-radius: 5px;
-	cursor: pointer;
 	transition-duration: 1s;
+	cursor: default;
+}
+.cardContainer .s-card img {
+	margin-top: 25px;
+	width: 100px;
 }
 .cardContainer .s-card p {
-	color: #f2f2f2;
-	font-size: 1.2em;
+	color: black;
+	margin-top: 5px;
+	font-size: 25px;
 	font-family: 'Open Sans',sans-serif;
-}
-.cardContainer .s-card:hover {
-	box-shadow: 0 0 50px rgba(255,255,255,0.8);
-	transform: translateY(-10px);
+	text-transform: capitalize;
 }
 
 /*Contact Us Section*/
-.csec {
-	background: linear-gradient(to right, #27a9a6, #27a9a6);
-	background-attachment: fixed; 
-	position: absolute;
-	width: 100%;
-	height: 250px;
-	top: 200px;
-	content: '';
-	transform-origin: top right;
-	transform: skewY(-10deg);
-	z-index: -1;
-}
+
 .back-contact {
 	margin-top: 0px;
 	transform: translateY(-50px);
@@ -234,9 +223,8 @@ a, button {
 	justify-content: space-around;
 }
 .cc {
-	height: 400px;
+	height: 370px;
 	width: 400px;
-	height: 500px;
 	border-radius: 10px;
 	justify-content: center;
 	box-shadow: 1px 1px 20px rgba(0,0,0,0.4);
