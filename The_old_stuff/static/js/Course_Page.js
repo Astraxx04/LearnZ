@@ -1,10 +1,27 @@
 
 //Course name - Key,, current chapter - 0 index,, chapter name - 1 index
-const Courses={"JavaScript Fundamentals": ["Chapter 4","Callbacks & Closures"],"Data Science": ["Chapter 4","Callbacks & Closures"],"C programming": ["Chapter 4","Callbacks & Closures"],"Data Communication": ["Chapter 4","Callbacks & Closures"],"Data structure Fundamentals": ["Chapter 4","Callbacks & Closures"],"Micro Processor": ["Chapter 4","Callbacks & Closures"]};
-
-
+var Courses={"JavaScript Fundamentals": ["Chapter 4","Callbacks & Closures"],"Data Science": ["Chapter 4","Callbacks & Closures"],"C programming": ["Chapter 4","Callbacks & Closures"],"Data Communication": ["Chapter 4","Callbacks & Closures"],"Data structure Fundamentals": ["Chapter 4","Callbacks & Closures"],"Micro Processor": ["Chapter 4","Callbacks & Closures"]};
+var NoOfSemester = 6;
+var user_usn = "1DS20IS027";
 const CourseContainer = document.getElementById("CourseContainer");  
-//For Every person insert card 
+const dropdown = document.getElementById("dropdown");  
+const useinfo = document.getElementById("useinfo");  
+
+//User Usn
+var span = document.createElement('span');
+span.classList.add("user_usn");
+span.innerHTML = user_usn;
+useinfo.appendChild(span);
+
+
+//Add Semester option based on No of semester
+for (let index = 0; index < NoOfSemester; index++) {
+  var li = document.createElement('li');
+  li.innerHTML=`<a href=""> Semester `+(index+1)+`</a>`;
+  dropdown.appendChild(li);
+}
+
+//For Every course insert card 
 Object.keys(Courses).forEach(Course => {
     //Creted div with class card;
     var div = document.createElement('div');

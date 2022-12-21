@@ -47,7 +47,7 @@ header .SemesterDropdown{
 	padding: 5px 20px;
 	margin-left: 80%;
 }
-
+/*Header for different size*/
 @media screen and (max-width: 2000px) {
 	header .SemesterDropdown{
 		margin-left: 75%;
