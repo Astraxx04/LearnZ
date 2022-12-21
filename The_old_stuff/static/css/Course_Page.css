@@ -45,8 +45,31 @@ nav a{
 
 header .SemesterDropdown{
 	padding: 5px 20px;
-	margin-left: 90rem;
+	margin-left: 80%;
 }
+
+@media screen and (max-width: 2000px) {
+	header .SemesterDropdown{
+		margin-left: 75%;
+	}
+  }
+
+  @media screen and (max-width: 1540px) {
+	header .SemesterDropdown{
+		margin-left: 70%;
+	}
+  }
+  @media screen and (max-width: 1285px) {
+	header .SemesterDropdown{
+		margin-left: 65%;
+	}
+  }
+  @media screen and (max-width: 1110px) {
+	header .SemesterDropdown{
+		margin-left: 60%;
+	}
+  }
+  
 header .Title{
 	padding: 5px 20px;
 	border-radius: 20px;
