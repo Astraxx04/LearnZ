@@ -17,9 +17,9 @@
     <script>
       $(window).on("scroll", function () {
         if ($(window).scrollTop()) {
-          $("nav").addClass("black");
+          $("header").addClass("black");
         } else {
-          $("nav").removeClass("black");
+          $("header").removeClass("black");
         }
       });
     </script>
@@ -27,17 +27,36 @@
   <body>
     <!-- Header -->
     <header id="header">
-      <nav>
+      <div class="inner flex">
         <div class="logo"><img src="../images/icon/logo.png" alt="logo" /></div>
-        <ul>
-          <li><a href="#quote">Home</a></li>
-          <li><a href="#services_section">Services</a></li>
-          <li><a href="#contactus_section">Contact</a></li>
-          <li><a href="#contactus_section">About Us</a></li>
-        </ul>
 
-        <a class="get-started" href="student_login.html">Get Started</a>
-      </nav>
+        <button
+          class="mobile-nav-toggle"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Menu</span>
+        </button>
+
+        <nav>
+          <ul
+            id="primary-navigation"
+            data-visible="false"
+            class="primary-navigation flex"
+          >
+            <li><a href="#quote">Home</a></li>
+            <li><a href="#services_section">Services</a></li>
+            <li><a href="#contactus_section">Contact</a></li>
+            <li><a href="#contactus_section">About Us</a></li>
+            
+          </ul>
+        </nav>
+        <ul class="get-started">
+          <li>
+            <a  href="student_login.html">Get Started</a>
+          </li>
+        </ul>
+      </div>
     </header>
     <!--Info-->
     <div class="head-container">
