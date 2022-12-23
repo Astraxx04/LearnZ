@@ -14,5 +14,5 @@ Janesh Walia
 Konjeti Nidhi
 Lakshita R
 
-https://astraxx04.github.io/Devops/static/html/index.html
+http://65.0.110.7:5001/
 Click to view
