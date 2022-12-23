@@ -416,21 +416,8 @@ footer .btn:hover {
 		display: flex;
 		justify-content: center;
 	}
-	.logo {
-		transition: 1s;
-		margin-left: 30%;
-	}
-	nav ul, .srch, .get-started{
-		display: none;
-	}
 	.menu {
 		display: block;
-	}
-	nav {
-		padding-bottom: 20px;
-		border-bottom: 1px solid #0005;
-		/* position: fixed; */
-		/* top: 0; */
 	}
 	.quote p, .quote h5, .play {
 		justify-content: center;
