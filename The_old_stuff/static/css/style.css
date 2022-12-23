@@ -69,6 +69,8 @@ header button span, .mobile-nav-toggle{
 	padding: 0.5rem;
 	margin-right: 2rem;
   }
+  /*header mobile view*/
+  /*
   @media (max-width: 40em) {
 	  .primary-navigation {
 		--gap: 2rem;
@@ -107,7 +109,7 @@ header button span, .mobile-nav-toggle{
 	  }
   }
   
-  
+  */
   nav li a,.get-started li a{
 	color: black;
 	height: 100%;
