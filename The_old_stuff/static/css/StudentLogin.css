@@ -142,7 +142,7 @@ header button span, .mobile-nav-toggle{
 	
 }
 .svg-image img{
-	width: 500px;
+	width: 40rem;
 	filter: drop-shadow(0 20px 10px rgba(0,0,0,0.2));
 }
 
@@ -160,10 +160,6 @@ form{
 
 form.sign-in-form{
     z-index: 2;
-}
-form.sign-up-form{
-    z-index: 1;
-    opacity: 0;
 }
 
 .title{

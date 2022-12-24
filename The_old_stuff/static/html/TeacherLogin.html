@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="../css/StudentSignUp.css" />
+    <link rel="stylesheet" type="text/css" href="../css/StudentLogin.css" />
     <title>Document</title>
     <script
       src="https://kit.fontawesome.com/36bed4b74a.js"
@@ -48,7 +48,7 @@
         </nav>
         <ul class="get-started">
           <li>
-            <a href="StudentLogin.html">Sign In</a>
+            <a href="TeacherSignup.html">Sign Up</a>
           </li>
         </ul>
       </div>
@@ -57,46 +57,44 @@
     <!--Info-->
     <div class="head-container">
       <div class="svg-image">
-        <img src="../images/undraw_learning_re_32qv.svg" alt="svg" />
+        <img src="../images/teacherlogin.png" alt="svg" />
       </div>
-      <form action="" class="sign-up-form">
-        <h2 class="title">Sign Up</h2>
-        <div class="input-field">
-          <i class="fa fa-building"></i>
-          <select name="CollegeName" id="CollegeName" required>
-            <option disabled value="" selected hidden>Select College</option>
-          </select>
-        </div>
-        <div class="input-field">
-          <i class="fa fa-user"></i>
-          <input type="name" placeholder="Name" id="Newname" required />
-        </div>
-        <div class="input-field">
-          <i class="fa fa-envelope"></i>
-          <input type="email" placeholder="Email" id="NewEmail" required />
-        </div>
-        <div class="input-field">
-          <i class="fa fa-id-card"></i>
-          <input type="usn" placeholder="USN" id="Newusn" required />
-        </div>
-        <div class="input-field">
-          <i class="fa fa-lock"></i>
-          <input type="password" placeholder="Password" id="NewPass" required />
-        </div>
-        <div class="input-field">
-          <i class="fa fa-lock"></i>
-          <input
-            type="password"
-            placeholder="Confirm Password"
-            id="ConfiPass"
-            required
-          />
-        </div>
-        <div class="teachlog">
-          <a href="../html/teacher_login.html">Not a Student?</a>
-        </div>
-        <input type="submit" value="Sign up" class="btn solid" id="SignUpBtn" />
-      </form>
+      <div class="form">
+        <form action="" class="sign-in-form" id="sign-in-form">
+          <h2 class="title">Sign In</h2>
+          <div class="input-field">
+            <i class="fa fa-building"></i>
+            <select name="CollegeName" id="CollegeName" required>
+              <option disabled value="" selected hidden>Select College</option>
+            </select>
+          </div>
+          <div class="input-field">
+            <i class="fa fa-id-card"></i>
+            <input
+              type="teachid"
+              placeholder="Teacher ID"
+              id="Newteachid"
+              required
+            />
+          </div>
+          <div class="input-field">
+            <i class="fa fa-lock"></i>
+            <input
+              type="password"
+              class=""
+              placeholder="Password"
+              id="Password"
+              required
+            />
+          </div>
+          <div class="studlog">
+            <a href="../html/StudentLogin.html">Not a Teacher?</a>
+          </div>
+          <input type="submit" id="Login" value="Login" class="btn solid" />
+
+          <div class="WrongPass"><h3 id="WrongPass"></h3></div>
+        </form>
+      </div>
     </div>
 
     <!-- FOOTER -->
