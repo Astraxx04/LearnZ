@@ -69,6 +69,7 @@ def student_signup(request):
 
     return render(request, "authentication/StudentSignup.html")
 
+<<<<<<< HEAD
 def teacher_signup(request):
     #baba
     if request.method == "POST":
@@ -116,6 +117,8 @@ def teacher_signup(request):
 
     return render(request, "authentication/TeacherSignup.html")
 
+=======
+>>>>>>> 69b10711b608abd0437b2bb48ff64f0608c99c8b
 
 def student_signin(request):
     if request.method == 'POST':

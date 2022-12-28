@@ -19,6 +19,7 @@
 	--headerNavHoverColor:#baf8f8;
 	--getStartedHoverColor:#baf8f8;
 	--servicesText:black;
+	--contactusFormBgcolor:#fff;
 }
 
 .black {
@@ -223,6 +224,7 @@ header button span, .mobile-nav-toggle{
 	color: #2E3D49;
 	font-size: 45px;
 	font-weight: 800;
+	text-transform: capitalize;
 }
 
 .cardContainer {
@@ -238,13 +240,14 @@ header button span, .mobile-nav-toggle{
 	width: 300px;
 	height: 400px;
 	background: rgba(255, 255, 255, 0.05);
-	margin: 20px;
+	margin: 1REM;
 	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 	border-radius: 15px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	backdrop-filter: blur(10px);
+	padding-left: 1REM;
   }
   .cardContainer .card .content {
 	position: relative;
@@ -303,71 +306,50 @@ header button span, .mobile-nav-toggle{
 	opacity: 1;
   }
 /*Contact Us Section*/
-
-.back-contact {
-	margin-top: 0px;
-	transform: translateY(-50px);
+.contactus{
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
-}
-.cc {
-	height: 370px;
-	width: 400px;
-	border-radius: 10px;
 	justify-content: center;
-	box-shadow: 1px 1px 20px rgba(0,0,0,0.4);
-	background: #fff;
+	flex-direction: column;
 }
-.cc form {
-	margin: 5%;
-	margin-top: 40px;
-	width: 90%;
-	height: 90%;
-}
-.cc form label {
-	position: absolute;
-	color: #2E3D49;
-	font-size: 10px;
-	font-weight: 800;
-}
-.cc form input {
-	padding: 15px;
-	margin-bottom: 10px;
-	border-radius: 5px;
-	box-shadow: inset 0 0 5px lightgray;
-	border: 1px solid rgba(0,0,0,0.2);
-	outline: none;
-	color: #2E3D49;
-	font-weight: 600;
-}
-.imp {
-	color: #27a9a6;
-}
-form textarea {
-	width: 100%;
-	height: 100px;
-	box-shadow: inset 0 0 5px lightgray;
-	border: 1px solid rgba(0,0,0,0.2);
-	border-radius: 5px;
-	outline: none;
-	color: #2E3D49;
-	font-weight: 600;
-	padding: 15px;
-}
-#csubmit {
-	margin-top: 20px; 
-	background: linear-gradient(to right, #27a9a6, #27a9a6);
-	border-radius: 5px;
-	border-style: none;
-	outline: none;
-	width: 100%;
-	padding: 15px 25px;
-	color: #fff;
-	font-size: 12px;
-	cursor: pointer;
-}
+.form-container{
+	margin-top: 2rem;
+	box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0, 0, 0, 0.185);
+	padding:2rem;
+	background-color:var(--contactusFormBgcolor);
+  }
 
+  .form-group{
+	margin-bottom:1.5em;
+	transition:all .3s;
+  }
+  .form-label{
+	font-size:.75em;
+	color:var(--font-color);
+	display:block;
+	opacity:0;
+	transition: all .3s;
+	transform:translateX(-50px);
+  }
+  .form-control{
+	box-shadow:none;
+	
+	border-radius:0;
+	border-color:#ccc;
+	border-style:none none solid none;
+	width:100%;
+	font-size:1.25em;
+	transition:all .6s;
+  }
+  .underline{
+	text-decoration:underline;
+  }
+  p.form-control{
+	border-style: none;
+	font-size: 16px;
+	color:rgb(51, 50, 50) ; 
+	transition: 0.5s;
+  }
 /*FOOTER*/
 footer {
 	color: #E5E8EF;
