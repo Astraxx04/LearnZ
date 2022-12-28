@@ -1,3 +1,4 @@
+{% load static%}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -36,7 +37,7 @@
         </button>
         <ul class="get-started">
           <li>
-            <a href="{% url 'teacher_login' %}">Sign In</a>
+            {% comment %} <a href="{% url 'teacher_login' %}">Sign In</a> {% endcomment %}
           </li>
         </ul>
       </div>
@@ -86,7 +87,7 @@
           />
         </div>
         <div class="studlog">
-          <a href="{% url 'authentication/html/StudentLogin.html' %}">Not a Teacher?</a>
+          <a href="{% url 'student_signin' %}">Not a Teacher?</a>
         </div>
         <input type="submit" value="Sign up" class="btn solid" id="SignUpBtn" />
       </form>
