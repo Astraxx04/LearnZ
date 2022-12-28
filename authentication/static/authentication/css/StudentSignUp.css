@@ -12,18 +12,19 @@
 	display: flex;
 	gap: var(--gap,5ex);
   }
-:root{
-	--cyan:#baf8f8;
-	--headerColor:#fff;
-	--getstartedColor:rgba(0, 200, 200, 0.473);
-	--formTitleColor:white;
-	--inputFieldBgColor:#f0f0f0;
-	--selectCollegeColor:#333;
-	--inputFieldPlaceHolder:#aaa;
-	--btnBgColor:#27a9a6;
-	--btnTextColor:#fff;
-	--btnHoverColor:#39808b;
-}
+  :root{
+	  --cyan:#baf8f8;
+	  --headerColor:#fff;
+	  --formTitleColor:white;
+	  --inputFieldBgColor:#f0f0f0;
+	  --selectCollegeColor:#333;
+	  --inputFieldPlaceHolder:#aaa;
+	  --btnBgColor:#abbcef;
+	  --btnTextColor:#fff;
+	  --btnHoverColor:#527af6;
+	  --getstartedColor:#abbcef;  /*Get started is signup*/
+	  --getStartedHoverColor:#527af6;
+  }
 
 .black {
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
@@ -37,14 +38,12 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 header {
-	top: 0;
-	left: 0;
-  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 99999;
   width: 100%;
   background-color: var(--headerColor);
   align-items: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   
 }
 
@@ -54,7 +53,8 @@ header .inner {
   justify-content: space-between;
 }
 header .logo {
-  margin: 1rem;
+	margin: 0.5rem;
+	
 }
 header .logo img{
 	width: 8rem;
@@ -73,9 +73,17 @@ header button span, .mobile-nav-toggle{
   .get-started{
 	background: var(--getstartedColor);
 	backdrop-filter: blur(5rem);
+	font-weight: bolder;
+	letter-spacing: 1.2px;
 	border-radius: 15px;
-	padding: 0.5rem;
-	margin-right: 2rem;
+	padding: 0.7rem;
+	margin-right: 2.5rem;
+	transform: translateX(-3.5rem);
+  }
+  
+  .get-started:hover{
+	transition: 1s;
+	background: var(--getStartedHoverColor);
   }
   /*header mobile view*/
   /*
@@ -134,7 +142,7 @@ header button span, .mobile-nav-toggle{
 /*Inside content*/
 
 .head-container {
-	margin-top:200px;
+	margin-top: 100px;
 	margin-bottom:120px;
 	display: flex;
 	flex-wrap: wrap;
@@ -159,6 +167,7 @@ form{
     transition: 0.2s 0.7s ease-in-out;
 }
 
+
 form.sign-up-form{
     z-index: 1;
 }
@@ -170,12 +179,11 @@ form.sign-up-form{
 }
 
 .input-field{
-    max-width: 380px;
-    width:100%;
-    height:55px;
+    width:350px;
+    height:60px;
     background-color: var(--inputFieldBgColor);
     margin: 10px 0;
-    border-radius:55px;
+    border-radius:60px;
     display: grid;
     grid-template-columns: 15% 85%;
     padding: 0 .4rem;
@@ -216,7 +224,17 @@ form.sign-up-form{
     margin: 10px 0;
     transition: .5s;
 }
-
+.teachlog{
+	margin: 10px 0;
+}
+.teachlog a{
+	color:black;
+	transition: 1s;
+}
+.teachlog:hover a{
+	letter-spacing: 1px;
+	color:#527af6;
+}
 .btn:hover{
     background-color:var(--btnHoverColor);
 }
@@ -226,93 +244,3 @@ input[type=password].wrong {
     animation-duration: 0.7s, 0.35s;
     animation-iteration-count: 1, 2;
   }
-/*FOOTER*/
-footer {
-	color: #E5E8EF;
-	background: #000D;
-	padding: 50px 0; 
-	margin-top: 10rem;
-}
-footer .footer-container {
-	max-width: 1300px;
-	margin: auto;
-	padding: 0 20px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-wrap: wrap-reverse;
-}
-
-footer .left-col .footer_header{
-	transform: translateY(-12px);
-	margin-bottom: 10px;
-}
-footer p{
-	margin-top: 7px;
-}
-footer p i{
-	margin-right: 3px;
-}
-footer .footer_header{
-	font-size: 26px;
-}
-footer .border{
-	width: 100px;
-	height: 4px;
-	background: linear-gradient(to right, #27a9a6, #27a9a6);
-	margin: 2px;
-}
-footer .mid-col .footer_header{
-	transform: translateY(-20px);
-}
-footer .mid-col .links{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-transform: capitalize;
-}
-footer a{
-	
-	color:#fff;
-	cursor:pointer;
-}
-footer .newsletter-form {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-}
-footer input::placeholder {
-  color: white !important;
-}
-footer .txtb {
-	flex: 1;
-	padding: 18px 40px;
-	font-size: 16px;
-	background: #343A40;
-	border: none;
-	font-weight: 700;
-	outline: none;
-	border-radius: 5px;
-	min-width: 260px;
-	margin-top: 20px;
-	color: white;
-}
-footer .btn {
-	margin-top: 20px;
-	padding: 18px 40px;
-	font-size: 16px;
-	color: #f1f1f1;
-	background: linear-gradient(to right, #27a9a6, #27a9a6);
-	border: none;
-	font-weight: 700;
-	outline: none;
-	border-radius: 5px;
-	margin-left: 20px;
-	cursor: pointer;
-	transition: opacity .3s linear;	
-}
-footer .btn:hover {
-	opacity: .7;
-}
