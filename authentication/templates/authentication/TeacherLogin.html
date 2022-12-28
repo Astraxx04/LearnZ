@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="{% static 'authentucation/css/StudentLogin.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'authentication/css/StudentLogin.css' %}" />
     <title>Teacher Login</title>
     <script
       src="https://kit.fontawesome.com/36bed4b74a.js"
@@ -76,7 +76,7 @@
             />
           </div>
           <div class="studlog">
-            <a href="{% url 'authentication/html/StudentLogin.html' %}">Not a Teacher?</a>
+            <a href="{% url 'student_signin' %}">Not a Teacher?</a>
           </div>
           <input type="submit" id="Login" value="Login" class="btn solid" />
 
