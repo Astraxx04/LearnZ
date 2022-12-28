@@ -20,6 +20,8 @@
 	--getStartedHoverColor:#baf8f8;
 	--servicesText:black;
 	--contactusFormBgcolor:#fff;
+	--font-color:#555;
+  --font-hover-color:orange;
 }
 
 .black {
@@ -333,22 +335,50 @@ header button span, .mobile-nav-toggle{
   }
   .form-control{
 	box-shadow:none;
-	
 	border-radius:0;
 	border-color:#ccc;
 	border-style:none none solid none;
 	width:100%;
 	font-size:1.25em;
+	font-family: 'Courier New', Courier, monospace;
 	transition:all .6s;
   }
   .underline{
 	text-decoration:underline;
   }
-  p.form-control{
-	border-style: none;
-	font-size: 16px;
-	color:rgb(51, 50, 50) ; 
-	transition: 0.5s;
+  
+.form-control::placeholder{
+	color:#aaa ; 
+  }
+  .form-control:focus{
+	box-shadow:none;
+	border-color:var(--font-hover-color);
+	outline:none;
+  }
+  .form-group:focus-within{
+	transform:scale();
+  }
+  .form-control.message{
+	padding-top: 1.5rem;
+  }
+  .btn{
+	background: var(--getstartedColor);
+	border:0px solid #aaa;
+	border-radius:10px;
+	color:var(--font-color);
+	font-size:1em;
+	padding:0.5rem;
+	text-transform:uppercase;
+	margin-top: 1.25rem;
+	font-weight: bold;
+	
+  }
+  .btn:hover{
+	cursor:pointer;
+	background-color: var(--getStartedHoverColor);
+  }
+textarea{
+	resize:none;
   }
 /*FOOTER*/
 footer {
