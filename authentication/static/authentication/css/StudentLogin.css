@@ -55,7 +55,7 @@ header .inner {
   justify-content: space-between;
 }
 header .logo {
-  margin: 8rem;
+  margin: 1rem;
 }
 header .logo img{
 	width: 100px;
