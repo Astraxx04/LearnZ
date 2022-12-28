@@ -62,8 +62,7 @@ def student_signup(request):
         # myuser.is_active = False
         #myuser.is_active = False
         myuser.save()
-        messages.success(
-            request, "Your Account has been created succesfully!!.")
+        pyautogui.alert("Your Account has been created succesfully!!.")
 
 
         return redirect('student_signin')
@@ -108,8 +107,7 @@ def teacher_signup(request):
         # myuser.is_active = False
         #myuser.is_active = False
         myuser.save()
-        messages.success(
-            request, "Your Account has been created succesfully!!.")
+        pyautogui.alert("Your Account has been created succesfully!!.")
 
 
         return redirect('teacher_signin')
@@ -126,7 +124,7 @@ def student_signin(request):
         if user is not None:
             login(request, user)
             fname = user.first_name
-            messages.success(request, "Logged In Sucessfully!!")
+            pyautogui.alert("Logged In Sucessfully!!")
             return render(request, "courses/Course_Page.html",{"fname":fname})
         else:
             return redirect('index')
@@ -169,5 +167,5 @@ def activate(request, uidb64, token):
 
 def signout(request):
     logout(request)
-    messages.success(request, "Logged Out Successfully!!")
+    pyautogui.alert("Logged Out Successfully!!")
     return redirect('index')
