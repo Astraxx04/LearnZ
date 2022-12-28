@@ -124,6 +124,23 @@ def student_signin(request):
 
     return render(request, "authentication/StudentLogin.html")
 
+def teacher_signin(request):
+    if request.method == 'POST':
+        username = request.POST.get('teacherid',False)
+        pass1 = request.POST.get('pass1','')
+        
+        user = authenticate(username=username, password=pass1)
+        
+        if user is not None:
+            login(request, user)
+            fname = user.first_name
+            messages.success(request, "Logged In Sucessfully!!")
+            return render(request, "authentication/index.html",{"fname":fname})
+        else:
+            messages.error(request, "Bad Credentials!!")
+            return redirect('index')
+
+    return render(request, "authentication/TeacherLogin.html")
 
 def activate(request, uidb64, token):
     try:
