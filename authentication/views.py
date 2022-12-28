@@ -15,7 +15,6 @@ from django.utils.encoding import force_str
 django.utils.encoding.force_text = force_str
 
 
-
 # Create your views here.
 def index(request):
     return render(request, "authentication/index.html")
