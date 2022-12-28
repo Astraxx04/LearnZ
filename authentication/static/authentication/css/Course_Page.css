@@ -22,27 +22,28 @@
 .black {
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
-nav {
-	padding: 20px;
-	top: 0;
-	position: fixed;
-	display: flex;
-	width: 100%;
-	z-index: 1000;
-	background: var(--headerColor);
-	transition: 1.5s;
-	align-items: center;
-	height: 30px;
-}
-nav a{
-	color: black;
-}
-.logo img{
-	width: 100px;
-	aspect-ratio: 1;
-	transition: all 1s;
+header {
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  width: 100%;
+  background-color: var(--headerColor);
+  align-items: center;
+  
 }
 
+header .inner {
+  
+  align-items: center;
+  justify-content: space-between;
+}
+header .logo {
+	margin: 0.5rem;
+	
+}
+header .logo img{
+	width: 8rem;
+}
 header .SemesterDropdown{
 	padding: 5px 20px;
 	margin-left: 80%;

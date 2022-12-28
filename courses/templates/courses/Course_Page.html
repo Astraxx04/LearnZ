@@ -5,7 +5,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'authentication/css/Course_Page.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'authentication/css/Course_Page.css' %}"
+    />
     <script
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
       rel="stylesheet"
@@ -23,16 +26,25 @@
       src="https://kit.fontawesome.com/36bed4b74a.js"
       crossorigin="anonymous"
     ></script>
-    <script src="{% static 'authentication/js/Course_Page.js' %}" defer></script>
+    <script
+      src="{% static 'authentication/js/Course_Page.js' %}"
+      defer
+    ></script>
     <title>Courses</title>
   </head>
 
   <body>
     <!-- Header -->
     <header id="header">
+      <div class="inner flex">
+        <div class="logo">
+          <a href="{% url 'index' %}"
+            ><img
+              src="{% static 'authentication/images/icon/logo_full.png' %}"
+              alt="logo"
+          /></a>
+        </div>
 
-      <nav>
-        <div class="logo"><img src="{% static 'authentication/images/icon/logo_full.png' %}" alt="logo" /></div>
         <div class="SemesterDropdown">
           <a href="#" class="Title"
             >Semester <i class="fa-solid fa-angle-down"></i
@@ -43,7 +55,7 @@
           <span class="user_logo"><i class="fa-solid fa-user"></i></span>
           |
         </div>
-      </nav>
+      </div>
     </header>
 
     <!--cards-->
