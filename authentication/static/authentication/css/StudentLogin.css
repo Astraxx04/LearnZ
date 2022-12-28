@@ -14,7 +14,7 @@
   }
 :root{
 	--cyan:#baf8f8;
-	--headerColor:#ccc;
+	--headerColor:#fff;
 	--getstartedColor:rgba(0, 200, 200, 0.473);
 	--formTitleColor:#444;
 	--inputFieldBgColor:#f0f0f0;
@@ -44,8 +44,10 @@ header {
   width: 100%;
   background-color: var(--headerColor);
   align-items: center;
-  
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
+  
+
 
 header .inner {
   
