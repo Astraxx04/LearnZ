@@ -43,6 +43,9 @@
   
   header .inner {
 	 align-items: center;
+	 
+  }
+  .SemesterDropdown{
   }
   header .logo {
 	  margin: 0.5rem;
@@ -53,7 +56,10 @@
   }
   header .SemesterDropdown{
 	padding: 5px 20px;
-	margin-left: 84rem;
+	
+}
+header .user{
+	margin-right: -100rem;
 }
 /*Header for different size*/
 /*@media screen and (max-width: 2000px) {
