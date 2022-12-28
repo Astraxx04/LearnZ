@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="../css/StudentSignUp.css" />
+    <link rel="stylesheet" type="text/css" href="{%  static 'authentication/css/StudentSignUp.css' %}" />
     <title>Document</title>
     <script
       src="https://kit.fontawesome.com/36bed4b74a.js"
@@ -24,7 +24,7 @@
     <!-- Header -->
     <header id="header">
       <div class="inner flex">
-        <div class="logo"><img src="../images/icon/logo_full.png" alt="logo" /></div>
+        <div class="logo"><img src="{% static 'authentication/images/icon/logo_full.png' %}" alt="logo" /></div>
 
         <button
           class="mobile-nav-toggle"
@@ -35,7 +35,7 @@
         </button>
         <ul class="get-started">
           <li>
-            <a href="TeacherLogin.html">Sign In</a>
+            <a href="{% url 'teacher_login' %}">Sign In</a>
           </li>
         </ul>
       </div>
@@ -44,7 +44,7 @@
     <!--Info-->
     <div class="head-container">
       <div class="svg-image">
-        <img src="../images/teachersignup.png" alt="svg" />
+        <img src="{% static 'authentication/images/teachersignup.png' %}" alt="svg" />
       </div>
       <form action="" class="sign-up-form">
         <h2 class="title">Sign Up</h2>
@@ -56,11 +56,11 @@
         </div>
         <div class="input-field">
           <i class="fa fa-user"></i>
-          <input type="name" placeholder="Name" id="Newname" required />
+          <input type="name" name="FName" placeholder="FirstName" id="FName" required />
         </div>
         <div class="input-field">
-          <i class="fa fa-envelope"></i>
-          <input type="email" placeholder="Email" id="NewEmail" required />
+          <i class="fa fa-user"></i>
+          <input type="name" name="LName" placeholder="LastName" id="LName" required />
         </div>
         <div class="input-field">
           <i class="fa fa-id-card"></i>
@@ -85,7 +85,7 @@
           />
         </div>
         <div class="studlog">
-          <a href="../html/StudentLogin.html">Not a Teacher?</a>
+          <a href="{% url 'authentication/html/StudentLogin.html' %}">Not a Teacher?</a>
         </div>
         <input type="submit" value="Sign up" class="btn solid" id="SignUpBtn" />
       </form>
