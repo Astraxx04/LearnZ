@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/Course_Page.css" />
+    <link rel="stylesheet" href="{% static 'authentication/css/Course_Page.css' %}1" />
     <script
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
       rel="stylesheet"
@@ -22,15 +23,16 @@
       src="https://kit.fontawesome.com/36bed4b74a.js"
       crossorigin="anonymous"
     ></script>
-    <script src="../js/Course_Page.js" defer></script>
+    <script src="{% static 'authentication/js/Course_Page.js' %}" defer></script>
     <title>Courses</title>
   </head>
 
   <body>
     <!-- Header -->
     <header id="header">
+
       <nav>
-        <div class="logo"><img src="../images/icon/logo.ico" alt="logo" /></div>
+        <div class="logo"><img src="{% static 'authentication/images/icon/logo.ico' %}" alt="logo" /></div>
         <div class="SemesterDropdown">
           <a href="#" class="Title"
             >Semester <i class="fa-solid fa-angle-down"></i
@@ -45,7 +47,18 @@
     </header>
 
     <!--cards-->
-
+    <section>
+      {% if user.is_authenticated %}
+      <h3>Hello {{fname}}!</h3>
+      <h4>You're successfully logged in.</h4>
+      <button type="submit"><a href="{% url 'signout' %}">SignOut</a></button>
+      <!-- {% else %}
+      <button type="submit"><a href="{% url 'student_signup' %}"">SignUp</a></button>
+    <br />
+    <button type="submit"><a href="{% url 'student_signin' %}">SignIn</a></button>
+    </div>
+  {% endif %} -->
+    </section>
     <section>
       <div class="container" id="CourseContainer"></div>
     </section>
