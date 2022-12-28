@@ -13,7 +13,7 @@ from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 import django
 from django.utils.encoding import force_str
 django.utils.encoding.force_text = force_str
-import js2py
+
 
 
 # Create your views here.
