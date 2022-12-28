@@ -16,6 +16,8 @@
 	--cyan:#baf8f8;
 	--headerColor:#ccc;
 	--getstartedColor:rgba(0, 200, 200, 0.473);
+	--headerNavHoverColor:#baf8f8;
+	--getStartedHoverColor:#baf8f8;
 }
 
 .black {
@@ -46,10 +48,11 @@ header .inner {
   justify-content: space-between;
 }
 header .logo {
-  margin: 1rem;
+	margin: 0.5rem;
+	
 }
 header .logo img{
-	width: 50px;
+	width: 8rem;
 }
 header button span, .mobile-nav-toggle{
 	display: none;
@@ -65,9 +68,17 @@ header button span, .mobile-nav-toggle{
   .get-started{
 	background: var(--getstartedColor);
 	backdrop-filter: blur(5rem);
+	font-weight: bolder;
+	letter-spacing: 1.2px;
 	border-radius: 15px;
-	padding: 0.5rem;
-	margin-right: 2rem;
+	padding: 0.7rem;
+	margin-right: 2.5rem;
+	transform: translateX(-3.5rem);
+  }
+  
+  .get-started:hover{
+	transition: 1s;
+	background: var(--getStartedHoverColor);
   }
   /*header mobile view*/
   /*
@@ -117,12 +128,19 @@ header button span, .mobile-nav-toggle{
 	font-family: "Montserrat";
 	font-weight: 600;
 	transition: 0.5s;
+	border-radius: 0.5rem;
   }
-  nav li a:hover, .get-started li a:hover{
+  nav li a:hover{
 	letter-spacing: 2px;
 	transition: 1s;
+	background-color: var(--headerNavHoverColor);
+	padding:0.45rem;
   }
-
+.get-started li a:hover{
+	transition: 1s;
+	
+	letter-spacing: 2px;
+}
 
 .head-container {
 	margin-top:200px;
