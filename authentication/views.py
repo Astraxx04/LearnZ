@@ -126,7 +126,8 @@ def student_signin(request):
         if user is not None:
             login(request, user)
             fname = user.first_name
-            return render(request, "authentication/Course_Page.html",{"fname":fname})
+            messages.success(request, "Logged In Sucessfully!!")
+            return render(request, "courses/Course_Page.html",{"fname":fname})
         else:
             return redirect('index')
 
