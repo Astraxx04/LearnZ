@@ -40,3 +40,5 @@ Object.keys(Courses).forEach(Course => {
     div.appendChild(div1);
     
   });
+
+  //edited
