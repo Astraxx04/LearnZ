@@ -13,6 +13,7 @@ from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 import django
 from django.utils.encoding import force_str
 django.utils.encoding.force_text = force_str
+import js2py
 
 
 # Create your views here.
@@ -129,6 +130,9 @@ def student_signin(request):
             messages.success(request, "Logged In Sucessfully!!")
             return render(request, "authentication/Course_Page.html",{"fname":fname})
         else:
+            message="Wrong password"
+            alerting="alert('Wrong Passwords')"
+            print(s2py.eval_js(alerting))
             messages.error(request, "Bad Credentials!!")
             return redirect('index')
 
