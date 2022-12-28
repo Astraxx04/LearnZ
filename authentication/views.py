@@ -127,7 +127,7 @@ def student_signin(request):
             login(request, user)
             fname = user.first_name
             messages.success(request, "Logged In Sucessfully!!")
-            return render(request, "authentication/Course_Page.html",{"fname":fname})
+            return render(request, "courses/Course_Page.html",{"fname":fname})
         else:
             messages.error(request, "Bad Credentials!!")
             return redirect('index')
