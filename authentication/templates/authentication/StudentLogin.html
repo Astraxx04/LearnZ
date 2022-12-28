@@ -52,7 +52,7 @@
       <img src="{% static 'authentication/images/login.png' %}" alt="svg" />
     </div>
     <div class="form">
-      <form action="{% url 'student_signin' %}" method="post" class="sign-in-form" id="sign-in-form">
+      <form action="{% url 'student_signin' %}" method="post" class="sign-in-form" id="sign-in-form"> {% csrf_token %}
         <h2 class="title">Sign In</h2>
         <!--
           <div class="input-field">

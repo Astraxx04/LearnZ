@@ -15,13 +15,13 @@ import django
 from django.utils.encoding import force_str
 django.utils.encoding.force_text = force_str
 
+#delete this comment
 
 # Create your views here.
 def index(request):
     return render(request, "authentication/index.html")
 
 
-@csrf_exempt
 def student_signup(request):
     if request.method == "POST":
         CollegeName = request.POST['CollegeName']
@@ -63,7 +63,6 @@ def student_signup(request):
         return redirect('student_signin')
 
     return render(request, "authentication/StudentSignup.html")
-
 
 def teacher_signup(request):
     if request.method == "POST":
@@ -107,8 +106,6 @@ def teacher_signup(request):
 
     return render(request, "authentication/TeacherSignup.html")
 
-
-@csrf_exempt
 def student_signin(request):
     if request.method == 'POST':
         username = request.POST.get('usn',False)
