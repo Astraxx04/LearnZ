@@ -16,6 +16,7 @@ import pyautogui
 django.utils.encoding.force_text = force_str
 
 
+
 # Create your views here.
 def index(request):
     return render(request, "authentication/index.html")

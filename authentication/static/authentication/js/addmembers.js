@@ -1,8 +1,12 @@
 
 //Person Name - Key,, github - 0 index,, linkdin - 1 index,, imagepath - 2 index
 
-const Peoples={"Bhawesh Agarwal": ["FrontEnd","https://github.com/Bhawesh02","https://www.linkedin.com/in/bhawesh-agarwal-70b98b113/","../images/creator/me.jpg"],
-"Nidhi":["Frontend","https://github.com/Sonuuuuuuu","https://www.linkedin.com/in/konjeti-nidhi-96245a226/","../images/creator/me.jpg"]
+const Peoples={"Bhawesh Agarwal": ["FrontEnd","https://github.com/Bhawesh02","https://www.linkedin.com/in/bhawesh-agarwal-70b98b113/","/static/authentication/images/creator/me.jpg"],
+"Nidhi":["Frontend","https://github.com/Sonuuuuuuu","https://www.linkedin.com/in/konjeti-nidhi-96245a226/","/static/authentication/images/creator/me.jpg"],"asd": ["FrontEnd","https://github.com/Bhawesh02","https://www.linkedin.com/in/bhawesh-agarwal-70b98b113/","/static/authentication/images/creator/me.jpg"],
+"Nasd":["Frontend","https://github.com/Sonuuuuuuu","https://www.linkedin.com/in/konjeti-nidhi-96245a226/","/static/authentication/images/creator/me.jpg"],"Bha213wesh Agarwal": ["FrontEnd","https://github.com/Bhawesh02","https://www.linkedin.com/in/bhawesh-agarwal-70b98b113/","/static/authentication/images/creator/me.jpg"],
+"Niasdhi":["Frontend","https://github.com/Sonuuuuuuu","https://www.linkedin.com/in/konjeti-nidhi-96245a226/","/static/authentication/images/creator/me.jpg"],"Bhawqwe21esh Agarwal": ["FrontEnd","https://github.com/Bhawesh02","https://www.linkedin.com/in/bhawesh-agarwal-70b98b113/","/static/authentication/images/creator/me.jpg"],
+"Niassaddhi":["Frontend","https://github.com/Sonuuuuuuu","https://www.linkedin.com/in/konjeti-nidhi-96245a226/","/static/authentication/images/creator/me.jpg"],"Bhawasdwqeesh Agarwal": ["FrontEnd","https://github.com/Bhawesh02","https://www.linkedin.com/in/bhawesh-agarwal-70b98b113/","/static/authentication/images/creator/me.jpg"],
+"Niasaadhi":["Frontend","https://github.com/Sonuuuuuuu","https://www.linkedin.com/in/konjeti-nidhi-96245a226/","/static/authentication/images/creator/me.jpg"]
 };
 
 
