@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="../css/StudentLogin.css" />
+    <link rel="stylesheet" type="text/css" href="{% static 'authentucation/css/StudentLogin.css' %}" />
     <title>Document</title>
     <script
       src="https://kit.fontawesome.com/36bed4b74a.js"
@@ -24,7 +24,7 @@
     <!-- Header -->
     <header id="header">
       <div class="inner flex">
-        <div class="logo"><img src="../images/icon/logo_full.png" alt="logo" /></div>
+        <div class="logo"><img src="{% static 'authentication/images/icon/logo_full.png' %}" alt="logo" /></div>
 
         <button
           class="mobile-nav-toggle"
@@ -33,22 +33,9 @@
         >
           <span class="sr-only">Menu</span>
         </button>
-
-        <nav>
-          <ul
-            id="primary-navigation"
-            data-visible="false"
-            class="primary-navigation flex"
-          >
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#services_section">Services</a></li>
-            <li><a href="#contactus_section">Contact</a></li>
-            <li><a href="#contactus_section">About Us</a></li>
-          </ul>
-        </nav>
         <ul class="get-started">
           <li>
-            <a href="TeacherSignup.html">Sign Up</a>
+            <a href="{% url 'teacher_signup'%}">Sign Up</a>
           </li>
         </ul>
       </div>
@@ -57,7 +44,7 @@
     <!--Info-->
     <div class="head-container">
       <div class="svg-image">
-        <img src="../images/teacherlogin.png" alt="svg" />
+        <img src="{% static 'authentication/images/teacherlogin.png' %}" alt="svg" />
       </div>
       <div class="form">
         <form action="" class="sign-in-form" id="sign-in-form">
@@ -88,7 +75,7 @@
             />
           </div>
           <div class="studlog">
-            <a href="../html/StudentLogin.html">Not a Teacher?</a>
+            <a href="{% url 'authentication/html/StudentLogin.html' %}">Not a Teacher?</a>
           </div>
           <input type="submit" id="Login" value="Login" class="btn solid" />
 
