@@ -4,4 +4,4 @@ from django.shortcuts import render
 
 
 def course_page(request):
-    return render(request, "Course_Page.html")
+    return render(request, "courses/Course_Page.html")

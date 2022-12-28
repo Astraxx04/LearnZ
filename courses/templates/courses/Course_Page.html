@@ -5,7 +5,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'authentication/css/Course_Page.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'courses/css/Course_Page.css' %}"
+    />
     <script
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
       rel="stylesheet"
@@ -23,16 +26,25 @@
       src="https://kit.fontawesome.com/36bed4b74a.js"
       crossorigin="anonymous"
     ></script>
-    <script src="{% static 'authentication/js/Course_Page.js' %}" defer></script>
+    <script
+      src="{% static 'courses/js/Course_Page.js' %}"
+      defer
+    ></script>
     <title>Courses</title>
   </head>
 
   <body>
     <!-- Header -->
     <header id="header">
+      <div class="inner flex">
+        <div class="logo">
+          <a href="{% url 'index' %}"
+            ><img
+              src="{% static 'courses/images/icon/logo_full.png' %}"
+              alt="logo"
+          /></a>
+        </div>
 
-      <nav>
-        <div class="logo"><img src="{% static 'authentication/images/icon/logo_full.png' %}" alt="logo" /></div>
         <div class="SemesterDropdown">
           <a href="#" class="Title"
             >Semester <i class="fa-solid fa-angle-down"></i
@@ -43,45 +55,25 @@
           <span class="user_logo"><i class="fa-solid fa-user"></i></span>
           |
         </div>
-      </nav>
+      </div>
     </header>
 
     <!--cards-->
+<!--
     <section>
       {% if user.is_authenticated %}
       <h3>Hello {{fname}}!</h3>
       <h4>You're successfully logged in.</h4>
       <button type="submit"><a href="{% url 'signout' %}">SignOut</a></button>
-      <!-- {% else %}
+      {% else %}
       <button type="submit"><a href="{% url 'student_signup' %}"">SignUp</a></button>
     <br />
     <button type="submit"><a href="{% url 'student_signin' %}">SignIn</a></button>
     </div>
-  {% endif %} -->
-    </section>
+  {% endif %} 
+    </section>-->
     <section>
       <div class="container" id="CourseContainer"></div>
     </section>
-    <footer>
-      <div class="footer-container">
-        <div class="left-col">
-          <h1 class="footer_header">Contact Us</h1>
-          <p><i class="fa-solid fa-phone"></i> +91-123456785</p>
-          <p><i class="fa-solid fa-envelope"></i> expamle@gmail.com</p>
-          <p>
-            <i class="fa-solid fa-location-dot"></i> Dayananda Sagar College of
-            Engineering <br />Bangalore, Karnataka-560078
-          </p>
-        </div>
-        <div class="mid-col">
-          <h1 class="footer_header">Quick Links</h1>
-          <div class="links">
-            <p><a href="">Home</a></p>
-            <p><a href="">Log in</a></p>
-            <p><a href="">About us</a></p>
-          </div>
-        </div>
-      </div>
-    </footer>
   </body>
 </html>
