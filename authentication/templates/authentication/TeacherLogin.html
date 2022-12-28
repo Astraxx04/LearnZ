@@ -35,7 +35,7 @@
         </button>
         <ul class="get-started">
           <li>
-            <a href="TeacherSignup.html">Sign Up</a>
+            <a href="{% url 'teacher_signup'%}">Sign Up</a>
           </li>
         </ul>
       </div>
@@ -44,7 +44,7 @@
     <!--Info-->
     <div class="head-container">
       <div class="svg-image">
-        <img src="../images/teacherlogin.png" alt="svg" />
+        <img src="{% static 'authentication/images/teacherlogin.png' %}" alt="svg" />
       </div>
       <div class="form">
         <form action="" class="sign-in-form" id="sign-in-form">
@@ -75,7 +75,7 @@
             />
           </div>
           <div class="studlog">
-            <a href="../html/StudentLogin.html">Not a Teacher?</a>
+            <a href="{% url 'authentication/html/StudentLogin.html' %}">Not a Teacher?</a>
           </div>
           <input type="submit" id="Login" value="Login" class="btn solid" />
 
