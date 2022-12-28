@@ -70,6 +70,7 @@ def student_signup(request):
     return render(request, "authentication/StudentSignup.html")
 
 def teacher_signup(request):
+    #baba
     if request.method == "POST":
         CollegeName = request.POST['CollegeName']
         username = request.POST['teacherid']
