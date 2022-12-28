@@ -224,7 +224,7 @@ header button span, .mobile-nav-toggle{
 	letter-spacing: 1.2px;
 	font-weight: bold;
 	color: #2E3D49;
-	font-size: 45px;
+	font-size: 3rem;
 	font-weight: 800;
 	text-transform: capitalize;
 }
@@ -235,20 +235,20 @@ header button span, .mobile-nav-toggle{
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
-	margin: 40px 0;
+	margin: 2.8rem 0;
   }
   .cardContainer .card {
 	position: relative;
-	width: 300px;
-	height: 400px;
+	width: 18.75rem;
+	height: 25rem;
 	background: rgba(255, 255, 255, 0.05);
 	margin: 1REM;
-	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-	border-radius: 15px;
+	box-shadow: 0 0.938rem 2.188rem rgba(0, 0, 0, 0.2);
+	border-radius: 0.938rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	backdrop-filter: blur(10px);
+	backdrop-filter: blur(0.625);
 	padding-left: 1REM;
   }
   .cardContainer .card .content {
@@ -291,11 +291,11 @@ header button span, .mobile-nav-toggle{
   .cardContainer .card .content .contentBx h3 {
 	color: var(--servicesText);
 	text-transform: uppercase;
-	letter-spacing: 2px;
+	letter-spacing: 0.125rem;
 	font-weight: 500;
-	font-size: 18px;
+	font-size: 1.125rem;
 	text-align: center;
-	margin: 20px 0 10px;
+	margin: 1.25rem 0 0.625rem;
 	line-height: 1.1em;
   }
   .cardContainer .card .content .contentBx h3 span{

@@ -43,7 +43,7 @@
     <div class="svg-image">
       <img src="{%static 'authentication/images/undraw_online_test_re_kyfx.svg'%}" alt="svg" />
     </div>
-    <form action="{% url 'student_signup' %}" method="post" class="sign-up-form">{% csrf_token %}
+    <form action="{% url 'student_signup' %}" method="post" class="sign-up-form"> {% csrf_token %}
       <h2 class="title">Sign Up</h2>
       <div class="input-field">
         <i class="fa fa-building"></i>

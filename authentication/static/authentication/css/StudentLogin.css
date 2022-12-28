@@ -16,7 +16,7 @@
 	--cyan:#baf8f8;
 	--headerColor:#fff;
 	--getstartedColor:rgba(0, 200, 200, 0.473);
-	--formTitleColor:#444;
+	--formTitleColor:white;
 	--inputFieldBgColor:#f0f0f0;
 	--selectCollegeColor:#333;
 	--inputFieldPlaceHolder:#aaa;
@@ -55,7 +55,7 @@ header .inner {
   justify-content: space-between;
 }
 header .logo {
-  margin: 1rem;
+  margin: 8rem;
 }
 header .logo img{
 	width: 100px;
