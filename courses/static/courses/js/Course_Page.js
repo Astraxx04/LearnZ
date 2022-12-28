@@ -39,15 +39,7 @@ Object.keys(Courses).forEach(Course => {
     div1.classList.add("course-preview");
     div1.innerHTML=`<h6>Course</h6>
     <h2>`+Course+`</h2>
-    <a href="#"
-      >View all chapters <i class="fas fa-chevron-right"></i
-    ></a>`;
-    div.appendChild(div1);
-     //Creted div with class course-info and make content as card;
-    var div2 = document.createElement('div');
-    div2.classList.add("course-info");
-    div2.innerHTML=`<h6>`+Courses[Course][0]+`</h6>
-    <h2>`+Courses[Course][1]+`</h2>
     <button class="btn">Continue</button>`;
-    div.appendChild(div2);
+    div.appendChild(div1);
+    
   });

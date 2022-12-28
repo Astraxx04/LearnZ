@@ -9,7 +9,7 @@
 	--headerColor:#ccc;
 	--cardBackground:#ccc;
 	--courseBackground:#27a9a6;
-	--courseContinueButton:#27a9a6;
+	--courseContinueButton:#a8b9ef;
 	--semesterBorderColor:#27a9a6;
 	--semesterHoverColor:#27a9a6;
 	--semesterDropdownHoverColor:#27a9a6;
@@ -17,6 +17,8 @@
 	--semesterInDropdownBackgroundColor:#ccc;
 	--dropdownBackground:rgba(0, 0, 0, 0.4);
 	--userbBorderColor:#27a9a6;
+	--getstartedColor:#abbcef;  /*Get started is signout*/
+	--getStartedHoverColor:#527af6;
 
 }
 
@@ -132,12 +134,27 @@ transition-delay:0s,0s,0.3s ;
 	padding: 2px;
 	border: 2px solid var(--userbBorderColor);
 }
+
+.get-started{
+	background: var(--getstartedColor);
+	backdrop-filter: blur(5rem);
+	font-weight: bolder;
+	letter-spacing: 1.2px;
+	border-radius: 15px;
+	padding: 0.7rem;
+  }
+  
+  .get-started:hover{
+	transition: 1s;
+	background: var(--getStartedHoverColor);
+  }
 body{
 	background:#fff;
 	font-family: 'Muli',sans-serif;
 	overflow-x:hidden;
 	
 }
+
 /*cards*/
 
 
@@ -160,8 +177,7 @@ section{
   }
   .container .card {
 	position: relative;
-	width: 700px;
-	height: 250px;
+	
 	margin-right: 90px;
 	margin-bottom: 50px;
 	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
@@ -174,25 +190,7 @@ section{
 	background-color: var(--cardBackground);
   }
 
-.courses-container{
-	display: flex;
-  	flex-wrap: wrap;
-	flex-direction: row;
-	background-color: red;
-	overflow: hidden;
-	width: 1000rem;
-}
 
-.course{
-	background-color: #fff;
-	border-radius: 10px;
-	box-shadow: 0 10px 10px rgba(0,0,0,0.2);
-	display: flex;
-	overflow: hidden;
-	width: 70rem;
-	
-
-}
 .course h6{
 	opacity: 0.6;
 	margin: 0;
@@ -204,33 +202,17 @@ section{
 	margin: 10px 0;
 }
 .course-preview{
-	background-color: var(--courseBackground);
+	background-color: var(--getStartedHoverColor);
 	color: #fff;
 	padding: 30px;
 	max-width: 500px;
 	width: 300px;
-	height: 190px;
+	height: 10px;
 	border-radius: 15px;
 
 }
-.course-preview a{
-	color: #fff;
-	display: inline-block;
-	font-size: 12px;
-	opacity: 0.6;
-	margin-top: 30px; 
-  
-	text-decoration: none;
-}
-.course-info{
-	padding: 30px;
-	position: relative;
-	width: 100%;
-	background-color: #ccc;
-}
-
- .course-info .btn{
-	background-color: var(--courseContinueButton);
+.btn{
+	background-color: var(--courseBackground);
 	border: 0;
 	border-radius: 50px;
 	box-shadow: 0 10px 10px rgba(0,0,0,0.2);
@@ -239,8 +221,13 @@ section{
 	padding: 12px 25px;
 	position: absolute;
 	bottom: 30px;
-	right: 30px;
+	right: 10px;
 	letter-spacing: 1px;
+	cursor: pointer;
+	transition: 1s;
+}
+.btn:hover{
+	background-color: var(--getStartedColor);
 }
 
 /*Footer */
