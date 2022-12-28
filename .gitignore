@@ -1,1 +1,4 @@
 .DS_Store
+
+authentication/__pycache__/
+authentication/migrations/__pycache__/
