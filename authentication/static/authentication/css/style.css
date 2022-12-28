@@ -18,6 +18,7 @@
 	--getstartedColor:rgba(0, 200, 200, 0.473);
 	--headerNavHoverColor:#baf8f8;
 	--getStartedHoverColor:#baf8f8;
+	--servicesText:black;
 }
 
 .black {
@@ -251,13 +252,18 @@ header button span, .mobile-nav-toggle{
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	opacity: 0.5;
+	opacity: 1;
 	transition: 0.5s;
   }
+
+/*Content hover*/
   .cardContainer .card:hover .content {
-	opacity: 1;
-	transform: translateY(-20px);
+	transform: translateY(-10rem);
   }
+
+
+
+
   .cardContainer .card .content .imgBx {
 	position: relative;
 	width: 10rem;
@@ -266,13 +272,19 @@ header button span, .mobile-nav-toggle{
   }
   .cardContainer .card .content .imgBx img {
 	position: absolute;
+	opacity: 1;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
+	transition: 0.2s;
+  }
+
+  .cardContainer .card:hover .content .imgBx img{
+	opacity: 0;
   }
   .cardContainer .card .content .contentBx h3 {
-	color: #fff;
+	color: var(--servicesText);
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-weight: 500;
@@ -280,6 +292,15 @@ header button span, .mobile-nav-toggle{
 	text-align: center;
 	margin: 20px 0 10px;
 	line-height: 1.1em;
+  }
+  .cardContainer .card .content .contentBx h3 span{
+	opacity: 0;
+	transition: 0.5s;
+
+  }
+  /*span on hover*/
+  .cardContainer .card:hover .content .contentBx h3 span{
+	opacity: 1;
   }
 /*Contact Us Section*/
 
