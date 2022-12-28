@@ -1,9 +1,9 @@
 
 //Person Name - Key,, github - 0 index,, linkdin - 1 index,, imagepath - 2 index
 
-const Peoples={"SYLLABUS": ["FrontEnd","https://github.com/Bhawesh02","https://www.linkedin.com/in/bhawesh-agarwal-70b98b113/","../images/creator/me.jpg"],
-"QUIZ":["Frontend","https://github.com/Sonuuuuuuu","https://www.linkedin.com/in/konjeti-nidhi-96245a226/","../images/creator/me.jpg"],"MATERIAL":["Frontend","https://github.com/Sonuuuuuuu","https://www.linkedin.com/in/konjeti-nidhi-96245a226/","../images/creator/me.jpg"],
-"":["Frontend","https://github.com/Sonuuuuuuu","https://www.linkedin.com/in/konjeti-nidhi-96245a226/","../images/creator/me.jpg"]
+const Peoples={"QUIZ": ["","https://github.com/Bhawesh02","https://www.linkedin.com/in/bhawesh-agarwal-70b98b113/","../images/quiz.svg"],
+"ONLINE VIDEOS":["","https://github.com/Sonuuuuuuu","https://www.linkedin.com/in/konjeti-nidhi-96245a226/","../images/lectures.svg"],"NOTES":["","https://github.com/Sonuuuuuuu","https://www.linkedin.com/in/konjeti-nidhi-96245a226/","../images/notes.svg"],
+"SYLLABUS":["","https://github.com/Sonuuuuuuu","https://www.linkedin.com/in/konjeti-nidhi-96245a226/","../images/syllabus.svg"]
 };
 
 
@@ -32,7 +32,7 @@ Object.keys(Peoples).forEach(People => {
     div4.innerHTML="<h3>"+People+"<br /><span>"+Peoples[People][0]+"</span></h3>";
     div1.appendChild(div4);
     //added git and likdin to card as parent
-    var ul = document.createElement('ul');
+  /*  var ul = document.createElement('ul');
     ul.classList.add("sci");
     div.appendChild(ul);
     var li = document.createElement('li');
@@ -42,6 +42,6 @@ Object.keys(Peoples).forEach(People => {
     var li1 = document.createElement('li');
     li1.setAttribute("style","\"--i: 1\"")
     li1.innerHTML="<a href=\""+Peoples[People][2]+"\"><i class=\"fa-brands fa-linkedin\"></i></a>";
-    ul.appendChild(li1);
+    ul.appendChild(li1); */
 
   });

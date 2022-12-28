@@ -2,9 +2,7 @@
     margin: 0;
     padding: 0;
   }
-  body{
-    
-  }
+  
   .Title{
     display: flex;
     justify-content: center;
@@ -12,6 +10,8 @@
     margin-top: 25px;
     text-transform: uppercase;
     letter-spacing: 1.4px;
+    text-decoration: underline;
+    
     
   }
   section {
@@ -30,6 +30,7 @@
     align-items: center;
     flex-wrap: wrap;
     margin: 40px 0;
+    margin-top: 150px;
   }
   .container .card {
     position: relative;
@@ -42,7 +43,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(10px);
+   backdrop-filter: blur(10px);
+   
   }
   .container .card .content {
     position: relative;
@@ -50,20 +52,25 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    opacity: 0.5;
+   /* opacity: 0.5;*/
     transition: 0.5s;
   }
   .container .card:hover .content {
     opacity: 1;
     transform: translateY(-20px);
+    
+    
   }
+  .container .card:hover{
+  background-color: lavender;
+  } 
   .container .card .content .imgBx {
     position: relative;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    
     overflow: hidden;
-    border: 10px solid rgba(0, 0, 0, 0.25);
+     border: 10px solid rgba(0, 0, 0, 0.50);
   }
   .container .card .content .imgBx img {
     position: absolute;
@@ -76,7 +83,7 @@
   .container .card .content .contentBx h3 {
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-weight: 500;
+    font-weight: 1000;
     font-size: 18px;
     text-align: center;
     margin: 20px 0 10px;
