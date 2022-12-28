@@ -15,6 +15,7 @@ import django
 from django.utils.encoding import force_str
 django.utils.encoding.force_text = force_str
 
+#delete this comment
 
 # Create your views here.
 def index(request):
