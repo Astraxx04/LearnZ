@@ -19,36 +19,44 @@
 	--userbBorderColor:#27a9a6;
 
 }
-.black {
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-}
-nav {
-	padding: 20px;
-	top: 0;
-	position: fixed;
-	display: flex;
-	width: 100%;
-	z-index: 1000;
-	background: var(--headerColor);
-	transition: 1.5s;
-	align-items: center;
-	height: 30px;
-}
-nav a{
-	color: black;
-}
-.logo img{
-	width: 100px;
-	aspect-ratio: 1;
-	transition: all 1s;
-}
 
-header .SemesterDropdown{
+.flex {
+	display: flex;
+	gap: var(--gap,5ex);
+  }
+  html {
+	  scroll-behavior: smooth;
+  }
+  body {
+	  background: #FFF;
+	  font-family: 'Open Sans', sans-serif;
+  }
+  header {
+	top: 0;
+	left: 0;
+	z-index: 99999;
+	width: 100%;
+	background-color: var(--headerColor);
+	align-items: center;
+	
+  }
+  
+  header .inner {
+	 align-items: center;
+  }
+  header .logo {
+	  margin: 0.5rem;
+	  
+  }
+  header .logo img{
+	  width: 8rem;
+  }
+  header .SemesterDropdown{
 	padding: 5px 20px;
-	margin-left: 80%;
+	margin-left: 84rem;
 }
 /*Header for different size*/
-@media screen and (max-width: 2000px) {
+/*@media screen and (max-width: 2000px) {
 	header .SemesterDropdown{
 		margin-left: 75%;
 	}
@@ -69,7 +77,7 @@ header .SemesterDropdown{
 		margin-left: 60%;
 	}
   }
-  
+  */
 header .Title{
 	padding: 5px 20px;
 	border-radius: 20px;
@@ -82,21 +90,20 @@ header .SemesterDropdown:hover .Title,header .SemesterDropdown:focus .Title{
 header .dropdown{
 	visibility: hidden;
 	opacity: 0;
+	top:4.5rem;
 	position: absolute;
-	top:100%;
 	margin-left:10px;
 	background-color: var(--dropdownBackground);
 	box-shadow: 0 5px 45px rgb(1 1 1 / 75%);
 	border-radius: 5px;
 	transform: translateY(-3rem);
-	z-index: -1;
+	z-index: 10;
 	transition: all 0.3s ease 0s,visibility 0s linear 0.3s, z-index 0s linear 0.01s;
 }
 header .SemesterDropdown:hover .dropdown,header .SemesterDropdown:focus .dropdown{
 	cursor: pointer;
 visibility: visible;
 opacity: 1;
-z-index: 1;
 transform: translateY(-0.7rem);
 transition-delay:0s,0s,0.3s ;
 }

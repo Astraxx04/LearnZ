@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="{% static 'authentication/css/Course_Page.css' %}"
+      href="{% static 'courses/css/Course_Page.css' %}"
     />
     <script
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -27,7 +27,7 @@
       crossorigin="anonymous"
     ></script>
     <script
-      src="{% static 'authentication/js/Course_Page.js' %}"
+      src="{% static 'courses/js/Course_Page.js' %}"
       defer
     ></script>
     <title>Courses</title>
@@ -40,7 +40,7 @@
         <div class="logo">
           <a href="{% url 'index' %}"
             ><img
-              src="{% static 'authentication/images/icon/logo_full.png' %}"
+              src="{% static 'courses/images/icon/logo_full.png' %}"
               alt="logo"
           /></a>
         </div>
@@ -59,18 +59,19 @@
     </header>
 
     <!--cards-->
+<!--
     <section>
       {% if user.is_authenticated %}
       <h3>Hello {{fname}}!</h3>
       <h4>You're successfully logged in.</h4>
       <button type="submit"><a href="{% url 'signout' %}">SignOut</a></button>
-      <!-- {% else %}
+      {% else %}
       <button type="submit"><a href="{% url 'student_signup' %}"">SignUp</a></button>
     <br />
     <button type="submit"><a href="{% url 'student_signin' %}">SignIn</a></button>
     </div>
-  {% endif %} -->
-    </section>
+  {% endif %} 
+    </section>-->
     <section>
       <div class="container" id="CourseContainer"></div>
     </section>
