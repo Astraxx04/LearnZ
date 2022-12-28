@@ -35,24 +35,24 @@ def student_signup(request):
         pass2 = request.POST['ConfiPass']
 
         if User.objects.filter(username=username):
-            messages.error(
-                request, "USN already exist! Please try some other username.")
+            # messages.error(
+            #     request, "USN already exist! Please try some other username.")
             return redirect('index')
 
         if User.objects.filter(email=email).exists():
-            messages.error(request, "Email Already Registered!!")
+            # messages.error(request, "Email Already Registered!!")
             return redirect('index')
 
         if len(username) > 20:
-            messages.error(request, "Usn must be under 20 charcters!!")
+            # messages.error(request, "Usn must be under 20 charcters!!")
             return redirect('index')
 
         if pass1 != pass2:
-            messages.error(request, "Passwords didn't matched!!")
+            # messages.error(request, "Passwords didn't matched!!")
             return redirect('index')
 
         if not username.isalnum():
-            messages.error(request, "Username must be Alpha-Numeric!!")
+            # messages.error(request, "Username must be Alpha-Numeric!!")
             return redirect('index')
 
         myuser = User.objects.create_user(username, email, pass1)
@@ -82,24 +82,24 @@ def teacher_signup(request):
         pass2 = request.POST['ConfiPass']
 
         if User.objects.filter(username=username):
-            messages.error(
-                request, "teacherid already exist! Please try some other username.")
+            # messages.error(
+            #     request, "teacherid already exist! Please try some other username.")
             return redirect('index')
 
         if User.objects.filter(email=email).exists():
-            messages.error(request, "Email Already Registered!!")
+            # messages.error(request, "Email Already Registered!!")
             return redirect('index')
 
         if len(username) > 20:
-            messages.error(request, "Usn must be under 20 charcters!!")
+            # messages.error(request, "Usn must be under 20 charcters!!")
             return redirect('index')
 
         if pass1 != pass2:
-            messages.error(request, "Passwords didn't matched!!")
+            # messages.error(request, "Passwords didn't matched!!")
             return redirect('index')
 
         if not username.isalnum():
-            messages.error(request, "Username must be Alpha-Numeric!!")
+            # messages.error(request, "Username must be Alpha-Numeric!!")
             return redirect('index')
 
         myuser = User.objects.create_user(username, email, pass1)
@@ -128,12 +128,8 @@ def student_signin(request):
             login(request, user)
             fname = user.first_name
             messages.success(request, "Logged In Sucessfully!!")
-            return render(request, "authentication/Course_Page.html",{"fname":fname})
+            return render(request, "courses/Course_Page.html",{"fname":fname})
         else:
-            message="Wrong password"
-            alerting="alert('Wrong Passwords')"
-            print(s2py.eval_js(alerting))
-            messages.error(request, "Bad Credentials!!")
             return redirect('index')
 
     return render(request, "authentication/StudentLogin.html")
@@ -148,10 +144,8 @@ def teacher_signin(request):
         if user is not None:
             login(request, user)
             fname = user.first_name
-            messages.success(request, "Logged In Sucessfully!!")
             return render(request, "authentication/index.html",{"fname":fname})
         else:
-            messages.error(request, "Bad Credentials!!")
             return redirect('index')
 
     return render(request, "authentication/TeacherLogin.html")
