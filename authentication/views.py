@@ -36,23 +36,23 @@ def student_signup(request):
 
         if User.objects.filter(username=username):
             # pyautogui.alert("USN already exist! Please try some other username.")
-            return redirect('index')
+            return redirect('student_signup')
 
         if User.objects.filter(email=email).exists():
             # pyautogui.alert("Email Already Registered!!")
-            return redirect('index')
+            return redirect('student_signup')
 
         if len(username) > 20:
             # pyautogui.alert("Usn must be under 20 charcters!!")
-            return redirect('index')
+            return redirect('student_signup')
 
         if pass1 != pass2:
             # pyautogui.alert("Passwords didn't matched!!")
-            return redirect('index')
+            return redirect('student_signup')
 
         if not username.isalnum():
             # pyautogui.alert("Username must be Alpha-Numeric!!")
-            return redirect('index')
+            return redirect('student_signup')
 
         myuser = User.objects.create_user(username, email, pass1)
         myuser.first_name = fname
