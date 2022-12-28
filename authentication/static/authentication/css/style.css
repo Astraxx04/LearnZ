@@ -392,13 +392,22 @@ textarea{
   }
 /*About us*/
 
+:root{
+	--aboutuscardwidth:250px;
+	--aboutuscardheight:350px;
+	--aboutuscardimgbx:120px;
+	--aboutuscardimgbxBorder:10px;
 
+}
+.aboutus{
+	margin-top:2rem;
+}
 section {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
-	
+	margin: 0 10rem;
   }
   
   .container {
@@ -412,8 +421,8 @@ section {
   }
   .container .card {
 	position: relative;
-	width: 300px;
-	height: 400px;
+	width: var(--aboutuscardwidth);
+	height: var(--aboutuscardheight);
 	background: rgba(255, 255, 255, 0.05);
 	margin: 20px;
 	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
@@ -429,20 +438,18 @@ section {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	opacity: 0.5;
 	transition: 0.5s;
   }
   .container .card:hover .content {
-	opacity: 1;
 	transform: translateY(-20px);
   }
   .container .card .content .imgBx {
 	position: relative;
-	width: 150px;
-	height: 150px;
+	width:var(--aboutuscardimgbx);
+	aspect-ratio: 1;
 	border-radius: 50%;
 	overflow: hidden;
-	border: 10px solid rgba(0, 0, 0, 0.25);
+	border: var(--aboutuscardimgbxBorder) solid rgba(0, 0, 0, 0.25);
   }
   .container .card .content .imgBx img {
 	position: absolute;
@@ -480,7 +487,7 @@ section {
 	transition-delay: calc(0.1s * var(--i));
   }
   .container .card:hover .sci li {
-	transform: translateY(0px);
+	transform: translateY(10px);
 	opacity: 1;
   }
   .container .card .sci li a {
