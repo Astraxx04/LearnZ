@@ -87,41 +87,56 @@
         <div class="cardContainer">
           <div class="card">
             <div class="content">
-              <div class="imgBx"><img src="{% static 'authentication/images/extra/svg1.jpg' %}" /></div>
+              <div class="imgBx">
+                <img
+                  src="{% static 'authentication/images/extra/svg1.jpg' %}"
+                />
+              </div>
               <div class="contentBx">
-                <h3>Somewhere<br /><br /><span>nice</span></h3>
+                <h3>
+                  all-in-one platform<br /><br /><span
+                    >An all-in-one E-Learning platform for students and teachers where students can access materials posted by educators.
+                    </span
+                  >
+                </h3>
               </div>
             </div>
           </div>
           <div class="card">
             <div class="content">
-              <div class="imgBx"><img src="{% static 'authentication/images/extra/svg1.jpg' %}" /></div>
+              <div class="imgBx">
+                <img
+                  src="{% static 'authentication/images/extra/svg1.jpg' %}"
+                />
+              </div>
               <div class="contentBx">
-                <h3>Somewhere<br /><br /><span>nice</span></h3>
+                <h3>Structured Environment<br /><br /><span>A well structured educational environment with a pleasant user experience.
+                </span></h3>
               </div>
             </div>
           </div>
           <div class="card">
             <div class="content">
-              <div class="imgBx"><img src="{% static 'authentication/images/extra/svg1.jpg' %}" /></div>
+              <div class="imgBx">
+                <img
+                  src="{% static 'authentication/images/extra/svg1.jpg' %}"
+                />
+              </div>
               <div class="contentBx">
-                <h3>Somewhere<br /><br /><span>nice</span></h3>
+                <h3>Automatic Reference Materials Suggestions<br /><br /><span>Students will be able to obtain relevant YouTube Video links for the selected course.
+                </span></h3>
               </div>
             </div>
           </div>
           <div class="card">
             <div class="content">
-              <div class="imgBx"><img src="{% static 'authentication/images/extra/svg1.jpg' %}" /></div>
-              <div class="contentBx">
-                <h3>Somewhere<br /><br /><span>nice</span></h3>
+              <div class="imgBx">
+                <img
+                  src="{% static 'authentication/images/extra/svg1.jpg' %}"
+                />
               </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="content">
-              <div class="imgBx"><img src="{% static 'authentication/images/extra/svg1.jpg' %}" /></div>
               <div class="contentBx">
-                <h3>Somewhere<br /><br /><span>nice</span></h3>
+                <h3>E-Learning<br /><br /><span>Contributing to the advancement of E-Learning</span></h3>
               </div>
             </div>
           </div>
@@ -140,32 +155,54 @@
           <img src="{% static 'authentication/images/icon/q1.png' %}" />
           <p>Brain teasing quizzes</p>
         </div>
-      </a>
+      </section>
     </div>
-  </div>
-  <!-- CONTACT US -->
-  <div class="diffSection" id="contactus_section">
-    <center>
-      <p style="font-size: 50px; padding: 100px">Contact Us</p>
-    </center>
-    <div class="back-contact">
-      <div class="cc">
-        <form action="mailto:roshank9419@gmail.com" method="post" enctype="text/plain">
-          <label>First Name <span class="imp">*</span></label><label style="margin-left: 185px">Last Name <span
-              class="imp">*</span></label><br />
-          <center>
-            <input type="text" name="" style="margin-right: 10px; width: 175px" required="required" /><input type="text"
-              name="lname" style="width: 175px" required="required" /><br />
-          </center>
-          <label>Email <span class="imp">*</span></label><br />
-          <input type="email" name="mail" style="width: 100%" required="required" /><br />
-          <label>Message <span class="imp">*</span></label><br />
-          <input type="text" name="message" style="width: 100%" required="required" /><br />
-          <button type="submit" id="csubmit">Send Message</button>
+    <!-- CONTACT US -->
+    <div class="contactus">
+      <h2 class="SubTopc">Contact us</h2>
+      <div class="form-container">
+        <form action="" method="POST" class="form">
+          <div class="form-group">
+            <label for="name" class="form-label">Your Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              placeholder="Name *"
+              tabindex="1"
+              required
+            />
+          </div>
+          <div class="form-group"></div>
+          <div class="form-group">
+            <label for="email" class="form-label">Your Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              placeholder="Email"
+              tabindex="2"
+              required
+            />
+            <div class="form-group">
+              <label for="message" class="form-label">Message</label>
+              <textarea
+                class="form-control"
+                rows="5"
+                cols="50"
+                id="message"
+                name="message"
+                placeholder="Enter Message..."
+                tabindex="3"
+                required
+              ></textarea>
+            </div>
+          </div>
         </form>
       </div>
     </div>
-  </div>
 
   <!-- Sliding Information -->
   <marquee style="
