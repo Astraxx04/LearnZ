@@ -1,5 +1,4 @@
 from django.views.decorators.csrf import csrf_exempt
-from . import u
 from . tokens import generate_token
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
