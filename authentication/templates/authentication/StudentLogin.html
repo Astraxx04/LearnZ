@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" type="text/css" href="{% static 'authentication/css/StudentLogin.css' %}" />
-  <title>Document</title>
+  <title>Student Login</title>
   <script src="https://kit.fontawesome.com/36bed4b74a.js" crossorigin="anonymous"></script>
   <script>
     $(window).on("scroll", function () {
@@ -29,15 +29,6 @@
       <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
         <span class="sr-only">Menu</span>
       </button>
-
-      <nav>
-        <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#services_section">Services</a></li>
-          <li><a href="#contactus_section">Contact</a></li>
-          <li><a href="#contactus_section">About Us</a></li>
-        </ul>
-      </nav>
       <ul class="get-started">
         <li>
           <a href="{% url 'student_signup' %}">Sign Up</a>
