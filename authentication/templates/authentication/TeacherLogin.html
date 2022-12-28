@@ -5,21 +5,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="{% static 'authentication/css/StudentLogin.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'authentication/css/TeacherLogin.css' %}" />
     <title>Teacher Login</title>
     <script
       src="https://kit.fontawesome.com/36bed4b74a.js"
       crossorigin="anonymous"
     ></script>
-    <script>
-      $(window).on("scroll", function () {
-        if ($(window).scrollTop()) {
-          $("header").addClass("black");
-        } else {
-          $("header").removeClass("black");
-        }
-      });
-    </script>
+    
   </head>
   <body>
     <!-- Header -->
@@ -50,13 +42,7 @@
       <div class="form">
         <form action="" class="sign-in-form" id="sign-in-form">
           <h2 class="title">Sign In</h2>
-          <div class="input-field">
-            <i class="fa fa-building"></i>
-            <select name="CollegeName" id="CollegeName" required>
-              <option disabled value="" selected hidden>Select College</option>
-              <option value="DSCE">DSCE</option>
-            </select>
-          </div>
+          
           <div class="input-field">
             <i class="fa fa-id-card"></i>
             <input
@@ -76,47 +62,17 @@
               required
             />
           </div>
-          <div class="studlog">
-            <a href="{% url 'student_signin' %}">Not a Teacher?</a>
-          </div>
+          
           <input type="submit" id="Login" value="Login" class="btn solid" />
 
           <div class="WrongPass"><h3 id="WrongPass"></h3></div>
+          <div class="studlog">
+            <a href="{% url 'student_signin' %}">Not a Teacher?</a>
+          </div>
         </form>
       </div>
     </div>
 
-    <!-- FOOTER -->
-    <footer>
-      <div class="footer-container">
-        <div class="left-col">
-          <h1 class="footer_header">Contact Us</h1>
-          <p><i class="fa-solid fa-phone"></i> +91-123456785</p>
-          <p><i class="fa-solid fa-envelope"></i> expamle@gmail.com</p>
-          <p>
-            <i class="fa-solid fa-location-dot"></i> Dayananda Sagar College of
-            Engineering <br />Bangalore, Karnataka-560078
-          </p>
-        </div>
-        <div class="mid-col">
-          <h1 class="footer_header">Quick Links</h1>
-          <div class="links">
-            <p><a href="">Home</a></p>
-            <p><a href="">Log in</a></p>
-            <p><a href="">About us</a></p>
-          </div>
-        </div>
-        <div class="right-col">
-          <h1 class="footer_header">Our Newsletter</h1>
-          <div class="border"></div>
-          <br />
-          <p>Enter Your Email to get our News and updates.</p>
-          <form class="newsletter-form">
-            <input class="txtb" type="email" placeholder="Enter Your Email" />
-            <input class="btn" type="submit" value="Submit" />
-          </form>
-        </div>
-      </div>
-    </footer>
+    
   </body>
 </html>

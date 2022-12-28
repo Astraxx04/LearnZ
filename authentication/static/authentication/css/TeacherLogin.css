@@ -12,19 +12,19 @@
 	display: flex;
 	gap: var(--gap,5ex);
   }
-  :root{
-	  --cyan:#baf8f8;
-	  --headerColor:#fff;
-	  --formTitleColor:white;
-	  --inputFieldBgColor:#f0f0f0;
-	  --selectCollegeColor:#333;
-	  --inputFieldPlaceHolder:#aaa;
-	  --btnBgColor:#abbcef;
-	  --btnTextColor:#fff;
-	  --btnHoverColor:#527af6;
-	  --getstartedColor:#abbcef;  /*Get started is signup*/
-	  --getStartedHoverColor:#527af6;
-  }
+:root{
+	--cyan:#baf8f8;
+	--headerColor:#fff;
+	--formTitleColor:white;
+	--inputFieldBgColor:#f0f0f0;
+	--selectCollegeColor:#333;
+	--inputFieldPlaceHolder:#aaa;
+	--btnBgColor:#f7a699e4;
+	--btnTextColor:#fff;
+	--btnHoverColor:#ff735d;
+	--getstartedColor:#f7a699e4;  /*Get started is signup*/
+	--getStartedHoverColor:#ff735d;
+}
 
 .black {
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
@@ -151,7 +151,7 @@ header button span, .mobile-nav-toggle{
 	
 }
 .svg-image img{
-	width: 40rem;
+	width: 50rem;
 	filter: drop-shadow(0 20px 10px rgba(0,0,0,0.2));
 }
 
@@ -167,9 +167,8 @@ form{
     transition: 0.2s 0.7s ease-in-out;
 }
 
-
-form.sign-up-form{
-    z-index: 1;
+form.sign-in-form{
+    z-index: 2;
 }
 
 .title{
@@ -224,16 +223,16 @@ form.sign-up-form{
     margin: 10px 0;
     transition: .5s;
 }
-.teachlog{
+.studlog{
 	margin: 10px 0;
 }
-.teachlog a{
+.studlog a{
 	color:black;
 	transition: 1s;
 }
-.teachlog:hover a{
+.studlog:hover a{
 	letter-spacing: 1px;
-	color:#527af6;
+	color:#ff735d;
 }
 .btn:hover{
     background-color:var(--btnHoverColor);
