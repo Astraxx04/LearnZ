@@ -1,43 +1,65 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
+  <head>
+    <link
+      rel="shortcut icon"
+      type="png"
+      href="{% static 'authentication/images/icon/favicon.png' %}"
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Comaptible" content="IE=edge" />
+    <script
+      src="https://kit.fontawesome.com/36bed4b74a.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>LearnZ</title>
+    <meta name="desciption" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'authentication/css/style.css' %}"
+    />
+    <script
+      type="text/javascript"
+      src="{% static 'authentication/js/script.js' %}"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script>
+      $(window).on("scroll", function () {
+        if ($(window).scrollTop()) {
+          $("header").addClass("black");
+        } else {
+          $("header").removeClass("black");
+        }
+      });
+    </script>
+  </head>
 
-<head>
-  <link rel="shortcut icon" type="png" href="{% static 'authentication/images/icon/favicon.png' %}" />
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Comaptible" content="IE=edge" />
-  <script src="https://kit.fontawesome.com/36bed4b74a.js" crossorigin="anonymous"></script>
-  <title>LearnZ</title>
-  <meta name="desciption" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" type="text/css" href="{% static 'authentication/css/style.css' %}" />
-  <script type="text/javascript" src="{% static 'authentication/js/script.js' %}"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-  <script>
-    $(window).on("scroll", function () {
-      if ($(window).scrollTop()) {
-        $("header").addClass("black");
-      } else {
-        $("header").removeClass("black");
-      }
-    });
-  </script>
-</head>
+  <body>
+    <!-- Header -->
+    <header id="header">
+      <div class="inner flex">
+        <div class="logo">
+          <img
+            src="{% static 'authentication/images/icon/logo_full.png' %}"
+            alt="logo"
+          />
+        </div>
 
-<body>
-  <!-- Header -->
-  <header id="header">
-    <div class="inner flex">
-      <div class="logo"><img src="{% static 'authentication/images/icon/logo_full.png' %}" alt="logo" /></div>
-
-      <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-        <span class="sr-only">Menu</span>
-      </button>
+        <button
+          class="mobile-nav-toggle"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Menu</span>
+        </button>
 
       <nav>
         <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
           <li><a href="index.html">Home</a></li>
-          <li><a href="#service-section">Services</a></li>
+          <li><a href="#services_section">Services</a></li>
           <li><a href="#contactus_section">Contact</a></li>
           <li><a href="#contactus_section">About Us</a></li>
 
@@ -89,8 +111,7 @@
     </div>
   </div>
 
-  
-  
+  <!-- SERVICES -->
   <div class="service-swipe">
     <h1 class="SubTopc">Why Choose Us</h1>
     <div class="cardContainer">
@@ -111,79 +132,110 @@
           <img src="{% static 'authentication/images/icon/q1.png' %}" />
           <p>Brain teasing quizzes</p>
         </div>
-      </a>
+      </section>
     </div>
-  </div>
-  <!-- CONTACT US -->
-  <div class="diffSection" id="contactus_section">
-    <center>
-      <p style="font-size: 50px; padding: 100px">Contact Us</p>
-    </center>
-    <div class="back-contact">
-      <div class="cc">
-        <form action="mailto:roshank9419@gmail.com" method="post" enctype="text/plain">
-          <label>First Name <span class="imp">*</span></label><label style="margin-left: 185px">Last Name <span
-              class="imp">*</span></label><br />
-          <center>
-            <input type="text" name="" style="margin-right: 10px; width: 175px" required="required" /><input type="text"
-              name="lname" style="width: 175px" required="required" /><br />
-          </center>
-          <label>Email <span class="imp">*</span></label><br />
-          <input type="email" name="mail" style="width: 100%" required="required" /><br />
-          <label>Message <span class="imp">*</span></label><br />
-          <input type="text" name="message" style="width: 100%" required="required" /><br />
-          <button type="submit" id="csubmit">Send Message</button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <!-- Sliding Information -->
-  <marquee style="
-        background: linear-gradient(to right, #5995fd, rgb(10, 122, 192));
-        margin-top: 50px;
-      " direction="left" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="20">
-    <div class="marqu">
-      “Education is the passport to the future, for tomorrow belongs to those
-      who prepare for it today.” “Your attitude, not your aptitude, will
-      determine your altitude.” “If you think education is expensive, try
-      ignorance.” “The only person who is educated is the one who has learned
-      how to learn …and change.”
-    </div>
-  </marquee>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-container">
-      <div class="left-col">
-        <h1 class="footer_header">Contact Us</h1>
-        <p><i class="fa-solid fa-phone"></i> +91-123456785</p>
-        <p><i class="fa-solid fa-envelope"></i> expamle@gmail.com</p>
-        <p>
-          <i class="fa-solid fa-location-dot"></i> Dayananda Sagar College of
-          Engineering <br />Bangalore, Karnataka-560078
-        </p>
-      </div>
-      <div class="mid-col">
-        <h1 class="footer_header">Quick Links</h1>
-        <div class="links">
-          <p><a href="">Home</a></p>
-          <p><a href="">Log in</a></p>
-          <p><a href="">About us</a></p>
+    <!-- CONTACT US -->
+    <div class="diffSection" id="contactus_section">
+      <center>
+        <p style="font-size: 50px; padding: 100px">Contact Us</p>
+      </center>
+      <div class="back-contact">
+        <div class="cc">
+          <form
+            action="mailto:roshank9419@gmail.com"
+            method="post"
+            enctype="text/plain"
+          >
+            <label>First Name <span class="imp">*</span></label
+            ><label style="margin-left: 185px"
+              >Last Name <span class="imp">*</span></label
+            ><br />
+            <center>
+              <input
+                type="text"
+                name=""
+                style="margin-right: 10px; width: 175px"
+                required="required"
+              /><input
+                type="text"
+                name="lname"
+                style="width: 175px"
+                required="required"
+              /><br />
+            </center>
+            <label>Email <span class="imp">*</span></label
+            ><br />
+            <input
+              type="email"
+              name="mail"
+              style="width: 100%"
+              required="required"
+            /><br />
+            <label>Message <span class="imp">*</span></label
+            ><br />
+            <input
+              type="text"
+              name="message"
+              style="width: 100%"
+              required="required"
+            /><br />
+            <button type="submit" id="csubmit">Send Message</button>
+          </form>
         </div>
       </div>
-      <div class="right-col">
-        <h1 class="footer_header">Our Newsletter</h1>
-        <div class="border"></div>
-        <br />
-        <p>Enter Your Email to get our News and updates.</p>
-        <form class="newsletter-form">
-          <input class="txtb" type="email" placeholder="Enter Your Email" />
-          <input class="btn" type="submit" value="Submit" />
-        </form>
-      </div>
     </div>
-  </footer>
-</body>
 
+    <!-- Sliding Information -->
+    <marquee
+      style="
+        background: linear-gradient(to right, #5995fd, rgb(10, 122, 192));
+        margin-top: 50px;
+      "
+      direction="left"
+      onmouseover="this.stop()"
+      onmouseout="this.start()"
+      scrollamount="20"
+    >
+      <div class="marqu">
+        “Education is the passport to the future, for tomorrow belongs to those
+        who prepare for it today.” “Your attitude, not your aptitude, will
+        determine your altitude.” “If you think education is expensive, try
+        ignorance.” “The only person who is educated is the one who has learned
+        how to learn …and change.”
+      </div>
+    </marquee>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-container">
+        <div class="left-col">
+          <h1 class="footer_header">Contact Us</h1>
+          <p><i class="fa-solid fa-phone"></i> +91-123456785</p>
+          <p><i class="fa-solid fa-envelope"></i> expamle@gmail.com</p>
+          <p>
+            <i class="fa-solid fa-location-dot"></i> Dayananda Sagar College of
+            Engineering <br />Bangalore, Karnataka-560078
+          </p>
+        </div>
+        <div class="mid-col">
+          <h1 class="footer_header">Quick Links</h1>
+          <div class="links">
+            <p><a href="">Home</a></p>
+            <p><a href="">Log in</a></p>
+            <p><a href="">About us</a></p>
+          </div>
+        </div>
+        <div class="right-col">
+          <h1 class="footer_header">Our Newsletter</h1>
+          <div class="border"></div>
+          <br />
+          <p>Enter Your Email to get our News and updates.</p>
+          <form class="newsletter-form">
+            <input class="txtb" type="email" placeholder="Enter Your Email" />
+            <input class="btn" type="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
