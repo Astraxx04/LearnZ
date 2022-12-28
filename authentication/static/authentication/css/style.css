@@ -14,7 +14,7 @@
   }
 :root{
 	--cyan:#baf8f8;
-	--headerColor:#ccc;
+	--headerColor:#fff;
 	--getstartedColor:rgba(0, 200, 200, 0.473);
 	--headerNavHoverColor:#baf8f8;
 	--getStartedHoverColor:#baf8f8;
@@ -43,6 +43,7 @@ header {
   width: 100%;
   background-color: var(--headerColor);
   align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   
 }
 
@@ -81,7 +82,7 @@ header button span, .mobile-nav-toggle{
   }
   
   .get-started:hover{
-	transition: 1s;
+	
 	background: var(--getStartedHoverColor);
   }
   /*header mobile view*/
@@ -136,9 +137,10 @@ header button span, .mobile-nav-toggle{
   }
   nav li a:hover{
 	letter-spacing: 2px;
-	transition: 1s;
+	transition: 1ms;
 	background-color: var(--headerNavHoverColor);
 	padding:0.45rem;
+
   }
 .get-started li a:hover{
 	transition: 1s;
@@ -217,7 +219,7 @@ header button span, .mobile-nav-toggle{
 }
 .service-swipe {
 	
-	background-color: #ccc;
+	background-color: #fff;
 }
 .SubTopc{
 	display: flex;
@@ -392,13 +394,22 @@ textarea{
   }
 /*About us*/
 
+:root{
+	--aboutuscardwidth:250px;
+	--aboutuscardheight:350px;
+	--aboutuscardimgbx:120px;
+	--aboutuscardimgbxBorder:10px;
 
+}
+.aboutus{
+	margin-top:2rem;
+}
 section {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
-	
+	margin: 0 10rem;
   }
   
   .container {
@@ -412,8 +423,8 @@ section {
   }
   .container .card {
 	position: relative;
-	width: 300px;
-	height: 400px;
+	width: var(--aboutuscardwidth);
+	height: var(--aboutuscardheight);
 	background: rgba(255, 255, 255, 0.05);
 	margin: 20px;
 	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
@@ -429,20 +440,18 @@ section {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	opacity: 0.5;
 	transition: 0.5s;
   }
   .container .card:hover .content {
-	opacity: 1;
 	transform: translateY(-20px);
   }
   .container .card .content .imgBx {
 	position: relative;
-	width: 150px;
-	height: 150px;
+	width:var(--aboutuscardimgbx);
+	aspect-ratio: 1;
 	border-radius: 50%;
 	overflow: hidden;
-	border: 10px solid rgba(0, 0, 0, 0.25);
+	border: var(--aboutuscardimgbxBorder) solid rgba(0, 0, 0, 0.25);
   }
   .container .card .content .imgBx img {
 	position: absolute;
@@ -480,7 +489,7 @@ section {
 	transition-delay: calc(0.1s * var(--i));
   }
   .container .card:hover .sci li {
-	transform: translateY(0px);
+	transform: translateY(10px);
 	opacity: 1;
   }
   .container .card .sci li a {
