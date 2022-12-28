@@ -4,6 +4,7 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('course', views.course, name='course'),
     path('student_signup', views.student_signup, name='student_signup'),
     path('student_signin', views.student_signin, name='student_signin'),
     # path('activate/<uidb64>/<token>', views.activate, name='activate'),
