@@ -69,6 +69,52 @@ def student_signup(request):
 
     return render(request, "authentication/StudentSignup.html")
 
+def teacher_signup(request):
+    if request.method == "POST":
+        CollegeName = request.POST['CollegeName']
+        username = request.POST['teacherid']
+        fname = request.POST['FName']
+        lname = request.POST['LName']
+        email = request.POST['email']
+        pass1 = request.POST['password']
+        pass2 = request.POST['ConfiPass']
+
+        if User.objects.filter(username=username):
+            messages.error(
+                request, "teacherid already exist! Please try some other username.")
+            return redirect('index')
+
+        if User.objects.filter(email=email).exists():
+            messages.error(request, "Email Already Registered!!")
+            return redirect('index')
+
+        if len(username) > 20:
+            messages.error(request, "Usn must be under 20 charcters!!")
+            return redirect('index')
+
+        if pass1 != pass2:
+            messages.error(request, "Passwords didn't matched!!")
+            return redirect('index')
+
+        if not username.isalnum():
+            messages.error(request, "Username must be Alpha-Numeric!!")
+            return redirect('index')
+
+        myuser = User.objects.create_user(username, email, pass1)
+        myuser.first_name = fname
+        myuser.last_name = lname
+        # myuser.last_name = lname
+        # myuser.is_active = False
+        #myuser.is_active = False
+        myuser.save()
+        messages.success(
+            request, "Your Account has been created succesfully!!.")
+
+
+        return redirect('teacher_signin')
+
+    return render(request, "authentication/TeacherSignup.html")
+
 
 def student_signin(request):
     if request.method == 'POST':
