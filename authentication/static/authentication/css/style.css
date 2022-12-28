@@ -212,6 +212,9 @@ header button span, .mobile-nav-toggle{
 
 
 /*Service Section*/
+:root{
+	--cardWeight:18.75rem;
+}
 .service-swipe {
 	
 	background-color: #ccc;
@@ -239,7 +242,7 @@ header button span, .mobile-nav-toggle{
   }
   .cardContainer .card {
 	position: relative;
-	width: 18.75rem;
+	width: var(--cardWeight);
 	height: 25rem;
 	background: rgba(255, 255, 255, 0.05);
 	margin: 1REM;
@@ -254,16 +257,22 @@ header button span, .mobile-nav-toggle{
   .cardContainer .card .content {
 	position: relative;
 	display: flex;
+	margin: 0 8px;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	opacity: 1;
 	transition: 0.5s;
   }
-
+  @media (max-width: 1760px){
+	
+:root{
+	--cardWeight:15.75rem;
+}
+  }
 /*Content hover*/
   .cardContainer .card:hover .content {
-	transform: translateY(-10rem);
+	transform: translateY(-5rem);
   }
 
 
@@ -316,6 +325,7 @@ header button span, .mobile-nav-toggle{
 }
 .form-container{
 	margin-top: 2rem;
+
 	box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0, 0, 0, 0.185);
 	padding:2rem;
 	background-color:var(--contactusFormBgcolor);
@@ -385,6 +395,7 @@ footer {
 	color: #E5E8EF;
 	background: #000D;
 	padding: 50px 0; 
+	margin-top: 2rem;
 	
 }
 footer .footer-container {
