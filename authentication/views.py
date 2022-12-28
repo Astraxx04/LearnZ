@@ -21,7 +21,6 @@ def index(request):
     return render(request, "authentication/index.html")
 
 
-@csrf_exempt
 def student_signup(request):
     if request.method == "POST":
         CollegeName = request.POST['CollegeName']
@@ -96,7 +95,7 @@ def student_signup(request):
     return render(request, "authentication/StudentSignup.html")
 
 
-@csrf_exempt
+
 def student_signin(request):
     if request.method == 'POST':
         username = request.POST.get('usn',False)
