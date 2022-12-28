@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="{%  static 'authentication/css/TeacherSignUp.css' %}" />
-    <title>Teacher Signup</title>
     <link rel="icon" type="image/x-icon" href="{% static 'authentication/images/favicon.ico">
+    <title>Teacher Signup</title>
     <script
       src="https://kit.fontawesome.com/36bed4b74a.js"
       crossorigin="anonymous"
@@ -18,7 +18,7 @@
     <!-- Header -->
     <header id="header">
       <div class="inner flex">
-        <div class="logo"><img src="{% static 'authentication/images/icon/logo_full.png' %}" alt="logo" /></div>
+        <div class="logo"><a href="{% url 'index' %}"><img src="{% static 'authentication/images/icon/logo_full.png' %}" alt="logo" /></a></div>
 
         <button
           class="mobile-nav-toggle"
