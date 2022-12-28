@@ -45,7 +45,10 @@
 	 align-items: center;
 	 
   }
-  .SemesterDropdown{
+  .userloggedin{
+	align-items: center;
+	position: absolute;
+	right:20rem;
   }
   header .logo {
 	  margin: 0.5rem;
@@ -57,9 +60,6 @@
   header .SemesterDropdown{
 	padding: 5px 20px;
 	
-}
-header .user{
-	margin-right: -100rem;
 }
 /*Header for different size*/
 /*@media screen and (max-width: 2000px) {

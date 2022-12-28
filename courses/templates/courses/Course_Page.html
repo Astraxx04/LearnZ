@@ -5,10 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="{% static 'courses/css/Course_Page.css' %}"
-    />
+    <link rel="stylesheet" href="{% static 'courses/css/Course_Page.css' %}" />
     <script
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
       rel="stylesheet"
@@ -26,10 +23,7 @@
       src="https://kit.fontawesome.com/36bed4b74a.js"
       crossorigin="anonymous"
     ></script>
-    <script
-      src="{% static 'courses/js/Course_Page.js' %}"
-      defer
-    ></script>
+    <script src="{% static 'courses/js/Course_Page.js' %}" defer></script>
     <title>Courses</title>
   </head>
 
@@ -44,22 +38,23 @@
               alt="logo"
           /></a>
         </div>
-        
-        <div class="SemesterDropdown">
-          <a href="#" class="Title"
-            >Semester <i class="fa-solid fa-angle-down"></i
-          ></a>
-          <ul class="dropdown" id="dropdown"></ul>
-        </div>
-        <div class="user" id="useinfo">
-          <span class="user_logo"><i class="fa-solid fa-user"></i></span>
-          |
+        <div class="userloggedin flex">
+          <div class="SemesterDropdown">
+            <a href="#" class="Title"
+              >Semester <i class="fa-solid fa-angle-down"></i
+            ></a>
+            <ul class="dropdown" id="dropdown"></ul>
+          </div>
+          <div class="user" id="useinfo">
+            <span class="user_logo"><i class="fa-solid fa-user"></i></span>
+            |
+          </div>
         </div>
       </div>
     </header>
 
     <!--cards-->
-<!--
+    <!--
     <section>
       {% if user.is_authenticated %}
       <h3>Hello {{fname}}!</h3>
