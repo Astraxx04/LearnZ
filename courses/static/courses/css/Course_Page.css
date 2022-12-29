@@ -168,7 +168,6 @@ section{
 	z-index: 1;
 	display: flex;
 	flex-wrap: wrap;
-
 	width:100%;
 	margin-left: 220px;
 	margin-top: 50px;
@@ -177,7 +176,6 @@ section{
   }
   .container .card {
 	position: relative;
-	
 	margin-right: 90px;
 	margin-bottom: 50px;
 	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
@@ -196,6 +194,7 @@ section{
 	margin: 0;
 	letter-spacing: 1px;
 	text-transform: uppercase;
+	color:red;
 }
 .course h2{
 	letter-spacing: 1px;
