@@ -26,13 +26,13 @@
         >
           <span class="sr-only">Menu</span>
         </button>
-        <a href="{% url 'teacher_signup'%}"></a>
-        <ul class="get-started">
-          <li>
-            Sign Up
-          </li>
-        </ul>
-      </a>
+        <a href="{% url 'teacher_signup' %}">
+          <ul class="get-started">
+            <li>
+              Sign Up
+            </li>
+          </ul>
+        </a>
       </div>
     </header>
 
@@ -42,13 +42,14 @@
         <img src="{% static 'authentication/images/teacherlogin.png' %}" alt="svg" />
       </div>
       <div class="form">
-        <form action="" class="sign-in-form" id="sign-in-form">
+        <form  action="{% url 'teacher_signin' %}" method="post" class="sign-in-form" id="sign-in-form">{% csrf_token %}
           <h2 class="title">Sign In</h2>
           
           <div class="input-field">
             <i class="fa fa-id-card"></i>
             <input
               type="teachid"
+              name="teachid"
               placeholder="Teacher ID"
               id="Newteachid"
               required
@@ -59,6 +60,7 @@
             <input
               type="password"
               class=""
+              name="password"
               placeholder="Password"
               id="Password"
               required
