@@ -164,18 +164,14 @@ section{
 }
 
 .container {
-	position: relative;
-	z-index: 1;
 	display: flex;
 	flex-wrap: wrap;
-	width:100%;
-	margin-left: 220px;
-	margin-top: 50px;
-	margin-right: 100px;
+	margin:2rem;
+	align-items: center;
+	justify-content: center;
 	
   }
   .container .card {
-	position: relative;
 	margin-right: 90px;
 	margin-bottom: 50px;
 	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
@@ -194,7 +190,6 @@ section{
 	margin: 0;
 	letter-spacing: 1px;
 	text-transform: uppercase;
-	color:red;
 }
 .course h2{
 	letter-spacing: 1px;
@@ -204,26 +199,36 @@ section{
 	background-color: var(--getStartedHoverColor);
 	color: #fff;
 	padding: 30px;
-	max-width: 500px;
-	width: 300px;
-	height: 10px;
+	
+	width: 350px;
+	height: 8.2rem;
 	border-radius: 15px;
 
 }
+.course-preview h6{
+	margin-top: 2.5rem;
+	transition: 1s;
+}
+.course-preview:hover h6{
+	margin-top: 1.12rem;
+}
+
 .btn{
 	background-color: var(--courseBackground);
 	border: 0;
 	border-radius: 50px;
 	box-shadow: 0 10px 10px rgba(0,0,0,0.2);
 	color: #fff;
+	margin-top: 1rem;
 	font-size: 16px;
 	padding: 12px 25px;
-	position: absolute;
-	bottom: 30px;
-	right: 10px;
 	letter-spacing: 1px;
 	cursor: pointer;
 	transition: 1s;
+	opacity:0;
+}
+.course-preview:hover .btn{
+	opacity: 1;
 }
 .btn:hover{
 	background-color: var(--getStartedColor);
