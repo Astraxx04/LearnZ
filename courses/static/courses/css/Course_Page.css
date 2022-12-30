@@ -19,7 +19,8 @@
 	--userbBorderColor:#27a9a6;
 	--getstartedColor:#abbcef;  /*Get started is signout*/
 	--getStartedHoverColor:#527af6;
-
+	--continueBtnColor:var(--getstartedColor);
+	--continueBtnHoverColor:var(--getStartedHoverColor);
 }
 
 .flex {
@@ -166,15 +167,17 @@ section{
 .container {
 	display: flex;
 	flex-wrap: wrap;
-	margin:2rem;
+	margin-top: 10rem;
+	margin-inline: 2rem;
 	align-items: center;
 	justify-content: center;
 	
   }
   .container .card {
-	margin-right: 90px;
-	margin-bottom: 50px;
 	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+	
+	margin-bottom:2rem;
+	margin-inline:2.75rem ;
 	border-radius: 15px;
 	display: flex;
 	justify-content: center;
@@ -214,7 +217,7 @@ section{
 }
 
 .btn{
-	background-color: var(--courseBackground);
+	background-color: var(--continueBtnColor);
 	border: 0;
 	border-radius: 50px;
 	box-shadow: 0 10px 10px rgba(0,0,0,0.2);
@@ -231,7 +234,7 @@ section{
 	opacity: 1;
 }
 .btn:hover{
-	background-color: var(--getStartedColor);
+	background-color: var(--continueBtnHoverColor);
 }
 
 /*Footer */
