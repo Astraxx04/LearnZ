@@ -5,20 +5,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="{%  static 'authentication/css/TeacherSignUp.css' %}" />
-    <link rel="icon" type="image/x-icon" href="{% static 'authentication/images/favicon.ico">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{%  static 'authentication/css/TeacherSignUp.css' %}"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{% static 'authentication/images/favicon.ico"
+    />
     <title>Teacher Signup</title>
     <script
       src="https://kit.fontawesome.com/36bed4b74a.js"
       crossorigin="anonymous"
     ></script>
-    
   </head>
   <body>
     <!-- Header -->
     <header id="header">
       <div class="inner flex">
-        <div class="logo"><a href="{% url 'index' %}"><img src="{% static 'authentication/images/icon/logo_full.png' %}" alt="logo" /></a></div>
+        <div class="logo">
+          <a href="{% url 'index' %}"
+            ><img
+              src="{% static 'authentication/images/icon/logo_full.png' %}"
+              alt="logo"
+          /></a>
+        </div>
 
         <button
           class="mobile-nav-toggle"
@@ -27,18 +40,21 @@
         >
           <span class="sr-only">Menu</span>
         </button>
-        <ul class="get-started">
-          <li>
-            <a href="{% url 'teacher_signin' %}">Sign In</a> 
-          </li>
-        </ul>
+        <a href="{% url 'teacher_signin' %}">
+          <ul class="get-started">
+            <li>Sign In</li>
+          </ul>
+        </a>
       </div>
     </header>
 
     <!--Info-->
     <div class="head-container">
       <div class="svg-image">
-        <img src="{% static 'authentication/images/teachersignup.png' %}" alt="svg" />
+        <img
+          src="{% static 'authentication/images/teachersignup.png' %}"
+          alt="svg"
+        />
       </div>
       <form action="" class="sign-up-form">
         <h2 class="title">Sign Up</h2>
@@ -51,16 +67,33 @@
         </div>
         <div class="input-field">
           <i class="fa fa-user"></i>
-          <input type="name" name="FName" placeholder="FirstName" id="FName" required />
+          <input
+            type="name"
+            name="FName"
+            placeholder="FirstName"
+            id="FName"
+            required
+          />
         </div>
         <div class="input-field">
           <i class="fa fa-user"></i>
-          <input type="name" name="LName" placeholder="LastName" id="LName" required />
+          <input
+            type="name"
+            name="LName"
+            placeholder="LastName"
+            id="LName"
+            required
+          />
         </div>
         <div class="input-field">
           <i class="fa fa-id-card"></i>
           <input
-            type="teachid" name="teachid" placeholder="Teacher ID" id="Newteachid" required />
+            type="teachid"
+            name="teachid"
+            placeholder="Teacher ID"
+            id="Newteachid"
+            required
+          />
         </div>
         <div class="input-field">
           <i class="fa fa-lock"></i>
@@ -68,16 +101,20 @@
         </div>
         <div class="input-field">
           <i class="fa fa-lock"></i>
-          <input type="password" name="password" placeholder="Confirm Password" id="ConfiPass" required />
+          <input
+            type="password"
+            name="password"
+            placeholder="Confirm Password"
+            id="ConfiPass"
+            required
+          />
         </div>
         <input type="submit" value="Sign up" class="btn solid" id="SignUpBtn" />
-        
+
         <div class="studlog">
           <a href="{% url 'student_signup' %}">Not a Teacher?</a>
         </div>
       </form>
     </div>
-
-    
   </body>
 </html>

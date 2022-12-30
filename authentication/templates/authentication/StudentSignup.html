@@ -1,82 +1,131 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'authentication/css/StudentSignUp.css' %}"
+    />
+    <title>Student Signup</title>
+    <script
+      src="https://kit.fontawesome.com/36bed4b74a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="{% static 'authentication/css/StudentSignUp.css' %}" />
-  <title>Student Signup</title>
-  <script src="https://kit.fontawesome.com/36bed4b74a.js" crossorigin="anonymous"></script>
-  
-</head>
+  <body>
+    <!-- Header -->
+    <header id="header">
+      <div class="inner flex">
+        <div class="logo">
+          <a href="{% url 'index' %}"
+            ><img
+              src="{% static 'authentication/images/icon/logo_full.png' %}"
+              alt="logo"
+          /></a>
+        </div>
 
-<body>
-  <!-- Header -->
-  <header id="header">
-    <div class="inner flex">
-      <div class="logo"><a href="{% url 'index' %}"><img src="{% static 'authentication/images/icon/logo_full.png' %}" alt="logo" /></a></div>
+        <button
+          class="mobile-nav-toggle"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Menu</span>
+        </button>
+        <a href="{% url 'student_signin' %}">
+          <ul class="get-started">
+            <li>Sign In</li>
+          </ul>
+        </a>
+      </div>
+    </header>
 
-      <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-        <span class="sr-only">Menu</span>
-      </button>
+    <!--Info-->
+    <div class="head-container">
+      <div class="svg-image">
+        <img
+          src="{%static 'authentication/images/undraw_online_test_re_kyfx.svg'%}"
+          alt="svg"
+        />
+      </div>
+      <form
+        action="{% url 'student_signup' %}"
+        method="post"
+        class="sign-up-form"
+      >
+        {% csrf_token %}
+        <h2 class="title">Sign Up</h2>
+        <div class="input-field">
+          <i class="fa fa-building"></i>
+          <select name="CollegeName" id="CollegeName" required>
+            <option value="">Select a College</option>
+            <option value="DSCE">DSCE</option>
+          </select>
+        </div>
+        <div class="input-field">
+          <i class="fa fa-user"></i>
+          <input
+            type="name"
+            name="FName"
+            placeholder="FirstName"
+            id="FName"
+            required
+          />
+        </div>
+        <div class="input-field">
+          <i class="fa fa-user"></i>
+          <input
+            type="name"
+            name="LName"
+            placeholder="LastName"
+            id="LName"
+            required
+          />
+        </div>
+        <div class="input-field">
+          <i class="fa fa-envelope"></i>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            id="email"
+            required
+          />
+        </div>
+        <div class="input-field">
+          <i class="fa fa-id-card"></i>
+          <input type="usn" name="usn" placeholder="USN" id="usn" required />
+        </div>
+        <div class="input-field">
+          <i class="fa fa-lock"></i>
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            id="password"
+            required
+          />
+        </div>
+        <div class="input-field">
+          <i class="fa fa-lock"></i>
+          <input
+            type="password"
+            placeholder="Confirm Password"
+            id="ConfiPass"
+            name="ConfiPass"
+            required
+          />
+        </div>
+        <input type="submit" value="Sign up" class="btn solid" id="SignUpBtn" />
 
-      <ul class="get-started">
-        <li>
-          <a href="{% url 'student_signin' %}">Sign In</a>
-        </li>
-      </ul>
+        <div class="teachlog">
+          <a href="{% url 'teacher_signup' %}">Not a Student?</a>
+        </div>
+      </form>
     </div>
-  </header>
-
-  <!--Info-->
-  <div class="head-container">
-    <div class="svg-image">
-      <img src="{%static 'authentication/images/undraw_online_test_re_kyfx.svg'%}" alt="svg" />
-    </div>
-    <form action="{% url 'student_signup' %}" method="post" class="sign-up-form"> {% csrf_token %}
-      <h2 class="title">Sign Up</h2>
-      <div class="input-field">
-        <i class="fa fa-building"></i>
-        <select name="CollegeName" id="CollegeName" required>
-          <option value=""> Select a College  </option>
-          <option value="DSCE">DSCE</option>
-        </select>
-      </div>
-      <div class="input-field">
-        <i class="fa fa-user"></i>
-        <input type="name" name="FName" placeholder="FirstName" id="FName" required />
-      </div>
-      <div class="input-field">
-        <i class="fa fa-user"></i>
-        <input type="name" name="LName" placeholder="LastName" id="LName" required />
-      </div>
-      <div class="input-field">
-        <i class="fa fa-envelope"></i>
-        <input type="email" name="email" placeholder="Email" id="email" required />
-      </div>
-      <div class="input-field">
-        <i class="fa fa-id-card"></i>
-        <input type="usn" name="usn" placeholder="USN" id="usn" required />
-      </div>
-      <div class="input-field">
-        <i class="fa fa-lock"></i>
-        <input type="password" name="password" placeholder="Password" id="password" required />
-      </div>
-      <div class="input-field">
-        <i class="fa fa-lock"></i>
-        <input type="password" placeholder="Confirm Password" id="ConfiPass" name="ConfiPass" required />
-      </div>
-      <input type="submit" value="Sign up" class="btn solid" id="SignUpBtn" />
-      
-      <div class="teachlog">
-        <a href="{% url 'teacher_signup' %}">Not a Student?</a>
-      </div>
-    </form>
-  </div>
-
-  
-</body>
-
+  </body>
 </html>
