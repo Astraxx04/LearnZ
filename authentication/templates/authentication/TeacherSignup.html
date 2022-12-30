@@ -56,7 +56,7 @@
           alt="svg"
         />
       </div>
-      <form action="" class="sign-up-form">
+      <form action="{% url 'teacher_signup' %}" method="post" class="sign-up-form">{% csrf_token %}
         <h2 class="title">Sign Up</h2>
         <div class="input-field">
           <i class="fa fa-building"></i>
@@ -86,6 +86,16 @@
           />
         </div>
         <div class="input-field">
+          <i class="fa fa-envelope"></i>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            id="email"
+            required
+          />
+        </div>
+        <div class="input-field">
           <i class="fa fa-id-card"></i>
           <input
             type="teachid"
@@ -97,15 +107,15 @@
         </div>
         <div class="input-field">
           <i class="fa fa-lock"></i>
-          <input type="password" placeholder="Password" id="NewPass" required />
+          <input type="password" name="password" placeholder="Password" id="NewPass" required />
         </div>
         <div class="input-field">
           <i class="fa fa-lock"></i>
           <input
             type="password"
-            name="password"
             placeholder="Confirm Password"
             id="ConfiPass"
+            name="ConfiPass"
             required
           />
         </div>
