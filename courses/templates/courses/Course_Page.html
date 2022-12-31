@@ -24,6 +24,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="{% static 'courses/js/Course_Page.js' %}" defer></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Courses</title>
   </head>
 
@@ -57,6 +58,15 @@
         </div>
       </div>
     </header>
+    {% for msg in messages %}
+      <script>
+        swal({
+          title: "{{ msg }}",
+          // title: "Login Successful",
+          // icon: "success",
+        });
+      </script>
+    {% endfor %}
 
     <!--cards-->
     <!--

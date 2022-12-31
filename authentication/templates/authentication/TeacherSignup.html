@@ -48,6 +48,16 @@
       </div>
     </header>
 
+    {% for msg in messages %}
+      <script>
+        swal({
+          title: "{{ msg }}",
+          // title: "User Not Found",
+          // text: "Sign-up first or Recheck your credentials",
+          // icon: "error",
+        });
+      </script>
+    {% endfor %}
     <!--Info-->
     <div class="head-container">
       <div class="svg-image">

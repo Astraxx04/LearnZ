@@ -63,7 +63,7 @@ def student_signup(request):
         myuser.save()
         # pyautogui.alert("Your Account has been created succesfully!!.")
 
-
+        messages.success(request, 'User Created.')
         return redirect('student_signin')
 
     return render(request, "authentication/StudentSignup.html")
@@ -107,8 +107,7 @@ def teacher_signup(request):
         #myuser.is_active = False
         myuser.save()
         # pyautogui.alert("Your Account has been created succesfully!!.")
-
-
+        messages.success(request, 'User Created.')
         return redirect('teacher_signin')
 
     return render(request, "authentication/TeacherSignup.html")
@@ -124,12 +123,15 @@ def student_signin(request):
             login(request, user)
             fname = user.first_name
             # pyautogui.alert("Logged In Sucessfully!!")
+            messages.success(request, 'Login Success')
             return render(request, "courses/Course_Page.html",{"fname":fname})
         else:
-            return redirect('index')
-
-    return render(request, "authentication/StudentLogin.html")
-
+            messages.error(request, 'Recheck Credentials.')
+            return render(request, "authentication/StudentLogin.html")
+    
+    return render(request, "authentication/StudentLogin.html")    
+    # return redirect('index')
+    
 def teacher_signin(request):
     if request.method == 'POST':
         username = request.POST.get('teachid',False)
@@ -140,9 +142,11 @@ def teacher_signin(request):
         if user is not None:
             login(request, user)
             fname = user.first_name
+            messages.success(request, 'Login Success')
             return render(request, "authentication/index.html",{"fname":fname})
         else:
-            return redirect('index')
+            messages.error(request, 'Recheck Credentials.')
+            return render(request, "authentication/TeacherLogin.html")
 
     return render(request, "authentication/TeacherLogin.html")
 

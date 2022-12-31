@@ -9,6 +9,7 @@
   <link rel="stylesheet" type="text/css" href="{% static 'authentication/css/StudentLogin.css' %}" />
   <title>Student Login</title>
   <script src="https://kit.fontawesome.com/36bed4b74a.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script>
     $(window).on("scroll", function () {
       if ($(window).scrollTop()) {
@@ -38,8 +39,18 @@
     </a></div>
   </header>
 
+  {% for msg in messages %}
+    <script>
+      swal({
+        title: "{{ msg }}",
+        // title: "User Not Found",
+        // text: "Sign-up first or Recheck your credentials",
+        // icon: "error",
+      });
+    </script>
+  {% endfor %}
   <!--Info-->
-  {% for message in messages %}
+  <!-- {% for message in messages %}
   <div class="head-container">
   <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
     <strong>Message:</strong> {{ message }}
@@ -47,7 +58,7 @@
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
-  {% endfor %}
+  {% endfor %} -->
   <div class="head-container">
     <div class="svg-image">
       <img src="{% static 'authentication/images/login.png' %}" alt="svg" />
