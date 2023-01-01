@@ -15,6 +15,7 @@
       src="https://kit.fontawesome.com/36bed4b74a.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </head>
 
   <body>
@@ -43,6 +44,7 @@
         </a>
       </div>
     </header>
+
     {% for msg in messages %}
     <script>
       swal({
@@ -52,7 +54,8 @@
         // icon: "error",
       });
     </script>
-  {% endfor %}
+    {% endfor %}
+
     <!--Info-->
     <div class="head-container">
       <div class="svg-image">
