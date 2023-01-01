@@ -11,6 +11,7 @@ from django.contrib.sites.shortcuts import get_current_site
 from django.template.loader import render_to_string
 from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 import django
+from authentication import models
 from django.utils.encoding import force_str
 # import pyautogui
 django.utils.encoding.force_text = force_str
@@ -34,11 +35,11 @@ def student_signup(request):
         pass1 = request.POST['password']
         pass2 = request.POST['ConfiPass']
 
-        if User.objects.filter(username=username):
+        if models.Student.objects.filter(username=username):
             # pyautogui.alert("USN already exist! Please try some other username.")
             return redirect('index')
 
-        if User.objects.filter(email=email).exists():
+        if models.Student.objects.filter(email=email).exists():
             # pyautogui.alert("Email Already Registered!!")
             return redirect('index')
 
@@ -54,16 +55,17 @@ def student_signup(request):
             # pyautogui.alert("Username must be Alpha-Numeric!!")
             return redirect('index')
 
-        myuser = User.objects.create_user(username, email, pass1)
+        myuser = models.Student.objects.create_user(username, email, pass1)
         myuser.first_name = fname
         myuser.last_name = lname
+        #myuser.CollegeName = CollegeName
         # myuser.last_name = lname
         # myuser.is_active = False
         #myuser.is_active = False
         myuser.save()
         # pyautogui.alert("Your Account has been created succesfully!!.")
 
-        messages.success(request, 'User Created.')
+
         return redirect('student_signin')
 
     return render(request, "authentication/StudentSignup.html")
@@ -79,11 +81,11 @@ def teacher_signup(request):
         pass1 = request.POST['password']
         pass2 = request.POST['ConfiPass']
 
-        if User.objects.filter(username=username):
+        if models.Teacher.objects.filter(username=username):
             # pyautogui.alert("teacherid already exist! Please try some other username.")
             return redirect('index')
 
-        if User.objects.filter(email=email).exists():
+        if models.Teacher.objects.filter(email=email).exists():
             # pyautogui.alert("Email Already Registered!!")
             return redirect('index')
 
@@ -99,15 +101,17 @@ def teacher_signup(request):
             # pyautogui.alert("Username must be Alpha-Numeric!!")
             return redirect('index')
 
-        myuser = User.objects.create_user(username, email, pass1)
+        myuser = models.Teacher.objects.create_user(username, email, pass1)
         myuser.first_name = fname
         myuser.last_name = lname
+        #myuser.CollegeName = CollegeName
         # myuser.last_name = lname
         # myuser.is_active = False
         #myuser.is_active = False
         myuser.save()
         # pyautogui.alert("Your Account has been created succesfully!!.")
-        messages.success(request, 'User Created.')
+
+
         return redirect('teacher_signin')
 
     return render(request, "authentication/TeacherSignup.html")
@@ -123,15 +127,12 @@ def student_signin(request):
             login(request, user)
             fname = user.first_name
             # pyautogui.alert("Logged In Sucessfully!!")
-            messages.success(request, 'Login Success')
             return render(request, "courses/Course_Page.html",{"fname":fname})
         else:
-            messages.error(request, 'Recheck Credentials.')
-            return render(request, "authentication/StudentLogin.html")
-    
-    return render(request, "authentication/StudentLogin.html")    
-    # return redirect('index')
-    
+            return redirect('index')
+
+    return render(request, "authentication/StudentLogin.html")
+
 def teacher_signin(request):
     if request.method == 'POST':
         username = request.POST.get('teachid',False)
@@ -142,11 +143,9 @@ def teacher_signin(request):
         if user is not None:
             login(request, user)
             fname = user.first_name
-            messages.success(request, 'Login Success')
             return render(request, "authentication/index.html",{"fname":fname})
         else:
-            messages.error(request, 'Recheck Credentials.')
-            return render(request, "authentication/TeacherLogin.html")
+            return redirect('index')
 
     return render(request, "authentication/TeacherLogin.html")
 
