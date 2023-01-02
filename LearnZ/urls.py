@@ -26,5 +26,5 @@ urlpatterns = [
     path('', include('authentication.urls')),
     path('index/', index, name='index'),
     path('courses/', course_page, name='course_page'),
-    path('features/', course_page, name='features_page'),
+    path('features/', feature_page, name='features_page'),
 ]
