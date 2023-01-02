@@ -7,7 +7,6 @@ const Peoples={"QUIZ": ["","https://github.com/Bhawesh02","https://www.linkedin.
 "SYLLABUS":["","https://github.com/Sonuuuuuuu","https://www.linkedin.com/in/konjeti-nidhi-96245a226/","{% static 'features/images/quiz.svg' %}"]
 };
 
-
 const CardContainer = document.getElementById("CardContainer");  
 //For Every person insert card 
 Object.keys(Peoples).forEach(People => {
@@ -46,3 +45,4 @@ Object.keys(Peoples).forEach(People => {
     ul.appendChild(li1); */
 
   });
+
