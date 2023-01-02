@@ -55,9 +55,9 @@ def student_signup(request):
             messages.error(request, 'Username must be Alpha-Numeric!!')
             return redirect('student_signup')
 
-        myuser = models.Student.objects.create_user(username, email, pass1)
-        myuser.first_name = fname
-        myuser.last_name = lname
+        myuser = models.Student.objects.create_user(username, email, pass1, first_name = fname, last_name = lname)
+        #myuser.first_name = fname
+        #myuser.last_name = lname
         #myuser.CollegeName = CollegeName
         # myuser.last_name = lname
         # myuser.is_active = False
@@ -100,9 +100,9 @@ def teacher_signup(request):
             messages.error(request, 'Username must be Alpha-Numeric!!')
             return redirect('teacher_signin')
 
-        myuser = models.Teacher.objects.create_user(username, email, pass1)
-        myuser.first_name = fname
-        myuser.last_name = lname
+        myuser = models.Teacher.objects.create_user(username, email, pass1, first_name = fname, last_name = lname)
+        #myuser.first_name = fname
+        #myuser.last_name = lname
         #myuser.CollegeName = CollegeName
         # myuser.last_name = lname
         # myuser.is_active = False

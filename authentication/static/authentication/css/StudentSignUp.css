@@ -12,34 +12,23 @@
 	display: flex;
 	gap: var(--gap,5ex);
   }
-<<<<<<< Updated upstream
-  :root{
-	  --cyan:#baf8f8;
-	  --headerColor:#fff;
-	  --formTitleColor:white;
-	  --inputFieldBgColor:#f0f0f0;
-	  --selectCollegeColor:#333;
-	  --inputFieldPlaceHolder:#aaa;
-	  --btnBgColor:#abbcef;
-	  --btnTextColor:#fff;
-	  --btnHoverColor:#527af6;
-	  --getstartedColor:#abbcef;  /*Get started is signup*/
-	  --getStartedHoverColor:#527af6;
-  }
-=======
 :root{
 	--cyan:#baf8f8;
 	--headerColor:#fff;
+
+	--formTitleColor:white;
 	--getstartedColor:rgba(0, 200, 200, 0.473);
 	--formTitleColor:#444;
+
 	--inputFieldBgColor:#f0f0f0;
 	--selectCollegeColor:#333;
 	--inputFieldPlaceHolder:#aaa;
-	--btnBgColor:#27a9a6;
+	--btnBgColor:#abbcef;
 	--btnTextColor:#fff;
-	--btnHoverColor:#39808b;
+	--btnHoverColor:#527af6;
+	--getstartedColor:#abbcef;  /*Get started is signup*/
+	--getStartedHoverColor:#527af6;
 }
->>>>>>> Stashed changes
 
 .black {
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
@@ -64,8 +53,7 @@ header {
 }
 
 header .inner {
-  
-  align-items: center;
+   align-items: center;
   justify-content: space-between;
 }
 header .logo {
@@ -183,9 +171,8 @@ form{
     transition: 0.2s 0.7s ease-in-out;
 }
 
-
-form.sign-up-form{
-    z-index: 1;
+form.sign-in-form{
+    z-index: 2;
 }
 
 .title{

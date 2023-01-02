@@ -15,12 +15,11 @@
 :root{
 	--cyan:#baf8f8;
 	--headerColor:#fff;
-<<<<<<< Updated upstream
+
 	--formTitleColor:white;
-=======
 	--getstartedColor:rgba(0, 200, 200, 0.473);
 	--formTitleColor:#444;
->>>>>>> Stashed changes
+
 	--inputFieldBgColor:#f0f0f0;
 	--selectCollegeColor:#333;
 	--inputFieldPlaceHolder:#aaa;
