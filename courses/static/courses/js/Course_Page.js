@@ -41,7 +41,7 @@ Object.keys(Courses).forEach(Course => {
     //Creted div with class course-preview and make card as parent;
     var div1 = document.createElement('div');
     div1.classList.add("course-preview");
-    div1.innerHTML=`<h6>Course</h6>
+    div1.innerHTML=`
     <h2>`+Course+`</h2>
     <button class="btn" id="${Course}">Continue</button>`;
     div.appendChild(div1);

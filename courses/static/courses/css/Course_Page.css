@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Laila&display=swap'); 
 * {
     margin: 0;
     padding: 0;
@@ -31,7 +33,7 @@
 	  scroll-behavior: smooth;
   }
   body {
-	  background: #FFF;
+	  background: #fff;
 	  font-family: 'Open Sans', sans-serif;
   }
   header {
@@ -155,6 +157,17 @@ body{
 	overflow-x:hidden;
 	
 }
+h1{
+	text-align: center;
+	justify-content: center;
+	text-decoration:underline;
+	text-decoration-color: #527af6;
+	margin-top: 90px;
+	font-family:'Laila';
+	font-size:50px;
+	color: #27a9a6;
+	
+}
 
 /*cards*/
 
@@ -237,100 +250,6 @@ section{
 	background-color: var(--continueBtnHoverColor);
 }
 
-/*Footer */
-
-footer {
-	color: #E5E8EF;
-	background: #000D;
-	padding: 50px 0; 
-	
-}
-footer .footer-container {
-	max-width: 1300px;
-	margin: auto;
-	padding: 0 20px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-wrap: wrap-reverse;
-}
-
-footer .left-col .footer_header{
-	transform: translateY(-12px);
-	margin-bottom: 10px;
-}
-footer p{
-	margin-top: 7px;
-}
-footer p i{
-	margin-right: 3px;
-}
-footer .left-col{
-    transform: translateX(250px);
-}
-footer .footer_header{
-	font-size: 26px;
-}
-footer .border{
-	width: 100px;
-	height: 4px;
-	background: linear-gradient(to right, #27a9a6, #27a9a6);
-	margin: 2px;
-}
-footer .mid-col .footer_header{
-	transform: translateY(-20px);
-}
-footer .mid-col .links{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-transform: capitalize;
-    transform: translateY(-15px)
-}
-footer .mid-col{
-    transform: translateX(-300px);
-}
-footer a{
-	
-	color:#fff;
-	cursor:pointer;
-}
-
-
-footer input::placeholder {
-  color: white !important;
-}
-footer .txtb {
-	flex: 1;
-	padding: 18px 40px;
-	font-size: 16px;
-	background: #343A40;
-	border: none;
-	font-weight: 700;
-	outline: none;
-	border-radius: 5px;
-	min-width: 260px;
-	margin-top: 20px;
-	color: white;
-}
-footer .btn {
-	margin-top: 20px;
-	padding: 18px 40px;
-	font-size: 16px;
-	color: #f1f1f1;
-	background: linear-gradient(to right, #27a9a6, #27a9a6);
-	border: none;
-	font-weight: 700;
-	outline: none;
-	border-radius: 5px;
-	margin-left: 20px;
-	cursor: pointer;
-	transition: opacity .3s linear;	
-}
-footer .btn:hover {
-    opacity: .7;
-}
 
 
 
