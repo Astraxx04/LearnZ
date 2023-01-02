@@ -61,42 +61,7 @@
     <div class="svg-image">
       <img src="{% static 'authentication/images/stu1_signup.svg' %}" alt="svg" />
     </div>
-    <form action="{% url 'student_signup' %}" method="post" class="sign-up-form">{% csrf_token %}
-      <h2 class="title">Sign Up</h2>
-      <div class="input-field">
-        <i class="fa fa-building"></i>
-        <select name="CollegeName" id="CollegeName" required>
-          <option value="">- Please select a College - </option>
-          <option value="DSCE">DSCE</option>
-        </select>
-      </div>
-      <div class="input-field">
-        <i class="fa fa-user"></i>
-        <input type="name" name="FName" placeholder="FirstName" id="FName" required />
-      </div>
-      <div class="input-field">
-        <i class="fa fa-user"></i>
-        <input type="name" name="LName" placeholder="LastName" id="LName" required />
-      </div>
-      <div class="input-field">
-        <i class="fa fa-envelope"></i>
-        <input type="email" name="email" placeholder="Email" id="email" required />
-      </div>
-      <div class="input-field">
-        <i class="fa fa-id-card"></i>
-        <input type="usn" name="usn" placeholder="USN" id="usn" required />
-      </div>
-      <div class="input-field">
-        <i class="fa fa-lock"></i>
-        <input type="password" name="password" placeholder="Password" id="password" required />
-      </div>
-      <div class="input-field">
-        <i class="fa fa-lock"></i>
-        <input type="password" placeholder="Confirm Password" id="ConfiPass" name="ConfiPass" required />
-      </div>
-      <div class="teachlog">
-        <a href="../html/teacher_login.html">Not a Student?</a>
-      </div>
+    
       <form
         action="{% url 'student_signup' %}"
         method="post"
