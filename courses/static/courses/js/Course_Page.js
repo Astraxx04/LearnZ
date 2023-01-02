@@ -25,6 +25,13 @@ for (let index = 0; index < NoOfSemester; index++) {
   dropdown.appendChild(li);
 }
 
+function log(theElement) {
+  let course_name = theElement.srcElement.id;
+  sessionStorage.setItem("course", course_name);
+  // console.log(sessionStorage.getItem("course"));
+  location.assign("/features");
+}
+
 //For Every course insert card 
 Object.keys(Courses).forEach(Course => {
     //Creted div with class card;
@@ -34,15 +41,16 @@ Object.keys(Courses).forEach(Course => {
     //Creted div with class course-preview and make card as parent;
     var div1 = document.createElement('div');
     div1.classList.add("course-preview");
-    div1.innerHTML=`<h6>Course</h6>
+    div1.innerHTML=`
     <h2>`+Course+`</h2>
-    <button class="btn">Continue</button>`;
+    <button class="btn" id="${Course}">Continue</button>`;
     div.appendChild(div1);
-    
   });
 
-  //edited
-
+  var all_button = document.getElementsByClassName('btn');
+  for (var i = 0 ; i < all_button.length; i++) {
+    all_button[i].addEventListener('click' , log , false ) ; 
+  }
 
 
   let db = new sqlite3.Database('../db.sqlite3', (err) => {

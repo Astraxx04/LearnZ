@@ -18,10 +18,13 @@ from django.urls import path, include
 
 from courses.views import *
 from authentication.views import *
+from features.views import *
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('authentication.urls')),
     path('index/', index, name='index'),
     path('courses/', course_page, name='course_page'),
+    path('features/', feature_page, name='features_page'),
 ]
