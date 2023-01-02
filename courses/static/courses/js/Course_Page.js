@@ -36,9 +36,8 @@ Object.keys(Courses).forEach(Course => {
     div1.classList.add("course-preview");
     div1.innerHTML=`<h6>Course</h6>
     <h2>`+Course+`</h2>
-    <button class="btn">Continue</button>`;
+    <button class="btn" id="${Course}">Continue</button>`;
     div.appendChild(div1);
-    
   });
 
   //edited
