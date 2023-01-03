@@ -1,0 +1,85 @@
+[
+    {
+        "model": "courses.Courses",
+        "pk": 1,
+        "fields": {
+            "semester": 1,
+            "course1": "Basic Electrical Engineering",
+            "course2": "Elements of Mechanical Engineering",
+            "course3": "Engineering Physics",
+            "course4": "Elements of Civil Engineering and Engineering Mechanics",
+            "course5": "Engineering Mathematics I"        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 2,
+        "fields": {
+            "semester": 2,
+            "course1": "Basic Electronics Engineering",
+            "course2": "C Programming for Problem Solving",
+            "course3": "Engineering Chemistry",
+            "course4": "Engineering Mathematics II"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 3,
+        "fields": {
+            "semester": 3,
+            "course1": "Computer Organization",
+            "course2": "Data Communication",
+            "course3": "Data Structures with C",
+            "course4": "Discrete and Integral Transforms",
+            "course5": "Digital System and Logic Design",
+            "course6": "Discrete Mathematical Structures"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk":4,
+        "fields": {
+            "semester": 4,
+            "course1": "Automata Theory and Formal Languages",
+            "course2": "Complex Variables and Distributions",
+            "course3": "Design and Analysis of Algorithms",
+            "course4": "Microprocessos and Microcontroller",
+            "course5": "Obh=ject Oriented Programming with C++",
+            "course6": "Operating Systems"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 5,
+        "fields": {
+            "semester": 5,
+            "course1": "Computer Networks and Cyber Security",
+            "course2": "Database Management System",
+            "course3": "Management and Entrepreneurship",
+            "course4": "Python Programming",
+            "course5": "Information Retrieval",
+            "course6": "Cloud Computing"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 6,
+        "fields": {
+            "semester": 6,
+            "course1": "Engineering Economics",
+            "course2": "Java and J2EE",
+            "course3": "Machine Learning Techniques",
+            "course4": "Software Engineering",
+            "course5": "Artificial Intelligence"        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 7,
+        "fields": {
+            "semester": 7,
+            "course1": "Block Chain",
+            "course2": "Cryptography and Network Security",
+            "course3": "Software Testing and Quality Metrics",
+            "course4": "Medical Imaging Techniques"
+        }
+    }
+]

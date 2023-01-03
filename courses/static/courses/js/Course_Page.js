@@ -11,7 +11,7 @@ const CourseContainer = document.getElementById("CourseContainer");
 const dropdown = document.getElementById("dropdown");  
 const useinfo = document.getElementById("useinfo");  
 
-//User Usn
+//User Usnz
 var span = document.createElement('span');
 span.classList.add("user_usn");
 span.innerHTML = user_usn;
@@ -23,13 +23,6 @@ for (let index = 0; index < NoOfSemester; index++) {
   var li = document.createElement('li');
   li.innerHTML=`<a href=""> Semester `+(index+1)+`</a>`;
   dropdown.appendChild(li);
-}
-
-function log(theElement) {
-  let course_name = theElement.srcElement.id;
-  sessionStorage.setItem("course", course_name);
-  // console.log(sessionStorage.getItem("course"));
-  location.assign("/features");
 }
 
 //For Every course insert card 
@@ -47,10 +40,8 @@ Object.keys(Courses).forEach(Course => {
     div.appendChild(div1);
   });
 
-  var all_button = document.getElementsByClassName('btn');
-  for (var i = 0 ; i < all_button.length; i++) {
-    all_button[i].addEventListener('click' , log , false ) ; 
-  }
+  //edited
+
 
 
   let db = new sqlite3.Database('../db.sqlite3', (err) => {
