@@ -25,6 +25,13 @@ for (let index = 0; index < NoOfSemester; index++) {
   dropdown.appendChild(li);
 }
 
+function log(theElement) {
+  let course_name = theElement.srcElement.id;
+  sessionStorage.setItem("course", course_name);
+  // console.log(sessionStorage.getItem("course"));
+  location.assign("/features");
+}
+
 //For Every course insert card 
 Object.keys(Courses).forEach(Course => {
     //Creted div with class card;
@@ -40,7 +47,10 @@ Object.keys(Courses).forEach(Course => {
     div.appendChild(div1);
   });
 
-  //edited
+var all_button = document.getElementsByClassName('btn');
+  for (var i = 0 ; i < all_button.length; i++) {
+    all_button[i].addEventListener('click' , log , false ) ; 
+  }
 
 
 
