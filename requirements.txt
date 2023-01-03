@@ -6,3 +6,4 @@ six==1.16.0
 sqlparse==0.4.3
 tzdata==2022.7
 tzlocal==4.2
+selenium==4.7.2
