@@ -20,3 +20,4 @@ for i in cursor.fetchall():
 
 cursor.close()
 sqliteConnection.close()
+

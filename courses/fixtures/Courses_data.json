@@ -3,83 +3,324 @@
         "model": "courses.Courses",
         "pk": 1,
         "fields": {
-            "semester": 1,
-            "course1": "Basic Electrical Engineering",
-            "course2": "Elements of Mechanical Engineering",
-            "course3": "Engineering Physics",
-            "course4": "Elements of Civil Engineering and Engineering Mechanics",
-            "course5": "Engineering Mathematics I"        }
+            "sem": 1,
+            "crs_id": "1BEE",
+            "course": "Basic Electrical Engineering"
+        }
     },
     {
         "model": "courses.Courses",
         "pk": 2,
         "fields": {
-            "semester": 2,
-            "course1": "Basic Electronics Engineering",
-            "course2": "C Programming for Problem Solving",
-            "course3": "Engineering Chemistry",
-            "course4": "Engineering Mathematics II"
+            "sem": 1,
+            "crs_id": "1EME",
+            "course": "Elements of Mechanical Engineering"
         }
     },
     {
         "model": "courses.Courses",
         "pk": 3,
         "fields": {
-            "semester": 3,
-            "course1": "Computer Organization",
-            "course2": "Data Communication",
-            "course3": "Data Structures with C",
-            "course4": "Discrete and Integral Transforms",
-            "course5": "Digital System and Logic Design",
-            "course6": "Discrete Mathematical Structures"
+            "sem": 1,
+            "crs_id": "1EPH",
+            "course": "Engineering Physics"
         }
     },
     {
         "model": "courses.Courses",
-        "pk":4,
+        "pk": 4,
         "fields": {
-            "semester": 4,
-            "course1": "Automata Theory and Formal Languages",
-            "course2": "Complex Variables and Distributions",
-            "course3": "Design and Analysis of Algorithms",
-            "course4": "Microprocessos and Microcontroller",
-            "course5": "Obh=ject Oriented Programming with C++",
-            "course6": "Operating Systems"
+            "sem": 1,
+            "crs_id": "1ECV",
+            "course": "Elements of Civil Engineering and Engineering Mechanics"
         }
     },
     {
         "model": "courses.Courses",
         "pk": 5,
         "fields": {
-            "semester": 5,
-            "course1": "Computer Networks and Cyber Security",
-            "course2": "Database Management System",
-            "course3": "Management and Entrepreneurship",
-            "course4": "Python Programming",
-            "course5": "Information Retrieval",
-            "course6": "Cloud Computing"
+            "sem": 1,
+            "crs_id": "1EMO",
+            "course": "Engineering Mathematics I"
         }
     },
     {
         "model": "courses.Courses",
         "pk": 6,
         "fields": {
-            "semester": 6,
-            "course1": "Engineering Economics",
-            "course2": "Java and J2EE",
-            "course3": "Machine Learning Techniques",
-            "course4": "Software Engineering",
-            "course5": "Artificial Intelligence"        }
+            "sem": 2,
+            "crs_id": "2BEE",
+            "course": "Basic Electronics Engineering"
+        }
     },
     {
         "model": "courses.Courses",
         "pk": 7,
         "fields": {
-            "semester": 7,
-            "course1": "Block Chain",
-            "course2": "Cryptography and Network Security",
-            "course3": "Software Testing and Quality Metrics",
-            "course4": "Medical Imaging Techniques"
+            "sem": 2,
+            "crs_id": "2CPS",
+            "course": "C Programming for Problem Solving"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 7,
+        "fields": {
+            "sem": 2,
+            "crs_id": "2ECH",
+            "course": "Engineering Chemistry"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 8,
+        "fields": {
+            "sem": 2,
+            "crs_id": "2EMT",
+            "course": "Engineering Mathematics II"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 9,
+        "fields": {
+            "sem": 3,
+            "crs_id": "3CON",
+            "course": "Computer Organization"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 10,
+        "fields": {
+            "sem": 3,
+            "crs_id": "3DCN",
+            "course": "Data Communication"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 11,
+        "fields": {
+            "sem": 3,
+            "crs_id": "3DSC",
+            "course": "Data Structures with C"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 12,
+        "fields": {
+            "sem": 3,
+            "crs_id": "3DIT",
+            "course": "Discrete and Integral Transforms"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 13,
+        "fields": {
+            "sem": 3,
+            "crs_id": "3DLD",
+            "course": "Digital System and Logic Design"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 14,
+        "fields": {
+            "sem": 3,
+            "crs_id": "3DMS",
+            "course": "Discrete Mathematical Structures"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 15,
+        "fields": {
+            "sem": 4,
+            "crs_id": "4AFL",
+            "course": "Automata Theory and Formal Languages"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 16,
+        "fields": {
+            "sem": 4,
+            "crs_id": "4CVD",
+            "course": "Complex Variables and Distributions"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 17,
+        "fields": {
+            "sem": 4,
+            "crs_id": "4DAA",
+            "course": "Design and Analysis of Algorithms"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 18,
+        "fields": {
+            "sem": 4,
+            "crs_id": "4MPM",
+            "course": "Microprocessos and Microcontroller"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 19,
+        "fields": {
+            "sem": 4,
+            "crs_id": "4OOP",
+            "course": "Object Oriented Programming with C++"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 20,
+        "fields": {
+            "sem": 4,
+            "crs_id": "4OPS",
+            "course": "Operating Systems"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 21,
+        "fields": {
+            "sem": 5,
+            "crs_id": "5CNS",
+            "course": "Computer Networks and Cyber Security"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 22,
+        "fields": {
+            "sem": 5,
+            "crs_id": "5DBM",
+            "course": "Database Management System"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 23,
+        "fields": {
+            "sem": 5,
+            "crs_id": "5MES",
+            "course": "Management and Entrepreneurship"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 24,
+        "fields": {
+            "sem": 5,
+            "crs_id": "5PPM",
+            "course": "Python Programming"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 25,
+        "fields": {
+            "sem": 5,
+            "crs_id": "5INR",
+            "course": "Information Retrieval"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 26,
+        "fields": {
+            "sem": 5,
+            "crs_id": "5CCP",
+            "course": "Cloud Computing"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 27,
+        "fields": {
+            "sem": 6,
+            "crs_id": "6EEC",
+            "course": "Engineering Economics"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 28,
+        "fields": {
+            "sem": 6,
+            "crs_id": "6JVJ",
+            "course": "Java and J2EE"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 29,
+        "fields": {
+            "sem": 6,
+            "crs_id": "MLT",
+            "course": "Machine Learning Techniques"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 30,
+        "fields": {
+            "sem": 6,
+            "crs_id": "6SWE",
+            "course": "Software Engineering"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 31,
+        "fields": {
+            "sem": 6,
+            "crs_id": "6AFI",
+            "course": "Artificial Intelligence"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 32,
+        "fields": {
+            "sem": 7,
+            "crs_id": "7BKC",
+            "course": "Block Chain"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 33,
+        "fields": {
+            "sem": 7,
+            "crs_id": "7CNS",
+            "course": "Cryptography and Network Security"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 34,
+        "fields": {
+            "sem": 7,
+            "crs_id": "7SQM",
+            "course": "Software Testing and Quality Metrics"
+        }
+    },
+    {
+        "model": "courses.Courses",
+        "pk": 35,
+        "fields": {
+            "sem": 7,
+            "crs_id": "7MIT",
+            "course": "Medical Imaging Techniques"
         }
     }
 ]
