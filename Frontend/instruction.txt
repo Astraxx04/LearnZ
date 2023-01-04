@@ -1,2 +1,0 @@
-Add any new frontend thing here.
-The Backend team will take files from here and integrate it.
