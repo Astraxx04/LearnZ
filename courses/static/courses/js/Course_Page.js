@@ -1,8 +1,7 @@
-
-//Course name - Key,, current chapter - 0 index,, chapter name - 1 index
-var Courses={"JavaScript Fundamentals": ["Chapter 4","Callbacks & Closures"],"Data Science": ["Chapter 4","Callbacks & Closures"],"C programming": ["Chapter 4","Callbacks & Closures"],"Data Communication": ["Chapter 4","Callbacks & Closures"],"Data structure Fundamentals": ["Chapter 4","Callbacks & Closures"],"Micro Processor": ["Chapter 4","Callbacks & Closures"]};
-
 var NoOfSemester = 7;
+var currentSem = 1;
+var all_the_course={1:"",2:"",3:"",4:"",5:"",6:"",7:""};
+var Courses = all_the_course[currentSem];
 
 var user_usn = "1DS20IS027";
 
@@ -33,7 +32,7 @@ function log(theElement) {
 }
 
 //For Every course insert card 
-Object.keys(Courses).forEach(Course => {
+Courses.forEach(Course => {
     //Creted div with class card;
     var div = document.createElement('div');
     div.classList.add("card");
