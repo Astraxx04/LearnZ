@@ -19,9 +19,11 @@ useinfo.appendChild(span);
 
 //Add Semester option based on No of semester
 for (let index = 0; index < NoOfSemester; index++) {
-  var li = document.createElement('li');
-  li.innerHTML=`<a href=""> Semester `+(index+1)+`</a>`;
-  dropdown.appendChild(li);
+
+  var a = document.createElement('a');
+  a.setAttribute("href","");
+  a.innerHTML=`<li>Semester `+(index+1)+`</li>`;
+  dropdown.appendChild(a);
 }
 
 function log(theElement) {

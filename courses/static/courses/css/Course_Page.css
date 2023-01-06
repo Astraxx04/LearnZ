@@ -108,9 +108,10 @@ header .dropdown{
 	top:4.5rem;
 	position: absolute;
 	margin-left:10px;
-	background-color: var(--dropdownBackground);
+	background-color: var(--headerColor);
 	box-shadow: 0 5px 45px rgb(1 1 1 / 75%);
-	border-radius: 5px;
+	border-radius: 2px;
+	padding: 5px;
 	transform: translateY(-3rem);
 	z-index: 10;
 	transition: all 0.3s ease 0s,visibility 0s linear 0.3s, z-index 0s linear 0.01s;
@@ -124,12 +125,8 @@ transition-delay:0s,0s,0.3s ;
 }
 .dropdown li{
 	margin-top:7px;
-	background-color: var(--semesterInDropdownBackgroundColor);
-	border:3px var(--semesterDropdownBorderColor);
-	border-style: solid;
 	padding: 10px;
-	border-radius: 18px;
-	
+	border-radius: 5px;
 	cursor: pointer;
 }
 .dropdown li:hover{
