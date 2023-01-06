@@ -160,12 +160,10 @@ body{
 h1{
 	text-align: center;
 	justify-content: center;
-	text-decoration:underline;
-	text-decoration-color: #527af6;
-	margin-top: 90px;
+	margin-top: 40px;
 	font-family:'Laila';
 	font-size:50px;
-	color: #27a9a6;
+	color: black;
 	
 }
 
