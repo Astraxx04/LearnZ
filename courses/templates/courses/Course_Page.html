@@ -19,14 +19,31 @@
       rel="stylesheet"
       type="text/css"
     />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Laila&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Laila&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/36bed4b74a.js"
       crossorigin="anonymous"
     ></script>
-    <script src="{% static 'courses/js/Course_Page.js' %}" defer data-usn="{{ usn }}"></script>
+    <script
+      src="{% static 'courses/js/Course_Page.js' %}"
+      defer
+      data-usn="{{ usn }}"
+    ></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Courses</title>
   </head>
@@ -51,6 +68,7 @@
           </div>
           <div class="user" id="useinfo">
             <span class="user_logo"><i class="fa-solid fa-user"></i></span>
+            
           </div>
           <a href="{% url 'index' %}">
             <ul class="get-started">
@@ -62,13 +80,13 @@
     </header>
     <h1>Enrolled Courses</h1>
     {% for msg in messages %}
-      <script>
-        swal({
-          title: "{{ msg }}",
-          // title: "Login Successful",
-          // icon: "success",
-        });
-      </script>
+    <script>
+      swal({
+        title: "{{ msg }}",
+        // title: "Login Successful",
+        // icon: "success",
+      });
+    </script>
     {% endfor %}
 
     <!--cards-->

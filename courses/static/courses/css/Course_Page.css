@@ -7,6 +7,10 @@
     list-style: none;
     text-decoration: none;
   }
+  .li{
+    text-decoration: none;
+
+  }
   :root{
 	--headerColor:#ccc;
 	--cardBackground:#ccc;
@@ -38,12 +42,12 @@
   }
   header {
 	top: 0;
-	left: 0;
-	z-index: 99999;
-	width: 100%;
-	background-color: var(--headerColor);
-	align-items: center;
-	
+  left: 0;
+  z-index: 99999;
+  width: 100%;
+  background-color: var(--headerColor);
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   }
   
   header .inner {
@@ -60,7 +64,7 @@
 	  
   }
   header .logo img{
-	  width: 8rem;
+	  width: 128px;
   }
   header .SemesterDropdown{
 	padding: 5px 20px;
@@ -145,6 +149,7 @@ transition-delay:0s,0s,0.3s ;
 	letter-spacing: 1.2px;
 	border-radius: 15px;
 	padding: 0.7rem;
+	transform: translateY(4px);
   }
   
   .get-started:hover{
