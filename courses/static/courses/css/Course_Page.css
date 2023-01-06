@@ -42,12 +42,13 @@
   }
   header {
 	top: 0;
-  left: 0;
-  z-index: 99999;
-  width: 100%;
-  background-color: var(--headerColor);
-  align-items: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+	left: 0;
+	z-index: 99999;
+	width: 100%;
+	background-color: var(--headerColor);
+	align-items: center;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+	
   }
   
   header .inner {
