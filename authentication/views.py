@@ -123,9 +123,9 @@ def student_signin(request):
         
         if user is not None:
             login(request, user)
-            fname = user.first_name
+            usn = user.get_username()
             messages.success(request, 'Login Successful')
-            return render(request, "courses/Course_Page.html",{"fname":fname})
+            return render(request, "courses/Course_Page.html",{"usn":usn})
         else:
             messages.error(request, 'Invalid USN/Password')
             return render(request, "authentication/StudentLogin.html")

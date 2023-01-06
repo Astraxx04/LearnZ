@@ -2,8 +2,8 @@ var NoOfSemester = 7;
 var currentSem = 1;
 var all_the_course={1:"",2:"",3:"",4:"",5:"",6:"",7:""};
 var Courses = all_the_course[currentSem];
-
-var user_usn = "1DS20IS027";
+const data = document.currentScript.dataset;
+const user_usn = data.usn;
 
 //const from html
 const CourseContainer = document.getElementById("CourseContainer");  
