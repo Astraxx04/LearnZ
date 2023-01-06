@@ -1,45 +1,60 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'authentication/css/StudentLogin.css' %}"
+    />
+    <title>Student Login</title>
+    <script
+      src="https://kit.fontawesome.com/36bed4b74a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+      $(window).on("scroll", function () {
+        if ($(window).scrollTop()) {
+          $("header").addClass("black");
+        } else {
+          $("header").removeClass("black");
+        }
+      });
+    </script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="{% static 'authentication/css/StudentLogin.css' %}" />
-  <title>Student Login</title>
-  <script src="https://kit.fontawesome.com/36bed4b74a.js" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <script>
-    $(window).on("scroll", function () {
-      if ($(window).scrollTop()) {
-        $("header").addClass("black");
-      } else {
-        $("header").removeClass("black");
-      }
-    });
-  </script>
-</head>
+  <body>
+    <!-- Header -->
+    <header id="header">
+      <div class="inner flex">
+        <div class="logo">
+          <a href="{% url 'index' %}"
+            ><img
+              src="{% static 'authentication/images/icon/logo_full.png' %}"
+              alt="logo"
+          /></a>
+        </div>
 
-<body>
-  <!-- Header -->
-  <header id="header">
-    <div class="inner flex">
-      <div class="logo"><a href="{% url 'index' %}"><img src="{% static 'authentication/images/icon/logo_full.png' %}" alt="logo" /></a></div>
+        <button
+          class="mobile-nav-toggle"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Menu</span>
+        </button>
+        <a href="{% url 'student_signup' %}">
+          <ul class="get-started">
+            <li>Sign Up</li>
+          </ul>
+        </a>
+      </div>
+    </header>
 
-      <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-        <span class="sr-only">Menu</span>
-      </button>
-      <a href="{% url 'student_signup' %}">
-      <ul class="get-started">
-        <li>
-          Sign Up
-        </li>
-      </ul>
-    </a></div>
-  </header>
-
-  {% for msg in messages %}
+    {% for msg in messages %}
     <script>
       swal({
         title: "{{ msg }}",
@@ -48,9 +63,9 @@
         // icon: "error",
       });
     </script>
-  {% endfor %}
-  <!--Info-->
-  <!-- {% for message in messages %}
+    {% endfor %}
+    <!--Info-->
+    <!-- {% for message in messages %}
   <div class="head-container">
   <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
     <strong>Message:</strong> {{ message }}
@@ -59,14 +74,20 @@
     </button>
   </div>
   {% endfor %} -->
-  <div class="head-container">
-    <div class="svg-image">
-      <img src="{% static 'authentication/images/login.png' %}" alt="svg" />
-    </div>
-    <div class="form">
-      <form action="{% url 'student_signin' %}" method="post" class="sign-in-form" id="sign-in-form"> {% csrf_token %}
-        <h2 class="title">Sign In</h2>
-        <!--
+    <div class="head-container">
+      <div class="svg-image">
+        <img src="{% static 'authentication/images/login.png' %}" alt="svg" />
+      </div>
+      <div class="form">
+        <form
+          action="{% url 'student_signin' %}"
+          method="post"
+          class="sign-in-form"
+          id="sign-in-form"
+        >
+          {% csrf_token %}
+          <h2 class="title">Sign In</h2>
+          <!--
           <div class="input-field">
             <i class="fa fa-building"></i>
 
@@ -75,27 +96,37 @@
             </select>
           </div>
           -->
-        <div class="input-field">
-          <i class="fa fa-id-card"></i>
-          <input type="usn" name="usn" placeholder="USN" id="Newusn" required />
-        </div>
-        <div class="input-field">
-          <i class="fa fa-lock"></i>
-          <input type="password" class="" name="password" placeholder="Password" id="Password" required />
-        </div>
-        
-        <input type="submit" id="Login" value="Login" class="btn solid" />
-        <div class="teachlog">
-          <a href="{% url 'teacher_signin' %}">Not a Student?</a>
-        </div>
-        <div class="WrongPass">
-          <h3 id="WrongPass"></h3>
-        </div>
-      </form>
+          <div class="input-field">
+            <i class="fa fa-id-card"></i>
+            <input
+              type="usn"
+              name="usn"
+              placeholder="USN"
+              id="Newusn"
+              required
+            />
+          </div>
+          <div class="input-field">
+            <i class="fa fa-lock"></i>
+            <input
+              type="password"
+              class=""
+              name="password"
+              placeholder="Password"
+              id="Password"
+              required
+            />
+          </div>
+
+          <input type="submit" id="Login" value="Login" class="btn solid" />
+          <div class="teachlog">
+            <a href="{% url 'teacher_signin' %}">Not a Student?</a>
+          </div>
+          <div class="WrongPass">
+            <h3 id="WrongPass"></h3>
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
-
-  
-</body>
-
+  </body>
 </html>

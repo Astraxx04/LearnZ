@@ -7,6 +7,10 @@
     list-style: none;
     text-decoration: none;
   }
+  .li{
+    text-decoration: none;
+
+  }
   :root{
 	--headerColor:#ccc;
 	--cardBackground:#ccc;
@@ -43,6 +47,7 @@
 	width: 100%;
 	background-color: var(--headerColor);
 	align-items: center;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 	
   }
   
@@ -60,7 +65,7 @@
 	  
   }
   header .logo img{
-	  width: 8rem;
+	  width: 128px;
   }
   header .SemesterDropdown{
 	padding: 5px 20px;
@@ -104,9 +109,10 @@ header .dropdown{
 	top:4.5rem;
 	position: absolute;
 	margin-left:10px;
-	background-color: var(--dropdownBackground);
+	background-color: var(--headerColor);
 	box-shadow: 0 5px 45px rgb(1 1 1 / 75%);
-	border-radius: 5px;
+	border-radius: 2px;
+	padding: 5px;
 	transform: translateY(-3rem);
 	z-index: 10;
 	transition: all 0.3s ease 0s,visibility 0s linear 0.3s, z-index 0s linear 0.01s;
@@ -120,12 +126,8 @@ transition-delay:0s,0s,0.3s ;
 }
 .dropdown li{
 	margin-top:7px;
-	background-color: var(--semesterInDropdownBackgroundColor);
-	border:3px var(--semesterDropdownBorderColor);
-	border-style: solid;
 	padding: 10px;
-	border-radius: 18px;
-	
+	border-radius: 5px;
 	cursor: pointer;
 }
 .dropdown li:hover{
@@ -145,6 +147,7 @@ transition-delay:0s,0s,0.3s ;
 	letter-spacing: 1.2px;
 	border-radius: 15px;
 	padding: 0.7rem;
+	transform: translateY(4px);
   }
   
   .get-started:hover{
@@ -160,12 +163,10 @@ body{
 h1{
 	text-align: center;
 	justify-content: center;
-	text-decoration:underline;
-	text-decoration-color: #527af6;
-	margin-top: 90px;
+	margin-top: 40px;
 	font-family:'Laila';
 	font-size:50px;
-	color: #27a9a6;
+	color: black;
 	
 }
 

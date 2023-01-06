@@ -1,10 +1,9 @@
-
-//Course name - Key,, current chapter - 0 index,, chapter name - 1 index
-var Courses={"JavaScript Fundamentals": ["Chapter 4","Callbacks & Closures"],"Data Science": ["Chapter 4","Callbacks & Closures"],"C programming": ["Chapter 4","Callbacks & Closures"],"Data Communication": ["Chapter 4","Callbacks & Closures"],"Data structure Fundamentals": ["Chapter 4","Callbacks & Closures"],"Micro Processor": ["Chapter 4","Callbacks & Closures"]};
-
 var NoOfSemester = 7;
-
-var user_usn = "1DS20IS027";
+var currentSem = 1;
+var all_the_course={1:"",2:"",3:"",4:"",5:"",6:"",7:""};
+var Courses = all_the_course[currentSem];
+const data = document.currentScript.dataset;
+const user_usn = data.usn;
 
 //const from html
 const CourseContainer = document.getElementById("CourseContainer");  
@@ -20,9 +19,11 @@ useinfo.appendChild(span);
 
 //Add Semester option based on No of semester
 for (let index = 0; index < NoOfSemester; index++) {
-  var li = document.createElement('li');
-  li.innerHTML=`<a href=""> Semester `+(index+1)+`</a>`;
-  dropdown.appendChild(li);
+
+  var a = document.createElement('a');
+  a.setAttribute("href","");
+  a.innerHTML=`<li>Semester `+(index+1)+`</li>`;
+  dropdown.appendChild(a);
 }
 
 function log(theElement) {
@@ -33,7 +34,7 @@ function log(theElement) {
 }
 
 //For Every course insert card 
-Object.keys(Courses).forEach(Course => {
+Courses.forEach(Course => {
     //Creted div with class card;
     var div = document.createElement('div');
     div.classList.add("card");
