@@ -32,7 +32,9 @@
               <h1 class="title">Lectures</h1>
               
               <p class="description"> 
-              <button class="btn">continue</button>  
+                <form action="question_bank" method="POST">{% csrf_token %}
+                  <input type="submit" />
+                </form>
               </p>
             
           </div>

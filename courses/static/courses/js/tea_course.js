@@ -27,7 +27,7 @@ for (let index = 0; index < NoOfSemester; index++) {
 
 function log(theElement) {
   let course_name = theElement.srcElement.id;
-  sessionStorage.setItem("course", course_name);
+  sessionStorage.setItem("courseTeacher", course_name);
   // console.log(sessionStorage.getItem("course"));
   location.assign("/features");
 }

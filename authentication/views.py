@@ -13,6 +13,77 @@ from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 import django
 from authentication import models
 from django.utils.encoding import force_str
+import sqlite3
+import json
+
+def getcourses():
+    sqliteConnection = sqlite3.connect('db.sqlite3')
+    cursor = sqliteConnection.cursor()
+    sqlite_select_Query = "select * from courses_courses;"
+    count_sem1 = "select count(*) from courses_courses where sem = 1;"
+    count_sem2 = "select count(*) from courses_courses where sem = 2;"
+    count_sem3 = "select count(*) from courses_courses where sem = 3;"
+    count_sem4 = "select count(*) from courses_courses where sem = 4;"
+    count_sem5 = "select count(*) from courses_courses where sem = 5;"
+    count_sem6 = "select count(*) from courses_courses where sem = 6;"
+    count_sem7 = "select count(*) from courses_courses where sem = 7;"
+
+    count=[]
+    cursor.execute(count_sem1)
+    sem1_count = cursor.fetchall()[0][0]
+    count.append(sem1_count)
+
+    cursor.execute(count_sem2)
+    sem2_count = cursor.fetchall()[0][0]
+    count.append(sem2_count)
+
+    cursor.execute(count_sem3)
+    sem3_count = cursor.fetchall()[0][0]
+    count.append(sem3_count)
+
+    cursor.execute(count_sem4)
+    sem4_count = cursor.fetchall()[0][0]
+    count.append(sem4_count)
+
+    cursor.execute(count_sem5)
+    sem5_count = cursor.fetchall()[0][0]
+    count.append(sem5_count)
+
+    cursor.execute(count_sem6)
+    sem6_count = cursor.fetchall()[0][0]
+    count.append(sem6_count)
+
+    cursor.execute(count_sem7)
+    sem7_count = cursor.fetchall()[0][0]
+    count.append(sem7_count)
+
+
+    courses={1:[],2:[],3:[],4:[],5:[],6:[],7:[]}
+    sem = 0
+    for i in count:
+        sem+=1
+        row_sem1 = "select course from courses_courses where sem = " + str(sem) +";"
+        cursor.execute(row_sem1)
+        row = cursor.fetchall()
+        courses[sem].append(row)
+    print(courses)
+    #print(sem1_count,sem2_count,sem3_count,sem4_count,sem5_count,sem6_count,sem7_count)
+    cursor.close()
+    return courses
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # import pyautogui
 django.utils.encoding.force_text = force_str
 
@@ -118,14 +189,15 @@ def student_signin(request):
     if request.method == 'POST':
         username = request.POST.get('usn',False)
         pass1 = request.POST.get('password','')
-        
+        courses = getcourses()
         user = authenticate(username=username, password=pass1)
         
         if user is not None:
             login(request, user)
             usn = user.get_username()
             messages.success(request, 'Login Successful')
-            return render(request, "courses/Course_Page.html",{"usn":usn})
+            serialized_courses = json.dumps(courses)
+            return render(request, "courses/Course_Page.html",{"usn":usn,"courses":serialized_courses})
         else:
             messages.error(request, 'Invalid USN/Password')
             return render(request, "authentication/StudentLogin.html")

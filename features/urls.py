@@ -5,4 +5,5 @@ from . import views
 urlpatterns = [
     path('student', views.studentFeatures, name='feature_page_student'),
     path('teacher', views.teacherFeatures, name='feature_page_teacher'),
+    path('question_bank', views.questionBank, name='qbDownload'),
 ]

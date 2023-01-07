@@ -1,10 +1,7 @@
 var NoOfSemester = 7;
 var currentSem = 1;
-var all_the_course={1:"",2:"",3:"",4:"",5:"",6:"",7:""};
-var Courses = all_the_course[currentSem];
-const data = document.currentScript.dataset;
-const user_usn = data.usn;
-
+var data = document.currentScript.dataset;
+var user_usn = data.usn;
 //const from html
 const CourseContainer = document.getElementById("CourseContainer");  
 const dropdown = document.getElementById("dropdown");  
@@ -28,13 +25,13 @@ for (let index = 0; index < NoOfSemester; index++) {
 
 function log(theElement) {
   let course_name = theElement.srcElement.id;
-  sessionStorage.setItem("course", course_name);
+  sessionStorage.setItem("courseStudent", course_name);
   // console.log(sessionStorage.getItem("course"));
   location.assign("/features");
 }
 
 //For Every course insert card 
-Courses.forEach(Course => {
+courses[currentSem][0].forEach(Course => {
     //Creted div with class card;
     var div = document.createElement('div');
     div.classList.add("card");
@@ -43,8 +40,8 @@ Courses.forEach(Course => {
     var div1 = document.createElement('div');
     div1.classList.add("course-preview");
     div1.innerHTML=`
-    <h2>`+Course+`</h2>
-    <button class="btn" id="${Course}">Continue</button>`;
+    <h2>`+Course[0]+`</h2>
+    <button class="btn" id="${Course[0]}">Continue</button>`;
     div.appendChild(div1);
   });
 
@@ -54,10 +51,3 @@ var all_button = document.getElementsByClassName('btn');
   }
 
 
-
-  let db = new sqlite3.Database('../db.sqlite3', (err) => {
-    if (err) {
-      console.error(err.message);
-    }
-    console.log('Connected to the chinook database.');
-  });
