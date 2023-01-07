@@ -208,13 +208,14 @@ def teacher_signin(request):
     if request.method == 'POST':
         username = request.POST.get('teachid',False)
         pass1 = request.POST.get('password','')
-        
+        courses = getcourses()
         user = authenticate(username=username, password=pass1)
         
         if user is not None:
             login(request, user)
             messages.success(request, 'Login Successful')
-            return render(request, "courses/tea_course.html", {"username":username})
+            serialized_courses = json.dumps(courses)
+            return render(request, "courses/tea_course.html", {"username":username,"courses":serialized_courses})
         else:
             messages.error(request, 'Invalid TeacherID/Password')
             return render(request, "authentication/TeacherLogin.html")
