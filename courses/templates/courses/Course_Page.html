@@ -61,16 +61,14 @@
         </div>
         <div class="userloggedin flex">
           <div class="SemesterDropdown">
-            <span href="" class="Title"
-              >Semester <i class="fa-solid fa-angle-down"></i
-            ></span>
+            <span href="" class="Title"> Semester <i class="fa-solid fa-angle-down"></i></span>
             <ul class="dropdown" id="dropdown"></ul>
           </div>
           <div class="user" id="useinfo">
             <span class="user_logo"><i class="fa-solid fa-user"></i></span>
             
           </div>
-          <a href="{% url 'index' %}">
+          <a href="{% url 'index' %}" style="text-decoration:none;">
             <ul class="get-started">
               <li>Sign Out</li>
             </ul>
@@ -78,7 +76,7 @@
         </div>
       </div>
     </header>
-    <h1>Enrolled Courses</h1>
+    <h1 class="headname">Enrolled Courses</h1>
     {% for msg in messages %}
     <script>
       swal({

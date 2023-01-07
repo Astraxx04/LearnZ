@@ -127,6 +127,7 @@ transition-delay:0s,0s,0.3s ;
 	border-radius: 15px;
 	padding: 0.7rem;
 	transform: translateY(4px);
+	text-decoration: none;
   }
   
   .get-started:hover{
@@ -139,16 +140,13 @@ body{
 	overflow-x:hidden;
 	
 }
-h1{
+.headname{
 	text-align: center;
 	justify-content: center;
 	margin-top: 60px;
 	font-family:'Laila';
 	font-size:50px;
-	color: #527af6;
-    text-decoration: underline;
-    text-decoration-color:#27a9a6 ;
-	
+	color: black;
 }
 
 
@@ -243,8 +241,6 @@ section{
 .btn:hover{
 	background-color: var(--continueBtnHoverColor);
 }
-
-
 
 
 
