@@ -1,7 +1,5 @@
 var NoOfSemester = 7;
 var currentSem = 1;
-var all_the_course={1:"",2:"",3:"",4:"",5:"",6:"",7:""};
-var Courses = all_the_course[currentSem];
 var data = document.currentScript.dataset;
 var user_usn = data.usn;
 //const from html
@@ -42,7 +40,7 @@ courses[currentSem][0].forEach(Course => {
     var div1 = document.createElement('div');
     div1.classList.add("course-preview");
     div1.innerHTML=`
-    <h2>`+Course+`</h2>
+    <h2>`+Course[0]+`</h2>
     <button class="btn" id="${Course[0]}">Continue</button>`;
     div.appendChild(div1);
   });
@@ -53,10 +51,3 @@ var all_button = document.getElementsByClassName('btn');
   }
 
 
-
-  let db = new sqlite3.Database('../db.sqlite3', (err) => {
-    if (err) {
-      console.error(err.message);
-    }
-    console.log('Connected to the chinook database.');
-  });

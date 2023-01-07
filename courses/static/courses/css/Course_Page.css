@@ -203,22 +203,10 @@ section{
   }
 
 
-.course h6{
-	opacity: 0.6;
-	margin: 0;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-}
-.course h2{
-	letter-spacing: 1px;
-	margin: 10px 0;
-}
 .course-preview{
 	background-color: var(--getStartedHoverColor);
 	color: #fff;
 	padding: 30px;
-	width: 350px;
-	height: 8.2rem;
 	border-radius: 15px;
 
 }
