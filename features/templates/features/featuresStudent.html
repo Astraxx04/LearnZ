@@ -1,77 +1,87 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
+
 <head>
-    <link href="{% static 'features/css/featuresStudent.css' %}" rel="stylesheet">
+  <link href="{% static 'features/css/featuresStudent.css' %}" rel="stylesheet">
 </head>
+
 <body>
-    <header id="header">
-      <div class="inner flex">
-        <div class="logo" style="margin-top:0;">
-          <a href="'index' %}"
-            ><img
-              src="{% static 'features/images/logo_full.png' %}"
-              alt="logo"
-          /></a>
-        </div>
-        <div class="userloggedin flex">
-          <a href="{% url 'index' %}">
-            <ul class="get-started">
-              <li>Sign Out</li>
-            </ul>
-          </a>
-        </div>
+  <header id="header">
+    <div class="inner flex">
+      <div class="logo" style="margin-top:0;">
+        <a href="{% url 'index' %}"><img src="{% static 'features/images/logo_full.png' %}" alt="logo" /></a>
       </div>
-    </header>
+      <div class="userloggedin flex">
+        <a href="{% url 'index' %}">
+          <ul class="get-started">
+            <li>Sign Out</li>
+          </ul>
+        </a>
+      </div>
+    </div>
+  </header>
 
-<div class="courses-cards" style="margin-left:100px;">
+  <div class="courses-cards" style="margin-left:100px;">
 
     <div class="main-card">
-      <div class="card-module"  style="background-image: url('./static/features/images/lectures.svg');" >
-          <div class="post-content">
-              <h1 class="title">Lectures</h1>
-              
-              <p class="description"> 
-              <button class="btn">continue</button>  
-              </p>
-            
-          </div>
+      <div class="card-module" style="background-image: url('./static/features/images/lectures.svg');">
+        <div class="post-content">
+          <h1 class="title">Lectures</h1>
+
+          <p class="description" class="btn">
+          <form action="question_bank" method="POST">{% csrf_token %}
+            <input type="submit" value="Continue" />
+          </form>
+          </p>
+
+        </div>
       </div>
     </div>
     <div class="main-card">
-      <div class="card-module"  style="background-image: url('./features/quiz.svg') ">
-          <div class="post-content">
-            
-            <h1 class="title">Quiz</h1>
-              <p class="description"><button class="btn">continue</button></p>
-            
-          </div>
+      <div class="card-module" style="background-image: url('./features/quiz.svg') ">
+        <div class="post-content">
+
+          <h1 class="title">Quiz</h1>
+          <p class="description" class="btn">
+          <form action="quiz" method="POST">{% csrf_token %}
+            <input type="submit" value="Continue" />
+          </form>
+          </p>
+
+
+        </div>
       </div>
     </div>
     <div class="main-card">
-      <div class="card-module"  style="background-image: url('features/syllabus.svg'); ">
-          <div class="post-content">
-              <h1 class="title">syllabus</h1>
-              
-              <p class="description"> <button class="btn">continue</button></p>
-              
-          </div>
+      <div class="card-module" style="background-image: url('features/syllabus.svg'); ">
+        <div class="post-content">
+          <h1 class="title">syllabus</h1>
+
+          <p class="description" class="btn">
+          <form action="syllabus" method="POST">{% csrf_token %}
+            <input type="submit" value="Continue" />
+          </form>
+          </p>
+
+        </div>
       </div>
     </div>
     <div class="main-card">
-      <div class="card-module"  style="background-image: url('features/notes.svg'); ">
-          <div class="post-content">
-              <h1 class="title">Notes</h1>
-            
-              <p class="description" ><button class="btn">continue</button></p>
-            
-          </div>
+      <div class="card-module" style="background-image: url('features/notes.svg'); ">
+        <div class="post-content">
+          <h1 class="title">Notes</h1>
+
+          <p class="description"><button class="btn">continue</button></p>
+
+        </div>
       </div>
     </div>
-   
-  
-    </div>  
-    </body>
-  
+
+
+  </div>
 </body>
+
+</body>
+
 </html>
