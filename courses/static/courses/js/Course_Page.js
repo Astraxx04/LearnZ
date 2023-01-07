@@ -2,10 +2,10 @@ var NoOfSemester = 7;
 var currentSem = 1;
 var all_the_course={1:"",2:"",3:"",4:"",5:"",6:"",7:""};
 var Courses = all_the_course[currentSem];
-const data = document.currentScript.dataset;
-const user_usn = data.usn;
-
+var data = document.currentScript.dataset;
+var user_usn = data.usn;
 //const from html
+console.log(courses);
 const CourseContainer = document.getElementById("CourseContainer");  
 const dropdown = document.getElementById("dropdown");  
 const useinfo = document.getElementById("useinfo");  
