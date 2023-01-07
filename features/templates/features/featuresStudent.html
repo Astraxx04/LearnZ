@@ -29,11 +29,9 @@
         <div class="post-content">
           <h1 class="title">Lectures</h1>
 
-          <p class="description" class="btn">
-          <form action="question_bank" method="POST">{% csrf_token %}
-            <input type="submit" value="Continue" />
-          </form>
-          </p>
+          <p class="description"><button class="btn">continue</button></p>
+
+
 
         </div>
       </div>
@@ -72,8 +70,11 @@
         <div class="post-content">
           <h1 class="title">Notes</h1>
 
-          <p class="description"><button class="btn">continue</button></p>
-
+          <p class="description" class="btn">
+          <form action="question_bank" method="POST">{% csrf_token %}
+            <input type="submit" value="Continue" />
+          </form>
+          </p>
         </div>
       </div>
     </div>
