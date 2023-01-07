@@ -85,7 +85,7 @@ sem_7.addEventListener('click',function(){
 
 function log(theElement) {
   let course_name = theElement.srcElement.id;
-  sessionStorage.setItem("course", course_name);
+  sessionStorage.setItem("courseStudent", course_name);
   // console.log(sessionStorage.getItem("course"));
   location.assign("/features");
 }
