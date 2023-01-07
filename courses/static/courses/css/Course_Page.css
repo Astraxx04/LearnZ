@@ -13,7 +13,7 @@
   }
   :root{
 	--headerColor:#ccc;
-	--cardBackground:#ccc;
+	--cardBackground:#fff;
 	--courseBackground:#27a9a6;
 	--courseContinueButton:#a8b9ef;
 	--semesterBorderColor:#27a9a6;
@@ -28,6 +28,7 @@
 	--continueBtnColor:var(--getstartedColor);
 	--continueBtnHoverColor:var(--getStartedHoverColor);
 }
+
 
 .flex {
 	display: flex;
@@ -65,35 +66,13 @@
 	  
   }
   header .logo img{
-	  width: 148px;
+	  width: 128px;
   }
   header .SemesterDropdown{
 	padding: 5px 20px;
 	
 }
-/*Header for different size*/
-/*@media screen and (max-width: 2000px) {
-	header .SemesterDropdown{
-		margin-left: 75%;
-	}
-  }
 
-  @media screen and (max-width: 1540px) {
-	header .SemesterDropdown{
-		margin-left: 70%;
-	}
-  }
-  @media screen and (max-width: 1285px) {
-	header .SemesterDropdown{
-		margin-left: 65%;
-	}
-  }
-  @media screen and (max-width: 1110px) {
-	header .SemesterDropdown{
-		margin-left: 60%;
-	}
-  }
-  */
 header .Title{
 	padding: 5px 20px;
 	border-radius: 20px;
@@ -163,10 +142,12 @@ body{
 h1{
 	text-align: center;
 	justify-content: center;
-	margin-top: 40px;
+	margin-top: 60px;
 	font-family:'Laila';
 	font-size:50px;
-	color: black;
+	color: #527af6;
+    text-decoration: underline;
+    text-decoration-color:#27a9a6 ;
 	
 }
 
@@ -191,7 +172,8 @@ section{
   }
   .container .card {
 	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-	margin-bottom:2rem;
+	margin-right: 2rem;
+	margin-bottom:4rem;
 	margin-inline:2.75rem ;
 	border-radius: 15px;
 	display: flex;
@@ -202,11 +184,34 @@ section{
 	background-color: var(--cardBackground);
   }
 
+ .course-preview h2{
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 20px;
+	font-family: 'Laila';
+	color: #fff;
 
+
+
+
+}
+.course h6{
+	opacity: 0.6;
+	margin: 0;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+.course h2{
+	letter-spacing: 1px;
+	margin: 10px 0;
+}
 .course-preview{
 	background-color: var(--getStartedHoverColor);
-	color: #fff;
+	color: #000;
 	padding: 30px;
+
+	width: 350px;
+	height: 17rem;
 	border-radius: 15px;
 
 }
@@ -238,8 +243,6 @@ section{
 .btn:hover{
 	background-color: var(--continueBtnHoverColor);
 }
-
-
 
 
 
