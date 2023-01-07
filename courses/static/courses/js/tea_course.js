@@ -84,7 +84,7 @@ function log(theElement) {
   let course_name = theElement.srcElement.id;
   sessionStorage.setItem("courseTeacher", course_name);
   // console.log(sessionStorage.getItem("course"));
-  location.assign("/features");
+  location.assign("/teacher");
 }
 function remove_courses() {
   CourseContainer.innerHTML="";
