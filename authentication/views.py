@@ -142,9 +142,8 @@ def teacher_signin(request):
         
         if user is not None:
             login(request, user)
-            fname = user.first_name
             messages.success(request, 'Login Successful')
-            return render(request, "authentication/index.html",{"fname":fname})
+            return render(request, "courses/tea_course.html", {"username":username})
         else:
             messages.error(request, 'Invalid TeacherID/Password')
             return render(request, "authentication/TeacherLogin.html")

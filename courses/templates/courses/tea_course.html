@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'courses/css/tea_course.css' %}" />
+    <script
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      rel="stylesheet"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/36bed4b74a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Laila&display=swap" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/36bed4b74a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="{% static 'courses/js/tea_course.js' %}" defer data-username="{{ username }}"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>Courses</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header id="header">
+      <div class="inner flex">
+        <div class="logo">
+          <a href="{% url 'index' %}"
+            ><img
+              src="{% static 'courses/images/logo_full.png' %}"
+              alt="logo"
+          /></a>
+        </div>
+        <div class="userloggedin flex">
+          <div class="SemesterDropdown">
+            <a href="#" class="Title"
+              ><i class="fa-solid fa-angle-down"></i
+            >Semester</a>
+            <ul class="dropdown" id="dropdown"></ul>
+          </div> 
+          <div class="user" id="useinfo">
+            <span class="user_logo"><i class="fa-solid fa-user"></i></span>
+            |
+          </div>
+          <a href="{% url 'index' %}">
+            <ul class="get-started">
+              <li>Sign Out</li>
+            </ul>
+          </a>
+        </div>
+      </div>
+    </header>
+    <h1>ENROLLED COURSES</h1>
+
+      <script>
+        swal({
+          title: "{{ msg }}",
+          // title: "Login Successful",
+          // icon: "success",
+        });
+      </script>
+
+
+    <!--cards-->
+    <!--
+    <section>
+      {% if user.is_authenticated %}
+      <h3>Hello {{fname}}!</h3>
+      <h4>You're successfully logged in.</h4>
+      <button type="submit"><a href="{% url 'signout' %}">SignOut</a></button>
+      {% else %}
+      <button type="submit"><a href="{% url 'student_signup' %}"">SignUp</a></button>
+    <br />
+    <button type="submit"><a href="{% url 'student_signin' %}">SignIn</a></button>
+    </div>
+  {% endif %} 
+    </section>-->
+    <section>
+      <div class="container" id="CourseContainer"></div>
+    </section>
+  </body>
+</html>
