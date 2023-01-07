@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'authentication',
     'courses',
     'features',
+    'UploadFiles',
 ]
 
 MIDDLEWARE = [
@@ -62,6 +63,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'LearnZ.urls'
+
+MEDIA_URL='/upload/'
+MEDIA_ROOT=os.path.join(BASE_DIR,'upload')
 
 TEMPLATES = [
     {
