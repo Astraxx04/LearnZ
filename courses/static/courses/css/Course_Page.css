@@ -191,7 +191,6 @@ section{
   }
   .container .card {
 	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-	
 	margin-bottom:2rem;
 	margin-inline:2.75rem ;
 	border-radius: 15px;
@@ -218,7 +217,6 @@ section{
 	background-color: var(--getStartedHoverColor);
 	color: #fff;
 	padding: 30px;
-	
 	width: 350px;
 	height: 8.2rem;
 	border-radius: 15px;

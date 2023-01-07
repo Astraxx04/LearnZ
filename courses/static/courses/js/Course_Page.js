@@ -5,7 +5,6 @@ var Courses = all_the_course[currentSem];
 var data = document.currentScript.dataset;
 var user_usn = data.usn;
 //const from html
-console.log(courses);
 const CourseContainer = document.getElementById("CourseContainer");  
 const dropdown = document.getElementById("dropdown");  
 const useinfo = document.getElementById("useinfo");  
@@ -34,7 +33,7 @@ function log(theElement) {
 }
 
 //For Every course insert card 
-Courses.forEach(Course => {
+courses[currentSem][0].forEach(Course => {
     //Creted div with class card;
     var div = document.createElement('div');
     div.classList.add("card");
@@ -44,7 +43,7 @@ Courses.forEach(Course => {
     div1.classList.add("course-preview");
     div1.innerHTML=`
     <h2>`+Course+`</h2>
-    <button class="btn" id="${Course}">Continue</button>`;
+    <button class="btn" id="${Course[0]}">Continue</button>`;
     div.appendChild(div1);
   });
 
