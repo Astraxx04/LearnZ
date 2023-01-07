@@ -4,4 +4,5 @@ from . import views
 
 urlpatterns = [
     path('courses/', views.course_page, name='course_page'),
+    path('tcourse/', views.tcourse, name='tcourse'),
 ]

@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+  }
+  body{
+    top: 0;
+  }
+
+
+
+
+:root{
+	--headerColor:#ccc;
+	--cardBackground:#ccc;
+	--courseBackground:#27a9a6;
+	--courseContinueButton:#a8b9ef;
+	--semesterBorderColor:#27a9a6;
+	--semesterHoverColor:#27a9a6;
+	--semesterDropdownHoverColor:#27a9a6;
+	--semesterDropdownBorderColor:#27a9a6;
+	--semesterInDropdownBackgroundColor:#ccc;
+	--dropdownBackground:rgba(0, 0, 0, 0.4);
+	--userbBorderColor:#27a9a6;
+	--getstartedColor:#abbcef;  /*Get started is signout*/
+	--getStartedHoverColor:#527af6;
+	--continueBtnColor:var(--getstartedColor);
+	--continueBtnHoverColor:var(--getStartedHoverColor);
+}
+
+
+
+header {
+	top: 0;
+	left: 0;
+	z-index: 99999;
+	width: 100%;
+	background-color: var(--headerColor);
+	align-items: center;
+	
+  }
+  
+  header .inner {
+	 align-items: center;
+	 
+  }
+  .userloggedin{
+	align-items: center;
+	position: absolute;
+	right:8rem;
+  }
+  header .logo {
+	  margin: 0.5rem;
+	  
+  }
+  header .logo img{
+	  width: 8rem;
+  }
+  header .SemesterDropdown{
+	padding: 5px 20px;
+	
+}
+header .Title{
+	padding: 5px 20px;
+	border-radius: 20px;
+	border:2px var(--semesterBorderColor);
+	border-style: solid;
+}
+header .SemesterDropdown:hover .Title,header .SemesterDropdown:focus .Title{
+	background-color: var(--semesterHoverColor);
+}
+header .dropdown{
+	visibility: hidden;
+	opacity: 0;
+	top:4.5rem;
+	position: absolute;
+	margin-left:10px;
+	background-color: var(--dropdownBackground);
+	box-shadow: 0 5px 45px rgb(1 1 1 / 75%);
+	border-radius: 5px;
+	transform: translateY(-3rem);
+	z-index: 10;
+	transition: all 0.3s ease 0s,visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+}
+
+.user_logo{
+	border-radius: 10px;
+	padding: 2px;
+	border: 2px solid var(--userbBorderColor);
+}
+
+.get-started{
+	background: var(--getstartedColor);
+	backdrop-filter: blur(5rem);
+	font-weight: bolder;
+	letter-spacing: 1.2px;
+	border-radius: 15px;
+	padding: 0.7rem;
+    transform: translateY(-63px);
+  }
+  
+  .get-started:hover{
+	transition: 1s;
+	background: var(--getStartedHoverColor);
+  }
+	
+
+
+.btn{
+  background: var(--getstartedColor);
+	backdrop-filter: blur(5rem);
+	font-weight: bolder;
+	letter-spacing: 1.2px;
+	border-radius: 15px;
+	padding: 0.7rem;
+    transform: translateY(-63px);
+    margin-left: 40px;
+    margin-top: 40px;
+  border:none;
+  width: 50%;
+}
+.btn:hover{
+  transition: 1s;
+	background: var(--getStartedHoverColor);
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+.courses-card {
+    display: flex;
+	flex-wrap: wrap;
+	margin-top: 10rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    padding-left: 500px;
+	
+   
+    
+  }
+  
+  .main-card {
+    display: flex;
+	flex-wrap: wrap;
+	margin-top: 10rem;
+	margin-inline: 2rem;
+	align-items: center;
+	justify-content: center;
+	
+
+
+    width: 20%;
+    
+    float: left;
+    padding: 5px 5px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card-module {
+    font-family: arial;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      background-color: #527af6;
+      background-image: url("https://static.vecteezy.com/system/resources/previews/000/215/345/large_2x/riding-a-bike-illustration-vector.png");
+      background-size: contain;
+      background-repeat: repeat;
+      border-radius: 20px;
+      height: 355px;
+      -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+      -webkit-transition: all 0.3s linear 0s;
+      -moz-transition: all 0.3s linear 0s;
+      -ms-transition: all 0.3s linear 0s;
+      -o-transition: all 0.3s linear 0s;
+      transition: all 0.3s linear 0s;
+      float: left;
+      width: 100%;
+      max-width: 260px;
+      cursor:pointer;
+  }
+  
+  .card-module .post-content {
+      position: absolute;
+      bottom: 8px;
+      background: #FFFFFF;
+      width: 92.5%;
+      padding: 30px;
+      left: 10px;
+      border-radius: 20px;
+      -webkti-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+      -moz-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+      -ms-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+      -o-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+      transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+  }
+  
+  .card-module .post-content .title {
+      margin: 0;
+      padding: 0 0 10px;
+      color: #333333;
+      font-size: 26px;
+      font-weight: 700;
+      text-align: center;
+      justify-content: center;
+  }
+  
+  
+  
+  .card-module .post-content .description {
+      color: #666666;
+      font-size: 14px;
+      line-height: 1.8em;
+  }
+  
+  .card-module .post-content .description{
+    height: 0px;
+    opacity: 0;
+    margin: 0;
+        -webkit-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+      -moz-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+      -ms-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+      -o-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+      transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+  }
+  
+  .card-module:hover .post-content .description {
+    height:100px !important;
+    opacity: 1;
+    margin-top: 50px;
+        -webkit-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+      -moz-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+      -ms-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+      -o-transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+      transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+  }
+
+
+
+  @media (max-width: 992px) and (min-width: 1200px) {
+   .main-card {
+      width:25%;
+    }
+  }
+  
+  
+  @media only screen and (max-width: 991px) {
+    .main-card {
+      width: 33.333%;
+    }
+  }
+  
+  
+  @media(max-width: 767px) {
+    .main-card {
+      width:50%;
+    }
+  }
+  
+  
