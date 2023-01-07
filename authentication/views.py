@@ -66,7 +66,6 @@ def getcourses():
         cursor.execute(row_sem1)
         row = cursor.fetchall()
         courses[sem].append(row)
-    print(courses)
     #print(sem1_count,sem2_count,sem3_count,sem4_count,sem5_count,sem6_count,sem7_count)
     cursor.close()
     return courses
