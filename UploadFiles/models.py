@@ -6,7 +6,7 @@ from django.core.validators import FileExtensionValidator
 
 class notes(models.Model):
     file_name = models.CharField(max_length=50)
-    my_file = models.FileField(validators=[FileExtensionValidator(allowed_extensions=['pdf'])])
+    my_file = models.FileField(validators=[FileExtensionValidator(allowed_extensions=['pdf','doc','docx','pptx'])])
 
 class quiz(models.Model):
     quiz_name = models.CharField(max_length=30)
