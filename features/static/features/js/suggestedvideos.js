@@ -38,15 +38,22 @@ fetch('/static/features/json/data.json').then(
     }
     )
     
-    //another functions
-    function data_function(data){
+//another functions
+function data_function(data){
     data.forEach(function (da) {
         dat.push(da);
     });
+    var two = dat[10];
+    console.log(two);
 
-    }
-    
-console.log(dat);    
+
+
+
+
+
+}
+  
+
 
 function searchkey(){
     
