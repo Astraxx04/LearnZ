@@ -31,7 +31,7 @@ def quizupload(request):
             quizName = request.POST.get('quiz_name') 
             courseName = request.POST.get('quiz_course_name') 
             link = request.POST.get('link')
-            quiz.objects.create(quiz_name=quizName,link=link).save()
+            quiz.objects.create(quiz_name=quizName,link=link,course_name = courseName).save()
             messages.success(request,"Quiz link uploaded successfully.")
             # exists=notes.objects.filter(my_file=MyFile).exists()
 
