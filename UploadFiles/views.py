@@ -14,6 +14,9 @@ import json
 
 # Create your views here.
 
+
+lastsyl=""
+
 def quizbase(request):
     cur_course = request.COOKIES.get('course_name')
     mydata=quiz.objects.filter(course_name = cur_course)    
@@ -118,9 +121,10 @@ def syluploadfile(request):
             else:
                 sylabus.objects.create(file_name=MyFileName,my_file=MyFile,course_name=courseName).save()
                 messages.success(request,"File uploaded successfully.")
-                loc="upload/"+MyFile.name
-                print(loc)
-                suggestfun(loc)
+            lastsyl="upload/"+MyFile.name
+            loc="upload/"+MyFile.name
+            print(lastsyl)
+            suggestfun(loc)
         return redirect("sylbase")
 
 def syldeleteFile(request,id):
@@ -138,19 +142,16 @@ def suggestfun(locat):
     x=len(pdfreader.pages)
     pageobj=pdfreader.pages[0]
     text=pageobj.extract_text()
-    print(text)
     r=Rake ()
     r.extract_keywords_from_text(text)
     keyword_extracted = r.get_ranked_phrases()[2:25]
-    print(keyword_extracted)
     x=keyword_extracted
-    print(x)
     def unwanted_number(x):
         for k in x:
             numbers = re.findall('[0-9]+', k)
             if(numbers):
                 x.remove(k)
-        print(x)
+        
 
     def unwanted_text(x):
         for k in x:
@@ -158,13 +159,13 @@ def suggestfun(locat):
             text = re.findall('(.*?)dayananda(.*?)', k) or re.findall('(.*?)university(.*?)', k) or re.findall('(.*?)malleshwara(.*?)', k) or re.findall('(.*?)institute(.*?)', k) or re.findall('(.*?)engineering(.*?)', k) or re.findall('(.*?)iso(.*?)', k)
             if(text):
                 x.remove(k)
-        print(x)
+        
 
 
-    print(keyword_extracted)
     unwanted_number(x)
-    print("\n\n\n")
     unwanted_text(x)
+    print("\n\n\n")
+    print(x)
 
 
     jsonString = json.dumps(x)
