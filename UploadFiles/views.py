@@ -109,7 +109,7 @@ def syluploadfile(request):
             else:
                 sylabus.objects.create(file_name=MyFileName,my_file=MyFile,course_name=courseName).save()
                 messages.success(request,"File uploaded successfully.")
-                loc="upload/Testing2.pdf"
+                loc="upload/"+MyFile.name
                 print(loc)
                 suggestfun(loc)
         return redirect("sylbase")
@@ -159,6 +159,6 @@ def suggestfun(locat):
 
 
     jsonString = json.dumps(x)
-    jsonFile = open("./features/static/features/data.json", "w")
+    jsonFile = open("./features/static/features/json/data.json", "w")
     jsonFile.write(jsonString)
     jsonFile.close()

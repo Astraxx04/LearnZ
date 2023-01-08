@@ -1,4 +1,19 @@
-{% extends 'nbase.html'%}
+{% load static}
+<html>
+    <head>
+        <title>File Upload</title>
+    </head>
+    <body>
+        {% block content %}
+
+        {% endblock%}
+    </body>
+</html>
+<script>
+	$(document).ready(function(){
+		$(".alert").hide(4000);
+	});		
+</script>
 {% block content %}
     <div class="container-fluid" style="margin-top:50px">
         <div class="col-md-offset-1 col-md-4">

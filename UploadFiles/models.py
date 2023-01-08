@@ -19,5 +19,5 @@ class quiz(models.Model):
 
 class sylabus(models.Model):
     file_name = models.CharField(max_length=50)
-    my_file = models.FileField(validators=[FileExtensionValidator(allowed_extensions=['pdf'])])
+    my_file = models.FileField()
     course_name = models.CharField(max_length=100)
