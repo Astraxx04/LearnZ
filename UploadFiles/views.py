@@ -1,6 +1,6 @@
 from django.shortcuts import redirect, render
-from .forms import MyFileForm
-from .models import notes,sylabus
+from .forms import MyFileForm,MyQuizForm
+from .models import notes,sylabus,quiz
 from django.contrib import messages
 from django.urls import path
 import os
@@ -13,6 +13,41 @@ import re
 import json
 
 # Create your views here.
+
+def quizbase(request):
+    mydata=quiz.objects.all()    
+    myform=MyQuizForm()
+    if mydata!='':
+        context={'form':myform,'mydata':mydata}
+        return render(request,'qindex.html',context)
+    else:
+        context={'form':myform}
+        return render(request,"qindex.html",context)
+
+def quizupload(request):
+    if request.method=="POST":
+        myform=MyQuizForm(request.POST,request.FILES)        
+        if myform.is_valid():
+            quizName = request.POST.get('quiz_name') 
+            link = request.POST.get('link')
+            quiz.objects.create(quiz_name=quizName,link=link).save()
+            messages.success(request,"Quiz link uploaded successfully.")
+            # exists=notes.objects.filter(my_file=MyFile).exists()
+
+            # if exists:
+            #     messages.error(request,'The file %s is already exists...!!!'% MyFile)
+            # else:
+            #     notes.objects.create(file_name=MyFileName,my_file=MyFile).save()
+            #     messages.success(request,"File uploaded successfully.")
+        return redirect("quizbase")
+
+def quizdelete(request,id):
+    mydata=quiz.objects.get(id=id)    
+    mydata.delete()    
+    #os.remove(mydata.my_file.path)
+    messages.success(request,'File deleted successfully.')  
+    return redirect('quizbase')    
+
 def notesbase(request):
     mydata=notes.objects.all()    
     myform=MyFileForm()
