@@ -4,7 +4,8 @@
 var NoOfSemester = 7;
 var currentSem = 1;
 const data = document.currentScript.dataset;
-const user_usn = data.username;
+const user_usn = data.usn;
+console.log(data.usn);
 
 //const from html
 const CourseContainer = document.getElementById("CourseContainer");
