@@ -1,6 +1,5 @@
 * {
     margin: 0;
-    
     padding: 0;
     list-style: none;
     text-decoration: none;
@@ -144,7 +143,7 @@ header .dropdown{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-    padding-left: 500px;
+  padding-left: 500px;
 	
    
     
@@ -152,11 +151,11 @@ header .dropdown{
   
   .main-card {
     display: flex;
-	flex-wrap: wrap;
-	margin-top: 10rem;
-	margin-inline: 2rem;
-	align-items: center;
-	justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10rem;
+    margin-inline: 2rem;
+    align-items: center;
+    justify-content: center;
 	
 
 
