@@ -1,4 +1,4 @@
-LearnZ 
+# LearnZ 
 E-learning platform to help students and teachers have the study materials organized and refer the relevant YouTube videos to students based on the materials uploaded by the teacher.
 
 # Contributers
