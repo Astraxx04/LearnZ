@@ -230,9 +230,8 @@ header .dropdown{
   }
 
 
-
   .btn{
-    background: var(--btnBgColor);
+    background: var(--getstartedColor);
     backdrop-filter: blur(5rem);
     font-weight: bolder;
     letter-spacing: 1.2px;
@@ -247,6 +246,7 @@ header .dropdown{
   .btn:hover{
     transition: 1s;
     background: var(--getStartedHoverColor);
+  cursor: pointer !important;
     
   }
   
