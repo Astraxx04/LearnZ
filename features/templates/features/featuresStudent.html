@@ -37,14 +37,15 @@
       </div>
     </div>
     <div class="main-card">
-      <div class="card-module" style="background-image: url('./features/quiz.svg') ">
+      <div class="card-module" style="background-image: url('./static/features/images/quiz.svg') ">
         <div class="post-content">
 
           <h1 class="title">Quiz</h1>
-          <p class="description" class="btn">
+          <p class="description"><button class="btn">
           <form action="quiz" method="POST">{% csrf_token %}
             <input type="submit" value="Continue" />
           </form>
+          </button>
           </p>
 
 
@@ -52,28 +53,30 @@
       </div>
     </div>
     <div class="main-card">
-      <div class="card-module" style="background-image: url('features/syllabus.svg'); ">
+      <div class="card-module" style="background-image: url('./static/features/images/syllabus.svg'); ">
         <div class="post-content">
           <h1 class="title">syllabus</h1>
 
-          <p class="description" class="btn">
+          <p class="description"><button class="btn">
           <form action="syllabus" method="POST">{% csrf_token %}
             <input type="submit" value="Continue" />
           </form>
+          </button>
           </p>
 
         </div>
       </div>
     </div>
     <div class="main-card">
-      <div class="card-module" style="background-image: url('features/notes.svg'); ">
+      <div class="card-module" style="background-image: url('./static/features/images/notes.svg'); ">
         <div class="post-content">
           <h1 class="title">Notes</h1>
 
-          <p class="description" class="btn">
+          <p class="description"><button class="btn">
           <form action="question_bank" method="POST">{% csrf_token %}
             <input type="submit" value="Continue" />
           </form>
+          </button>
           </p>
         </div>
       </div>

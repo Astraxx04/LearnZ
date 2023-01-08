@@ -9,7 +9,7 @@
   <title>LearnZ</title>
   <meta name="desciption" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" type="text/css" href="{% static 'features/static/features/css/suggestedvideos.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static './features/css/suggestedvideos.css' %}" />
   <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script>
@@ -28,7 +28,7 @@
     <div class="inner flex">
       <div class="logo">
         <a href="{% url 'index' %}">
-        <img src="{% static 'features/static/features/images/logo_full.png' %}" alt="logo" /></a>
+        <img src="{% static './features/images/logo_full.png' %}" alt="logo" /></a>
       </div>
       <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
         <span class="sr-only">Menu</span>
@@ -64,5 +64,5 @@
  
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script type="module" src="script.js"></script>
+<script src="{% static './features/js/suggestedvideos.js' %}"></script>
 </html>

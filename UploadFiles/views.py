@@ -70,7 +70,7 @@ def syluploadfile(request):
             else:
                 sylabus.objects.create(file_name=MyFileName,my_file=MyFile).save()
                 messages.success(request,"File uploaded successfully.")
-                loc="upload/Testing.pdf"
+                loc="upload/Testing2.pdf"
                 print(loc)
                 suggestfun(loc)
         return redirect("sylbase")
