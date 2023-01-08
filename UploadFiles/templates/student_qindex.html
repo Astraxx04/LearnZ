@@ -1,0 +1,74 @@
+{% load static%}
+<html>
+    <head>
+        <title>quiz Upload</title>
+    
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    <script src="{% static 'jquery/jquery.min.js'%}"></script>
+    </head>
+    <body>
+        <div class="container-fluid" style="margin-top:50px">
+            <div class="col-md-offset-1 col-md-4">
+                <h3 class="page-hader text-primary text-center">Upload Quiz links</h3>
+    
+                {% if messages %}
+                {% for message in messages %}
+                    {% if message.tags == 'error'%}
+                        <div class="alert alert-danger">
+                            {{ message }}
+                        </div>
+                    {% else %}
+                        <div class="alert alert-{{ message.tags }}">
+                            {{ message }}
+                        </div>	
+                    {% endif %}				
+                    {% endfor %}
+                {% endif %} 
+    
+                <form action="{% url 'quizupload' %}" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label>Quiz Name</label>
+                        {{form.quiz_name}}
+                        {{form.quiz_course_name}}
+                    </div>
+                    <div class="form-group">
+                        <label>Link</label>
+                        {{form.link}}
+                    </div>
+                    <button type="submit" class="btn btn-primary pull-right">Submit</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                {% if mydata %}
+                <h3 class="page-header text-primary text-center">View Quizes</h3>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th style="text-align:center">S.No</th>
+                            <th>Quiz Name</th>
+                            <th>Link</th>                    
+                            <th>Delete</th>                    
+                        </tr>                    
+                    </thead>
+                    {% for data in mydata %}
+                        <tbody>
+                            <tr>
+                                <td style="text-align:center">{{forloop.counter}}</td>
+                                <td>{{data.quiz_name}}</td>
+                                <td><a href="{{data.my_file.url}}">{{data.link}}</a></td>
+                                <td style="text-align:center"><a href="quizdelete/{{data.id}}" class="btn btn-danger">Delete</a></td>
+                            </tr>
+                        </tbody>
+                    {% endfor %}
+                </table>
+                {% endif %}
+            </div>
+        </div>
+    </body>
+    <script>
+        $(document).ready(function(){
+            $(".alert").hide(4000);
+        });		
+    </script>
+</html>

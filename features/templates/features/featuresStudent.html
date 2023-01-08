@@ -34,7 +34,6 @@
         >
           <div class="post-content">
             <h1 class="title">Reference</h1>
-
             <p class="description"><button class="btn">continue</button></p>
           </div>
         </div>
@@ -48,10 +47,7 @@
             <h1 class="title">Quiz</h1>
             <p class="description">
               <button class="btn">
-                <form action="quiz" method="POST">
-                  {% csrf_token %}
-                  <input type="submit" value="Continue" />
-                </form>
+                Continue
               </button>
             </p>
           </div>
@@ -64,15 +60,13 @@
         >
           <div class="post-content">
             <h1 class="title">syllabus</h1>
-
+            <a href = "{{syllabus.my_file.url}}">
             <p class="description">
               <button class="btn">
-                <form action="syllabus" method="POST">
-                  {% csrf_token %}
-                  <input type="submit" value="Continue" />
-                </form>
+                Continue
               </button>
             </p>
+          </a>
           </div>
         </div>
       </div>
@@ -83,15 +77,13 @@
         >
           <div class="post-content">
             <h1 class="title">Notes</h1>
-
+            <a href="{% url 'student_notesbase' %}">
             <p class="description">
               <button class="btn">
-                <form action="question_bank" method="POST">
-                  {% csrf_token %}
-                  <input type="submit" value="Continue" />
-                </form>
+                continue
               </button>
             </p>
+          </a>
           </div>
         </div>
       </div>

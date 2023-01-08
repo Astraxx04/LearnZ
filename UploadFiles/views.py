@@ -50,6 +50,15 @@ def quizdelete(request,id):
     messages.success(request,'File deleted successfully.')  
     return redirect('quizbase')    
 
+def student_notesbase(request):
+    cur_course = request.COOKIES.get('course_name')
+    mydata=notes.objects.filter(course_name = cur_course)
+    context={'mydata':mydata}
+    return render(request,'student_nindex.html',context)
+    
+
+
+
 def notesbase(request):
     cur_course = request.COOKIES.get('course_name')
     mydata=notes.objects.filter(course_name = cur_course)    
