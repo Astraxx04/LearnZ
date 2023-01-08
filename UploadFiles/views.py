@@ -51,7 +51,8 @@ def quizdelete(request,id):
     return redirect('quizbase')    
 
 def notesbase(request):
-    mydata=notes.objects.all()    
+    cur_course = request.COOKIES.get('course_name')
+    mydata=notes.objects.filter(course_name = cur_course)    
     myform=MyFileForm()
     if mydata!='':
         context={'form':myform,'mydata':mydata}
@@ -66,13 +67,13 @@ def notesuploadfile(request):
         if myform.is_valid():
             MyFileName = request.POST.get('file_name') 
             MyFile = request.FILES.get('file')
-
+            courseName = request.COOKIES.get('course_name') 
             exists=notes.objects.filter(my_file=MyFile).exists()
 
             if exists:
                 messages.error(request,'The file %s is already exists...!!!'% MyFile)
             else:
-                notes.objects.create(file_name=MyFileName,my_file=MyFile).save()
+                notes.objects.create(file_name=MyFileName,my_file=MyFile,course_name=courseName).save()
                 messages.success(request,"File uploaded successfully.")
         return redirect("notesbase")
 
@@ -84,7 +85,8 @@ def notesdeleteFile(request,id):
     return redirect('notesbase')
 
 def sylbase(request):
-    mydata=sylabus.objects.all()    
+    cur_course = request.COOKIES.get('course_name')
+    mydata=sylabus.objects.filter(course_name = cur_course)        
     myform=MyFileForm()
     if mydata!='':
         context={'form':myform,'mydata':mydata}
@@ -99,13 +101,13 @@ def syluploadfile(request):
         if myform.is_valid():
             MyFileName = request.POST.get('file_name') 
             MyFile = request.FILES.get('file')
-
-            exists=sylabus.objects.count()
+            courseName = request.COOKIES.get('course_name')
+            exists=sylabus.objects.filter(course_name = courseName).count()
 
             if exists > 0:
                 messages.error(request,'The syllabus already exists...!!!')
             else:
-                sylabus.objects.create(file_name=MyFileName,my_file=MyFile).save()
+                sylabus.objects.create(file_name=MyFileName,my_file=MyFile,course_name=courseName).save()
                 messages.success(request,"File uploaded successfully.")
                 loc="upload/Testing2.pdf"
                 print(loc)

@@ -7,6 +7,8 @@ from django.core.validators import FileExtensionValidator
 class notes(models.Model):
     file_name = models.CharField(max_length=50)
     my_file = models.FileField(validators=[FileExtensionValidator(allowed_extensions=['pdf','doc','docx','pptx'])])
+    course_name = models.CharField(max_length=100)
+
 
 class quiz(models.Model):
     quiz_name = models.CharField(max_length=30)
@@ -14,7 +16,8 @@ class quiz(models.Model):
     date = models.DateField(auto_now_add=True)
     course_name = models.CharField(max_length=100)
 
-    
+
 class sylabus(models.Model):
     file_name = models.CharField(max_length=50)
     my_file = models.FileField(validators=[FileExtensionValidator(allowed_extensions=['pdf'])])
+    course_name = models.CharField(max_length=100)
