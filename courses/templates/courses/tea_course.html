@@ -1,34 +1,28 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'courses/css/tea_course.css' %}" />
-    <script
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      rel="stylesheet"
-    ></script>
-    <script
-      src="https://kit.fontawesome.com/36bed4b74a.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Laila&display=swap" rel="stylesheet">
-    <script
-      src="https://kit.fontawesome.com/36bed4b74a.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="{% static 'courses/js/tea_course.js' %}" defer data-username="{{ username }}"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <title>Courses</title>
-  </head>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{% static 'courses/css/tea_course.css' %}" />
+  <script href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet"></script>
+  <script src="https://kit.fontawesome.com/36bed4b74a.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300" rel="stylesheet"
+    type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Laila&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/36bed4b74a.js" crossorigin="anonymous"></script>
+  <script src="{% static 'courses/js/tea_course.js' %}" defer data-username="{{ username }}"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <title>Courses</title>
+</head>
 
   <body>
     <!-- Header -->
@@ -60,17 +54,17 @@
     </header>
     <h1 class="headname">Enrolled Courses</h1>
 
-      <script>
-        swal({
-          title: "{{ msg }}",
-          // title: "Login Successful",
-          // icon: "success",
-        });
-      </script>
+  <script>
+    swal({
+      title: "{{ msg }}",
+      // title: "Login Successful",
+      // icon: "success",
+    });
+  </script>
 
 
-    <!--cards-->
-    <!--
+  <!--cards-->
+  <!--
     <section>
       {% if user.is_authenticated %}
       <h3>Hello {{fname}}!</h3>
@@ -83,11 +77,12 @@
     </div>
   {% endif %} 
     </section>-->
-    <section>
-      <div class="container" id="CourseContainer"></div>
-    </section>
-  </body>
-  <script>
-    var courses = JSON.parse('{{ courses|escapejs }}');
-  </script>
+  <section>
+    <div class="container" id="CourseContainer"></div>
+  </section>
+</body>
+<script>
+  var courses = JSON.parse('{{ courses|escapejs }}');
+</script>
+
 </html>

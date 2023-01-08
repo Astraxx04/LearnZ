@@ -1,43 +1,54 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Laila&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Laila&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-  }
-  :root{
-	--headerColor:#ccc;
-	--cardBackground:#ccc;
-	--courseBackground:#ff735d;;
-	--courseContinueButton:#f7a699e4;
-	--semesterBorderColor:#ff735d;;
-	--semesterHoverColor:#ff735d;;
-	--semesterDropdownHoverColor:#ff735d;;
-	--semesterDropdownBorderColor:#ff735d;;
-	--semesterInDropdownBackgroundColor:#ccc;
-	--dropdownBackground:rgba(0, 0, 0, 0.4);
-	--userbBorderColor:#ff735d;
-	--getstartedColor:#f7a699e4;  /*Get started is signout*/
-	--getStartedHoverColor:#ff735d;
-	--continueBtnColor:var(--getstartedColor);
-	--continueBtnHoverColor:#fa5b3d;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+
+:root {
+	--headerColor: #ccc;
+	--cardBackground: #ccc;
+	--courseBackground: #ff735d;
+	;
+	--courseContinueButton: #f7a699e4;
+	--semesterBorderColor: #ff735d;
+	;
+	--semesterHoverColor: #ff735d;
+	;
+	--semesterDropdownHoverColor: #ff735d;
+	;
+	--semesterDropdownBorderColor: #ff735d;
+	;
+	--semesterInDropdownBackgroundColor: #ccc;
+	--dropdownBackground: rgba(0, 0, 0, 0.4);
+	--userbBorderColor: #ff735d;
+	--getstartedColor: #f7a699e4;
+	/*Get started is signout*/
+	--getStartedHoverColor: #ff735d;
+	--continueBtnColor: var(--getstartedColor);
+	--continueBtnHoverColor: #fa5b3d;
 }
 
 
 .flex {
 	display: flex;
-	gap: var(--gap,5ex);
-  }
-  html {
-	  scroll-behavior: smooth;
-  }
-  body {
-	  background: #fff;
-	  font-family: 'Open Sans', sans-serif;
-  }
-  header {
+	gap: var(--gap, 5ex);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: #fff;
+	font-family: 'Open Sans', sans-serif;
+}
+
+header {
 	top: 0;
 	left: 0;
 	z-index: 99999;
@@ -45,29 +56,34 @@
 	background-color: var(--headerColor);
 	align-items: center;
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-	
-  }
-  
-  header .inner {
-	 align-items: center;
-	 
-  }
-  .userloggedin{
+
+}
+
+header .inner {
+	align-items: center;
+
+}
+
+.userloggedin {
 	align-items: center;
 	position: absolute;
-	right:8rem;
-  }
-  header .logo {
-	  margin: 0.5rem;
-	  
-  }
-  header .logo img{
-	  width: 128px;
-  }
-  header .SemesterDropdown{
-	padding: 5px 20px;
-	
+	right: 8rem;
 }
+
+header .logo {
+	margin: 0.5rem;
+
+}
+
+header .logo img {
+	width: 128px;
+}
+
+header .SemesterDropdown {
+	padding: 5px 20px;
+
+}
+
 /*Header for different size*/
 /*@media screen and (max-width: 2000px) {
 	header .SemesterDropdown{
@@ -90,53 +106,60 @@
 	}
   }
   */
-header .Title{
+header .Title {
 	padding: 5px 20px;
 	border-radius: 20px;
-	border:2px var(--semesterBorderColor);
+	border: 2px var(--semesterBorderColor);
 	border-style: solid;
 }
-header .SemesterDropdown:hover .Title,header .SemesterDropdown:focus .Title{
+
+header .SemesterDropdown:hover .Title,
+header .SemesterDropdown:focus .Title {
 	background-color: var(--semesterHoverColor);
 }
-header .dropdown{
+
+header .dropdown {
 	visibility: hidden;
 	opacity: 0;
-	top:4.5rem;
+	top: 4.5rem;
 	position: absolute;
-	margin-left:10px;
+	margin-left: 10px;
 	background-color: var(--headerColor);
 	box-shadow: 0 5px 45px rgb(1 1 1 / 75%);
 	border-radius: 2px;
 	padding: 5px;
 	transform: translateY(-3rem);
 	z-index: 10;
-	transition: all 0.3s ease 0s,visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+	transition: all 0.3s ease 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
 }
-header .SemesterDropdown:hover .dropdown,header .SemesterDropdown:focus .dropdown{
+
+header .SemesterDropdown:hover .dropdown,
+header .SemesterDropdown:focus .dropdown {
 	cursor: pointer;
-visibility: visible;
-opacity: 1;
-transform: translateY(-0.7rem);
-transition-delay:0s,0s,0.3s ;
+	visibility: visible;
+	opacity: 1;
+	transform: translateY(-0.7rem);
+	transition-delay: 0s, 0s, 0.3s;
 }
-.dropdown li{
-	margin-top:7px;
+
+.dropdown li {
+	margin-top: 7px;
 	padding: 10px;
 	border-radius: 5px;
 	cursor: pointer;
 }
-.dropdown li:hover{
+
+.dropdown li:hover {
 	background-color: var(--semesterDropdownHoverColor);
 }
 
-.user_logo{
+.user_logo {
 	border-radius: 10px;
 	padding: 2px;
 	border: 2px solid var(--userbBorderColor);
 }
 
-.get-started{
+.get-started {
 	background: var(--getstartedColor);
 	backdrop-filter: blur(5rem);
 	font-weight: bolder;
@@ -144,28 +167,30 @@ transition-delay:0s,0s,0.3s ;
 	border-radius: 15px;
 	padding: 0.7rem;
 	transform: translateY(4px);
-  }
-  
-  .get-started:hover{
+}
+
+.get-started:hover {
 	transition: 1s;
 	background: var(--getStartedHoverColor);
-  }
-body{
-	background:#fff;
-	font-family: 'Muli',sans-serif;
-	overflow-x:hidden;
-	
 }
-h1{
+
+body {
+	background: #fff;
+	font-family: 'Muli', sans-serif;
+	overflow-x: hidden;
+
+}
+
+h1 {
 	text-align: center;
 	justify-content: center;
 	margin-top: 40px;
-	font-family:'Laila';
-	font-size:50px;
+	font-family: 'Laila';
+	font-size: 50px;
 	color: #ff735d;
-    text-decoration: underline;
-    text-decoration-color:#27a9a6 ;
-	
+	text-decoration: underline;
+	text-decoration-color: #27a9a6;
+
 }
 .headname{
 	text-align: center;
@@ -180,7 +205,7 @@ h1{
 /*cards*/
 
 
-section{
+section {
 	z-index: -1;
 	margin-top: 100px;
 }
@@ -192,13 +217,14 @@ section{
 	margin-inline: 2rem;
 	align-items: center;
 	justify-content: center;
-	
-  }
-  .container .card {
+
+}
+
+.container .card {
 	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-	
-	margin-bottom:2rem;
-	margin-inline:2.75rem ;
+
+	margin-bottom: 2rem;
+	margin-inline: 2.75rem;
 	border-radius: 15px;
 	display: flex;
 	justify-content: center;
@@ -206,42 +232,46 @@ section{
 	align-items: center;
 	backdrop-filter: blur(10px);
 	background-color: var(--cardBackground);
-  }
+}
 
 
-.course h6{
+.course h6 {
 	opacity: 0.6;
 	margin: 0;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 }
-.course h2{
+
+.course h2 {
 	letter-spacing: 1px;
 	margin: 10px 0;
 }
-.course-preview{
+
+.course-preview {
 	background-color: var(--getStartedHoverColor);
 	color: #fff;
 	padding: 30px;
-	
+
 	width: 350px;
 	height: 8.2rem;
 	border-radius: 15px;
 
 }
-.course-preview h6{
+
+.course-preview h6 {
 	margin-top: 2.5rem;
 	transition: 1s;
 }
-.course-preview:hover h6{
+
+.course-preview:hover h6 {
 	margin-top: 1.12rem;
 }
 
-.btn{
+.btn {
 	background-color: var(--continueBtnColor);
 	border: 0;
 	border-radius: 50px;
-	box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 	color: #fff;
 	margin-top: 1rem;
 	font-size: 16px;
@@ -249,26 +279,13 @@ section{
 	letter-spacing: 1px;
 	cursor: pointer;
 	transition: 1s;
-	opacity:0;
+	opacity: 0;
 }
-.course-preview:hover .btn{
+
+.course-preview:hover .btn {
 	opacity: 1;
 }
-.btn:hover{
+
+.btn:hover {
 	background-color: var(--continueBtnHoverColor);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

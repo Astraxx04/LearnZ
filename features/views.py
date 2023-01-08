@@ -17,10 +17,10 @@ def teacherFeatures(request):
 def suggestedvideos(request):
     return render(request, "features/suggestedvideos.html")  
 
-# def questionBank(request):
-#     sqliteConnection = sqlite3.connect('db.sqlite3')
-#     cursor = sqliteConnection.cursor()
-#     print('DB Init')
+def Notes(request):
+    sqliteConnection = sqlite3.connect('db.sqlite3')
+    cursor = sqliteConnection.cursor()
+    print('DB Init')
 
 #     if 'courseStudent' in request.session:
 #         name = request.session['courseStudent']

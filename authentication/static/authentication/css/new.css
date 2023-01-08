@@ -7,15 +7,17 @@
 	padding: 0;
 	list-style: none;
 	text-decoration: none;
-  }
-  .flex {
+}
+
+.flex {
 	display: flex;
-	gap: var(--gap,5ex);
-  }
-:root{
-	--cyan:#baf8f8;
-	--headerColor:#ccc;
-	--getstartedColor:rgba(0, 200, 200, 0.473);
+	gap: var(--gap, 5ex);
+}
+
+:root {
+	--cyan: #baf8f8;
+	--headerColor: #ccc;
+	--getstartedColor: rgba(0, 200, 200, 0.473);
 }
 
 .black {
@@ -25,52 +27,60 @@
 html {
 	scroll-behavior: smooth;
 }
+
 body {
 	background: #FFF;
 	font-family: 'Open Sans', sans-serif;
 }
+
 header {
 	top: 0;
 	left: 0;
-  position: fixed;
-  z-index: 99999;
-  width: 100%;
-  background-color: var(--headerColor);
-  align-items: center;
-  
+	position: fixed;
+	z-index: 99999;
+	width: 100%;
+	background-color: var(--headerColor);
+	align-items: center;
+
 }
 
 header .inner {
-  
-  align-items: center;
-  justify-content: space-between;
+
+	align-items: center;
+	justify-content: space-between;
 }
+
 header .logo {
-  margin: 1rem;
+	margin: 1rem;
 }
-header .logo img{
+
+header .logo img {
 	width: 50px;
 }
-header button span, .mobile-nav-toggle{
+
+header button span,
+.mobile-nav-toggle {
 	display: none;
-  }
-  
-  .primary-navigation{
+}
+
+.primary-navigation {
 	/*background: var(--getstartedColor);
 	backdrop-filter: blur(5rem);
 	border-radius: 11px;*/
-	
+
 	padding: 1rem;
-  }
-  .get-started{
+}
+
+.get-started {
 	background: var(--getstartedColor);
 	backdrop-filter: blur(5rem);
 	border-radius: 15px;
 	padding: 0.5rem;
 	margin-right: 2rem;
-  }
-  /*header mobile view*/
-  /*
+}
+
+/*header mobile view*/
+/*
   @media (max-width: 40em) {
 	  .primary-navigation {
 		--gap: 2rem;
@@ -110,41 +120,47 @@ header button span, .mobile-nav-toggle{
   }
   
   */
-  nav li a,.get-started li a{
+nav li a,
+.get-started li a {
 	color: black;
 	height: 100%;
 	font-size: 16px;
 	font-family: "Montserrat";
 	font-weight: 600;
 	transition: 0.5s;
-  }
-  nav li a:hover, .get-started li a:hover{
+}
+
+nav li a:hover,
+.get-started li a:hover {
 	letter-spacing: 2px;
 	transition: 1s;
-  }
+}
 
 /*Inside content*/
 
 .head-container {
-	margin-top:200px;
-	margin-bottom:120px;
+	margin-top: 200px;
+	margin-bottom: 120px;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-around;
-	
+
 }
-.svg-image img{
+
+.svg-image img {
 	width: 500px;
-	filter: drop-shadow(0 20px 10px rgba(0,0,0,0.2));
+	filter: drop-shadow(0 20px 10px rgba(0, 0, 0, 0.2));
 }
+
 /*FOOTER*/
 footer {
 	color: #E5E8EF;
 	background: #000D;
-	padding: 50px 0; 
+	padding: 50px 0;
 	margin-top: 10rem;
 }
+
 footer .footer-container {
 	max-width: 1300px;
 	margin: auto;
@@ -155,49 +171,59 @@ footer .footer-container {
 	flex-wrap: wrap-reverse;
 }
 
-footer .left-col .footer_header{
+footer .left-col .footer_header {
 	transform: translateY(-12px);
 	margin-bottom: 10px;
 }
-footer p{
+
+footer p {
 	margin-top: 7px;
 }
-footer p i{
+
+footer p i {
 	margin-right: 3px;
 }
-footer .footer_header{
+
+footer .footer_header {
 	font-size: 26px;
 }
-footer .border{
+
+footer .border {
 	width: 100px;
 	height: 4px;
 	background: linear-gradient(to right, #27a9a6, #27a9a6);
 	margin: 2px;
 }
-footer .mid-col .footer_header{
+
+footer .mid-col .footer_header {
 	transform: translateY(-20px);
 }
-footer .mid-col .links{
+
+footer .mid-col .links {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	text-transform: capitalize;
 }
-footer a{
-	
-	color:#fff;
-	cursor:pointer;
+
+footer a {
+
+	color: #fff;
+	cursor: pointer;
 }
+
 footer .newsletter-form {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
 }
+
 footer input::placeholder {
-  color: white !important;
+	color: white !important;
 }
+
 footer .txtb {
 	flex: 1;
 	padding: 18px 40px;
@@ -211,6 +237,7 @@ footer .txtb {
 	margin-top: 20px;
 	color: white;
 }
+
 footer .btn {
 	margin-top: 20px;
 	padding: 18px 40px;
@@ -223,8 +250,9 @@ footer .btn {
 	border-radius: 5px;
 	margin-left: 20px;
 	cursor: pointer;
-	transition: opacity .3s linear;	
+	transition: opacity .3s linear;
 }
+
 footer .btn:hover {
 	opacity: .7;
 }
