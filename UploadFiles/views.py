@@ -15,7 +15,8 @@ import json
 # Create your views here.
 
 def quizbase(request):
-    mydata=quiz.objects.all()    
+    cur_course = request.COOKIES.get('course_name')
+    mydata=quiz.objects.filter(course_name = cur_course)    
     myform=MyQuizForm()
     if mydata!='':
         context={'form':myform,'mydata':mydata}
