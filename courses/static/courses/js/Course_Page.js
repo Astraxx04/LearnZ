@@ -1,19 +1,21 @@
+
+//Course name - Key,, current chapter - 0 index,, chapter name - 1 index
+
 var NoOfSemester = 7;
 var currentSem = 1;
-var data = document.currentScript.dataset;
-var user_usn = data.usn;
+const data = document.currentScript.dataset;
+const user_usn = data.username;
+
 //const from html
 const CourseContainer = document.getElementById("CourseContainer");
 const dropdown = document.getElementById("dropdown");
 const useinfo = document.getElementById("useinfo");
 
-//User Usnz
+//User Usn
 var span = document.createElement('span');
 span.classList.add("user_usn");
 span.innerHTML = user_usn;
 useinfo.appendChild(span);
-
-
 
 function setCookie(cname, cvalue, exdays) {
   const d = new Date();
@@ -39,10 +41,6 @@ function getCookie(cname) {
 
 
 
-
-
-
-//Add Semester option based on No of semester
 for (let index = 0; index < NoOfSemester; index++) {
 
   var a = document.createElement('a');
@@ -106,18 +104,6 @@ sem_7.addEventListener('click', function () {
 });
 
 
-
-
-
-
-
-function log(theElement) {
-  let course_name = theElement.srcElement.id;
-  sessionStorage.setItem("courseStudent", course_name);
-  // console.log(sessionStorage.getItem("course"));
-  location.assign("/student");
-}
-
 function remove_courses() {
   CourseContainer.innerHTML = "";
 }
@@ -134,9 +120,10 @@ function add_courses() {
   var div1 = document.createElement('div');
   div1.classList.add("course-preview");
   div1.innerHTML=`
-  <h2>`+Course[0]+`</h2>
-  <button class="btn" id="${Course[0]}">Continue</button>`;
+  <h2>`+Course[0]+`</h2><a href="/student">
+  <button class="btn" id="${Course[0]}">Continue</button></a>`;
   div.appendChild(div1);
+  
 });
 
 var cards = document.getElementsByClassName("card");
@@ -149,7 +136,12 @@ Array.from(cards).forEach(function (card) {
 
 
 
+
+
 }
+
+
+
 
 add_courses();
 
@@ -158,11 +150,16 @@ add_courses();
 
 
 
-//For Every course insert card 
 
-var all_button = document.getElementsByClassName('btn');
-for (var i = 0; i < all_button.length; i++) {
-  all_button[i].addEventListener('click', log, false);
-}
+
+
+
+
+
+
+
+
+
+
 
 

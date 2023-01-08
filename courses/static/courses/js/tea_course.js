@@ -103,12 +103,7 @@ sem_7.addEventListener('click', function () {
   add_courses();
 });
 
-function log(theElement) {
-  let course_name = theElement.srcElement.id;
-  sessionStorage.setItem("courseTeacher", course_name);
-  // console.log(sessionStorage.getItem("course"));
-  location.assign("/teacher");
-}
+
 function remove_courses() {
   CourseContainer.innerHTML = "";
 }
@@ -125,9 +120,10 @@ function add_courses() {
   var div1 = document.createElement('div');
   div1.classList.add("course-preview");
   div1.innerHTML=`
-  <h2>`+Course[0]+`</h2>
-  <button class="btn" id="${Course[0]}">Continue</button>`;
+  <h2>`+Course[0]+`</h2><a href="/teacher">
+  <button class="btn" id="${Course[0]}">Continue</button></a>`;
   div.appendChild(div1);
+  
 });
 
 var cards = document.getElementsByClassName("card");
@@ -137,7 +133,14 @@ Array.from(cards).forEach(function (card) {
     console.log(getCookie("course_name"));
   });
 })
+
+
+
+
+
 }
+
+
 
 
 add_courses();
@@ -159,8 +162,4 @@ add_courses();
 
 
 
-var all_button = document.getElementsByClassName('btn');
-for (var i = 0; i < all_button.length; i++) {
-  all_button[i].addEventListener('click', log, false);
-}
 

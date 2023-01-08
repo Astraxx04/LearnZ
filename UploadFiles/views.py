@@ -37,17 +37,10 @@ def quizupload(request):
         myform=MyQuizForm(request.POST,request.FILES)        
         if myform.is_valid():
             quizName = request.POST.get('quiz_name') 
-            courseName = request.POST.get('quiz_course_name') 
+            courseName = request.COOKIES.get('course_name') 
             link = request.POST.get('link')
             quiz.objects.create(quiz_name=quizName,link=link,course_name = courseName).save()
             messages.success(request,"Quiz link uploaded successfully.")
-            # exists=notes.objects.filter(my_file=MyFile).exists()
-
-            # if exists:
-            #     messages.error(request,'The file %s is already exists...!!!'% MyFile)
-            # else:
-            #     notes.objects.create(file_name=MyFileName,my_file=MyFile).save()
-            #     messages.success(request,"File uploaded successfully.")
         return redirect("quizbase")
 
 def quizdelete(request,id):
