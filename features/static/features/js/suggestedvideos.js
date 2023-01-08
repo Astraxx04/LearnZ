@@ -46,7 +46,7 @@ fetch('/static/features/json/data.json').then(
 
     }
     
-console.log(Object.entries(dat));    
+console.log(dat);    
 
 function searchkey(){
     
