@@ -27,23 +27,22 @@
     </header>
 
     <div class="courses-cards" style="margin-left: 100px">
-      <div class="main-card">
-        <div
-          class="card-module"
-          style="background-image: url('./static/features/images/lectures.svg')"
-        >
+      <div class="main-card" id="card_lectures">
+        <div class="card-module"style="background-image: url('./static/features/images/lectures.svg');">
           <div class="post-content">
             <h1 class="title">Reference</h1>
-
-            <p class="description"><button class="btn">continue</button></p>
+            <a href="{% url 'suggestedvideos' %}" >
+              <p class="description">
+                <button class="btn">View<i class="fas fa-arrow-up"></i></button>
+              </p>
+            </a>
           </div>
         </div>
       </div>
+
       <div class="main-card">
-        <div
-          class="card-module"
-          style="background-image: url('./static/features/images/quiz.svg')"
-        >
+        <div class="card-module"
+          style="background-image: url('./static/features/images/quiz.svg')">
           <div class="post-content">
             <h1 class="title">Quiz</h1>
             <p class="description">
@@ -58,13 +57,10 @@
         </div>
       </div>
       <div class="main-card">
-        <div
-          class="card-module"
-          style="background-image: url('./static/features/images/syllabus.svg')"
-        >
+        <div class="card-module"
+          style="background-image: url('./static/features/images/syllabus.svg')">
           <div class="post-content">
-            <h1 class="title">syllabus</h1>
-
+            <h1 class="title">Syllabus</h1>
             <p class="description">
               <button class="btn">
                 <form action="syllabus" method="POST">
@@ -76,14 +72,14 @@
           </div>
         </div>
       </div>
+
+
       <div class="main-card">
         <div
           class="card-module"
-          style="background-image: url('./static/features/images/notes.svg')"
-        >
+          style="background-image: url('./static/features/images/notes.svg')">
           <div class="post-content">
             <h1 class="title">Notes</h1>
-
             <p class="description">
               <button class="btn">
                 <form action="question_bank" method="POST">
