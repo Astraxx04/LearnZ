@@ -1,12 +1,12 @@
-
+let apiKey = "AIzaSyCC5ewMqBnYXGeOL0Cu1Gi2N6gE3hSzvy0"
 $(document).ready(function(){
-    let apiKey = "AIzaSyA_LrwXq6Zxzb0t9U3DDrTeU-p9nv8Z6tc.."
+    //let apiKey = "AIzaSyCC5ewMqBnYXGeOL0Cu1Gi2N6gE3hSzvy0"
  
     //$("form").submit((e) => {
       //  e.preventDefault()
         //let search = $("#search").val()
-        videoSearch(apiKey,"three schema architecture",4)
-        videoSearch(apiKey,"dbms",2)
+        // videoSearch(apiKey,"three schema architecture",4)
+        // videoSearch(apiKey,"dbms",2)
     //})
 })
  
@@ -38,26 +38,41 @@ fetch('/static/features/json/data.json').then(
     }
     )
     
-//another functions
+//  Accessing the list of keywords
 function data_function(data){
     data.forEach(function (da) {
         dat.push(da);
     });
-    var two = dat[10];
-    console.log(two);
-
-
-
-
-
-
+    var lenmax = dat.length;
+    console.log(dat)
+    searchkey(0, lenmax, dat);
 }
   
 
 
-function searchkey(){
+function searchkey(min, max, keyser){
     
+    ranvar=getRandomNonRepeatingNumbers(min, max-1, 5);
+    console.log(ranvar);
+    for(let xx=0;xx<5;xx++){
+        console.log(keyser[ranvar[xx]]);
+        videoSearch(apiKey,keyser[ranvar[xx]],2);
+    }
 }
 
+function getRandomNonRepeatingNumbers(min, max, count) {
+  const result = [];
+  const generatedNumbers = new Set();
 
-  
+  while (result.length < count) {
+    const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+
+    if (!generatedNumbers.has(randomNumber)) {
+      result.push(randomNumber);
+      generatedNumbers.add(randomNumber);
+    }
+  }
+
+  return result;
+}
+
