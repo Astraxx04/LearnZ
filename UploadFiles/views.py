@@ -63,10 +63,10 @@ def syluploadfile(request):
             MyFileName = request.POST.get('file_name') 
             MyFile = request.FILES.get('file')
 
-            exists=sylabus.objects.filter(my_file=MyFile).exists()
+            exists=sylabus.objects.count()
 
-            if exists:
-                messages.error(request,'The file %s is already exists...!!!'% MyFile)
+            if exists > 0:
+                messages.error(request,'The syllabus already exists...!!!')
             else:
                 sylabus.objects.create(file_name=MyFileName,my_file=MyFile).save()
                 messages.success(request,"File uploaded successfully.")
