@@ -29,6 +29,7 @@ def quizupload(request):
         myform=MyQuizForm(request.POST,request.FILES)        
         if myform.is_valid():
             quizName = request.POST.get('quiz_name') 
+            courseName = request.POST.get('quiz_course_name') 
             link = request.POST.get('link')
             quiz.objects.create(quiz_name=quizName,link=link).save()
             messages.success(request,"Quiz link uploaded successfully.")
