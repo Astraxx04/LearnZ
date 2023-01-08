@@ -8,4 +8,5 @@ urlpatterns = [
     path('notes', views.Notes, name='notesDownload'),
     path('quiz', views.Quiz, name='quizDownload'),
     path('syllabus', views.Syllabus, name='sybDownload'),
+    path('suggestedvideos', views.suggestedvideos, name='suggestedvideos'),
 ]

@@ -25,41 +25,44 @@
   <title>Courses</title>
 </head>
 
-<body>
-  <!-- Header -->
-  <header id="header">
-    <div class="inner flex">
-      <div class="logo">
-        <a href="{% url 'index' %}"><img src="{% static 'courses/images/icon/logo_full.png' %}" alt="logo" /></a>
-      </div>
-      <div class="userloggedin flex">
-        <div class="SemesterDropdown">
-          <span href="" class="Title">Semester <i class="fa-solid fa-angle-down"></i></span>
-          <ul class="dropdown" id="dropdown"></ul>
+  <body>
+    <!-- Header -->
+    <header id="header">
+      <div class="inner flex">
+        <div class="logo">
+          <a href="{% url 'index' %}"
+            ><img src="{% static 'courses/images/icon/logo_full.png' %}"
+              alt="logo"
+          /></a>
         </div>
-        <div class="user" id="useinfo">
-          <span class="user_logo"><i class="fa-solid fa-user"></i></span>
-
+        <div class="userloggedin flex">
+          <div class="SemesterDropdown">
+            <span href="" class="Title"> Semester <i class="fa-solid fa-angle-down"></i></span>
+            <ul class="dropdown" id="dropdown"></ul>
+          </div>
+          <div class="user" id="useinfo">
+            <span class="user_logo"><i class="fa-solid fa-user"></i></span>
+            
+          </div>
+          <a href="{% url 'index' %}" style="text-decoration:none;">
+            <ul class="get-started">
+              <li>Sign Out</li>
+            </ul>
+          </a>
         </div>
-        <a href="{% url 'index' %}">
-          <ul class="get-started">
-            <li>Sign Out</li>
-          </ul>
-        </a>
       </div>
-    </div>
-  </header>
-  <h1>Enrolled Courses</h1>
-  {% for msg in messages %}
-  <script>
-    swal({
-      title: "{{ msg }}",
-      // title: "Login Successful",
-      // icon: "success",
-    });
-
-  </script>
-  {% endfor %}
+    </header>
+    <h1 class="headname">Enrolled Courses</h1>
+    {% for msg in messages %}
+    <script>
+      swal({
+        title: "{{ msg }}",
+        // title: "Login Successful",
+        // icon: "success",
+      });
+      
+    </script>
+    {% endfor %}
 
   <!--cards-->
   <!--

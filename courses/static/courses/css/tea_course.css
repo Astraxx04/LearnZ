@@ -192,7 +192,14 @@ h1 {
 	text-decoration-color: #27a9a6;
 
 }
-
+.headname{
+	text-align: center;
+	justify-content: center;
+	margin-top: 60px;
+	font-family:'Laila';
+	font-size:50px;
+	color: black;
+}
 
 
 /*cards*/

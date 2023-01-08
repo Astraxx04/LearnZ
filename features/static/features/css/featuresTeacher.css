@@ -240,45 +240,45 @@ header .dropdown {
 }
 
 
-
-.btn {
-  background: var(--btnBgColor);
-  backdrop-filter: blur(5rem);
-  font-weight: bolder;
-  letter-spacing: 1.2px;
-  border-radius: 15px;
-  padding: 0.7rem;
-  transform: translateY(-63px);
-  margin-left: 40px;
-  margin-top: 40px;
-  border: none;
-  width: 50%;
-}
-
-.btn:hover {
-  transition: 1s;
-  background: var(--getStartedHoverColor);
-
-}
-
-
-
-@media (max-width: 992px) and (min-width: 1200px) {
-  .main-card {
-    width: 25%;
-  }
-}
-
-
-@media only screen and (max-width: 991px) {
-  .main-card {
-    width: 33.333%;
-  }
-}
-
-
-@media(max-width: 767px) {
-  .main-card {
+  .btn{
+    background: var(--getstartedColor);
+    backdrop-filter: blur(5rem);
+    font-weight: bolder;
+    letter-spacing: 1.2px;
+    border-radius: 15px;
+    padding: 0.7rem;
+      transform: translateY(-63px);
+      margin-left: 40px;
+      margin-top: 40px;
+    border:none;
     width: 50%;
+  }
+  .btn:hover{
+    transition: 1s;
+    background: var(--getStartedHoverColor);
+  cursor: pointer !important;
+    
+  }
+  
+  
+  
+  @media (max-width: 992px) and (min-width: 1200px) {
+   .main-card {
+      width:25%;
+    }
+  }
+  
+  
+  @media only screen and (max-width: 991px) {
+    .main-card {
+      width: 33.333%;
+    }
+  }
+  
+  
+  @media(max-width: 767px) {
+    .main-card {
+      width:50%;
+    }
   }
 }

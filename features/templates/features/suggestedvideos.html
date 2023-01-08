@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="shortcut icon" type="png" href="" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Comaptible" content="IE=edge" />
+  <script src="https://kit.fontawesome.com/36bed4b74a.js" crossorigin="anonymous"></script>
+  <title>LearnZ</title>
+  <meta name="desciption" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="{% static './features/css/suggestedvideos.css' %}" />
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script>
+    $(window).on("scroll", function () {
+      if ($(window).scrollTop()) {
+        $("header").addClass("black");
+      } else {
+        $("header").removeClass("black");
+      }
+    });
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="inner flex">
+      <div class="logo">
+        <a href="{% url 'index' %}">
+        <img src="{% static './features/images/logo_full.png' %}" alt="logo" /></a>
+      </div>
+      <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+        <span class="sr-only">Menu</span>
+      </button>
+      
+      <a href="">
+      <ul class="get-started">
+        <li>
+          Signout
+        </li>
+      </ul>
+    </a>
+    </div>
+  </header>
+
+  
+    <div class="container">
+        <h1 class="text-center mt-5">
+            Suggested Videos
+        </h1>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="videos">
+ 
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ 
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="{% static './features/js/suggestedvideos.js' %}"></script>
+</html>

@@ -4,14 +4,14 @@
 const Peoples = {
   "Aditi Pandey": ["Frontend, Backend", "https://github.com/aditipandey16", "http://www.linkedin.com/in/-aditi-pandey", "/static/authentication/images/creator/aditi.jpeg"],
   "Ahmed Fadil": ["Selenium, Snyk", "https://github.com/ahmedfadil", "https://www.linkedin.com/in/ahmed-fadil-74aa8b21b/", "/static/authentication/images/creator/ahmed.jpg"],
-  "Akash Sil": ["Docker, Jenkins, AWS, Backend", "https://github.com/Orange-Tofu", "https://www.linkedin.com/in/akash-s-64b6b21b7", "/static/authentication/images/creator/akash.jpg"],
+  "Akash Sil": ["Docker, Jenkins, AWS, Backend", "https://github.com/Orange-Tofu", "https://www.linkedin.com/in/akash-s-64b6b21b7", "/static/authentication/images/creator/akash.jpeg"],
   "Anujna G K": ["Selenium", "https://github.com/anujnaaa", "https://www.linkedin.com/in/anujna-g-k-5a3a16232", "/static/authentication/images/creator/anujna.jpeg"],
   "Ayushi Sah": ["Frontend, Backend", "https://github.com/aazaleas", "https://www.linkedin.com/in/ayushi-sah-61a351224/", "/static/authentication/images/creator/ayushi.jpeg"],
   "Bhawesh Agarwal": ["Frontend, Backend", "https://github.com/Bhawesh02", "https://www.linkedin.com/in/bhawesh-agarwal-70b98b113/", "/static/authentication/images/creator/bhawesh.jpg"],
-  "Gagan S": ["Github, Backend", "https://github.com/Bhawesh02", "https://www.linkedin.com/in/bhawesh-agarwal-70b98b113/", "/static/authentication/images/creator/gagan.jpg"],
+  "Gagan S": ["Github, Backend", "https://github.com/Astraxx04", "https://www.linkedin.com/in/gagan-s-105706202", "/static/authentication/images/creator/gagan.jpg"],
   "Janesh Walia": ["Docker, Backend", "https://www.github.com/Janesh7", "https://www.linkedin.com/in/janesh-walia-483378226", "/static/authentication/images/creator/janesh.jpeg"],
   "Lakshitha R": ["Github", "https://github.com/Bhawesh02", "https://www.linkedin.com/in/bhawesh-agarwal-70b98b113/", "/static/authentication/images/creator/lakshitha.jpg"],
-  "Konjeti Nidhi": ["Frontend", "https://github.com/Sonuuuuuuu", "https://www.linkedin.com/in/konjeti-nidhi-96245a226/", "/static/authentication/images/creator/nidhi.jpg"]
+  "Konjeti Nidhi": ["Frontend", "https://github.com/Sonuuuuuuu", "https://www.linkedin.com/in/konjeti-nidhi-96245a226/", "/static/authentication/images/creator/nidhi.jpeg"]
 };
 
 
