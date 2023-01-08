@@ -30,7 +30,7 @@ function videoSearch(apiKey,search,maxResults){
 
 var dat = [];
 //fetch function
-fetch('data.json').then(
+fetch('/static/features/json/data.json').then(
     function(u){ return u.json();}
     ).then(
     function(json){
@@ -45,8 +45,8 @@ fetch('data.json').then(
     });
 
     }
-
-console.log(typeof(dat));    
+    
+console.log(Object.entries(dat));    
 
 function searchkey(){
     

@@ -107,7 +107,7 @@ def suggestfun(locat):
     def unwanted_text(x):
         for k in x:
             k = re.sub("\d+", "",k)
-            text = re.findall('(.*?)dayananda(.*?)', k) or re.findall('(.*?)university(.*?)', k) or re.findall('(.*?)malleshwara(.*?)', k) or re.findall('(.*?)institute(.*?)', k) or re.findall('(.*?)engineering(.*?)', k)
+            text = re.findall('(.*?)dayananda(.*?)', k) or re.findall('(.*?)university(.*?)', k) or re.findall('(.*?)malleshwara(.*?)', k) or re.findall('(.*?)institute(.*?)', k) or re.findall('(.*?)engineering(.*?)', k) or re.findall('(.*?)iso(.*?)', k)
             if(text):
                 x.remove(k)
         print(x)
@@ -120,6 +120,6 @@ def suggestfun(locat):
 
 
     jsonString = json.dumps(x)
-    jsonFile = open("data.json", "w")
+    jsonFile = open("./features/static/features/data.json", "w")
     jsonFile.write(jsonString)
     jsonFile.close()
