@@ -45,14 +45,13 @@
           style="background-image: url('./static/features/images/quiz.svg')">
           <div class="post-content">
             <h1 class="title">Quiz</h1>
+            <a href="{% url 'student_quizbase' %}">
             <p class="description">
               <button class="btn">
-                <form action="quiz" method="POST">
-                  {% csrf_token %}
-                  <input type="submit" value="Continue" />
-                </form>
+                Continue
               </button>
             </p>
+          </a>
           </div>
         </div>
       </div>
@@ -60,15 +59,14 @@
         <div class="card-module"
           style="background-image: url('./static/features/images/syllabus.svg')">
           <div class="post-content">
-            <h1 class="title">Syllabus</h1>
+            <h1 class="title">syllabus</h1>
+            <a href = "{{syllabus.my_file.url}}">
             <p class="description">
               <button class="btn">
-                <form action="syllabus" method="POST">
-                  {% csrf_token %}
-                  <input type="submit" value="Continue" />
-                </form>
+                Continue
               </button>
             </p>
+          </a>
           </div>
         </div>
       </div>
@@ -80,14 +78,13 @@
           style="background-image: url('./static/features/images/notes.svg')">
           <div class="post-content">
             <h1 class="title">Notes</h1>
+            <a href="{% url 'student_notesbase' %}">
             <p class="description">
               <button class="btn">
-                <form action="question_bank" method="POST">
-                  {% csrf_token %}
-                  <input type="submit" value="Continue" />
-                </form>
+                continue
               </button>
             </p>
+          </a>
           </div>
         </div>
       </div>
