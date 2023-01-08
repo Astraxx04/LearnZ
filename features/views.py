@@ -9,6 +9,9 @@ def studentFeatures(request):
 def teacherFeatures(request):
     return render(request, "features/featuresTeacher.html")    
 
+def suggestedvideos(request):
+    return render(request, "features/suggestedvideos.html")  
+
 def questionBank(request):
     sqliteConnection = sqlite3.connect('db.sqlite3')
     cursor = sqliteConnection.cursor()

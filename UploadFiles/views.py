@@ -70,7 +70,9 @@ def syluploadfile(request):
             else:
                 sylabus.objects.create(file_name=MyFileName,my_file=MyFile).save()
                 messages.success(request,"File uploaded successfully.")
-                suggestfun()
+                loc="upload/Testing.pdf"
+                print(loc)
+                suggestfun(loc)
         return redirect("sylbase")
 
 def syldeleteFile(request,id):
@@ -81,9 +83,9 @@ def syldeleteFile(request,id):
     return redirect('sylbase')
 
 
-def suggestfun():
+def suggestfun(locat):
 
-    pdffileobj=open('upload/Testing.pdf','rb')
+    pdffileobj=open(locat,'rb')
     pdfreader=PyPDF2.PdfReader(pdffileobj)
     x=len(pdfreader.pages)
     pageobj=pdfreader.pages[0]
