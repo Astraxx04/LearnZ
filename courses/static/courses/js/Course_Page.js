@@ -14,6 +14,34 @@ span.innerHTML = user_usn;
 useinfo.appendChild(span);
 
 
+
+function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  let expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let ca = document.cookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+
+
+
+
+
 //Add Semester option based on No of semester
 for (let index = 0; index < NoOfSemester; index++) {
 
@@ -100,6 +128,7 @@ function add_courses() {
   //Creted div with class card;
   var div = document.createElement('div');
   div.classList.add("card");
+  div.setAttribute("course_name",Course[0]);
   CourseContainer.appendChild(div);
   //Creted div with class course-preview and make card as parent;
   var div1 = document.createElement('div');
@@ -110,10 +139,24 @@ function add_courses() {
   div.appendChild(div1);
 });
 
+var cards = document.getElementsByClassName("card");
+Array.from(cards).forEach(function (card) {
+  card.addEventListener('click',()=>{
+    setCookie("course_name", card.getAttribute("course_name"), 1);
+    console.log(getCookie("course_name"));
+  });
+})
+
 
 
 }
+
 add_courses();
+
+
+
+
+
 
 //For Every course insert card 
 
