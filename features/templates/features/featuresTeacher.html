@@ -31,75 +31,59 @@
 
     <div class="courses-cards" style="margin-left: 100px">
       <div class="main-card" id="card_lectures">
-        <div
-          class="card-module"
-          style="background-image: url('./static/features/images/lectures.svg')"
-        >
+        <div class="card-module"style="background-image: url('./static/features/images/lectures.svg');">
           <div class="post-content">
             <h1 class="title">Reference</h1>
-            <h2></h2>
-            <p class="description">
-              <button class="btn">Upload<i class="fas fa-arrow-up"></i></button>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="main-card" id="card_quiz">
-        <div
-          class="card-module"
-          style="background-image: url('./static/features/images/quiz.svg')"
-        >
-          <div class="post-content">
-            <h1 class="title">Quiz</h1>
-            <a href="{% url 'quizbase' %}">
+            <a href="{% url 'suggestedvideos' %}">
               <p class="description">
-                <button class="btn">
-                  Upload<i class="fas fa-arrow-up"></i>
-                </button>
+                <button class="btn">View<i class="fas fa-arrow-up"></i></button>
               </p>
             </a>
           </div>
         </div>
       </div>
-      <a href="{% url 'sylbase' %}">
-        <div class="main-card" id="card_syllabus">
-          <div
-            class="card-module"
-            style="
-              background-image: url('./static/features/images/syllabus.svg');
-            "
-          >
-            <div class="post-content">
-              <h1 class="title">syllabus</h1>
 
+      <div class="main-card" id="card_quiz">
+        <div class="card-module" style="background-image: url('./static/features/images/quiz.svg');">
+          <div class="post-content">
+            <h1 class="title">Quiz</h1>
+            <a href="{% url 'quizbase' %}">
               <p class="description">
-                <button class="btn">
-                  Uplaod<i class="fas fa-arrow-up"></i>
-                </button>
+                <button class="btn"> Upload<i class="fas fa-arrow-up"></i></button>
               </p>
-            </div>
+            </a>
           </div>
         </div>
-      </a>
+      </div>
+
+      <div class="main-card" id="card_syllabus">
+        <div class="card-module" style=" background-image: url('./static/features/images/syllabus.svg');">
+          <div class="post-content">
+            <h1 class="title">Syllabus</h1>
+            <a href="{% url 'sylbase' %}"></a>
+              <p class="description">
+                <button class="btn">Upload<i class="fas fa-arrow-up"></i></button>
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+      
 
       <div class="main-card" id="card_notes">
-        <div
-          class="card-module"
-          style="background-image: url('./static/features/images/notes.svg')"
-        >
+        <div class="card-module" style="background-image: url('./static/features/images/notes.svg');">
           <div class="post-content">
             <h1 class="title">Notes</h1>
-
             <p class="description">
               <a href="{% url 'notesbase' %}">
-                <button class="btn">
-                  Upload<i class="fas fa-arrow-up"></i>
-                </button>
+                <button class="btn">Upload<i class="fas fa-arrow-up"></i></button>
               </a>
             </p>
           </div>
         </div>
       </div>
+
+
     </div>
   </body>
   <script src="{% static '\features\js\features.js' %}"></script>
