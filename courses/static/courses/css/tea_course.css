@@ -10,7 +10,7 @@
 }
 
 :root {
-	--headerColor: #ccc;
+	--headerColor: #ffff;
 	--cardBackground: #ccc;
 	--courseBackground: #ff735d;
 	;
@@ -76,7 +76,7 @@ header .logo {
 }
 
 header .logo img {
-	width: 128px;
+	width: 8rem;
 }
 
 header .SemesterDropdown {

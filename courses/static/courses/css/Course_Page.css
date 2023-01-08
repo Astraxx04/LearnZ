@@ -9,13 +9,13 @@
 	text-decoration: none;
 }
 
-.li {
-	text-decoration: none;
-
+.flex {
+	display: flex;
+	gap: var(--gap, 5ex);
 }
 
 :root {
-	--headerColor: #ccc;
+	--headerColor: #fff;
 	--cardBackground: #fff;
 	--courseBackground: #27a9a6;
 	--courseContinueButton: #a8b9ef;
@@ -34,17 +34,12 @@
 }
 
 
-.flex {
-	display: flex;
-	gap: var(--gap, 5ex);
-}
-
 html {
 	scroll-behavior: smooth;
 }
 
 body {
-	background: #fff;
+	background: #ffff;
 	font-family: 'Open Sans', sans-serif;
 }
 
@@ -61,24 +56,38 @@ header {
 
 header .inner {
 	align-items: center;
-
+	justify-content: space-between;
 }
 
 .userloggedin {
 	align-items: center;
 	position: absolute;
 	right:8rem;
-  }
-  header .logo {
-	  margin: 0.5rem;
-	  
-  }
-  header .logo img{
-	  width: 128px;
-  }
-  header .SemesterDropdown{
-	padding: 5px 20px;
+}
+header .logo {
+	margin: 0.5rem;
+	
+}
 
+header .logo img{
+	width: 15rem;
+}
+
+header button span,
+.mobile-nav-toggle {
+	display: none;
+}
+
+.primary-navigation {
+	/*background: var(--getstartedColor);
+	backdrop-filter: blur(5rem);
+	border-radius: 11px;*/
+
+	padding: 1rem;
+}
+
+header .SemesterDropdown{
+	padding: 5px 20px;
 }
 
 header .Title{
@@ -148,6 +157,16 @@ header .SemesterDropdown:focus .dropdown {
   .get-started:hover{
 	transition: 1s;
 	background: var(--getStartedHoverColor);
+}
+
+.head-container {
+	margin-top: 100px;
+	margin-bottom: 120px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+
 }
 
 body {
@@ -222,7 +241,7 @@ section {
 }
 .course-preview{
 	background-color: var(--getStartedHoverColor);
-	color: #000;
+	color: #0000;
 	padding: 30px;
 
 	width: 350px;
