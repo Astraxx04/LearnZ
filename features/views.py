@@ -9,7 +9,7 @@ def studentFeatures(request):
 def teacherFeatures(request):
     return render(request, "features/featuresTeacher.html")    
 
-def questionBank(request):
+def Notes(request):
     sqliteConnection = sqlite3.connect('db.sqlite3')
     cursor = sqliteConnection.cursor()
     print('DB Init')
