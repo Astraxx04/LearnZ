@@ -14,6 +14,7 @@ class quiz(models.Model):
     date = models.DateField(auto_now_add=True)
     course_name = models.CharField(max_length=100)
 
+    
 class sylabus(models.Model):
     file_name = models.CharField(max_length=50)
     my_file = models.FileField(validators=[FileExtensionValidator(allowed_extensions=['pdf'])])
