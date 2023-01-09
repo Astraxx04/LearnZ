@@ -8,7 +8,7 @@
     />
     <link href="{% static 'features/css/features.css' %}" rel="stylesheet" />
   </head>
-
+  
   <body>
     <header id="header">
       <div class="inner flex">
@@ -28,7 +28,7 @@
             <li><a href="">Courses</a></li>
             <li><a href="{% url 'suggestedvideos' %}">Refrences</a></li>
             <li><a href="{% url 'student_quizbase' %}">Quiz</a></li>
-            <li><a href="{{syllabus.my_file.url}}">Syllabus</a></li>
+            <li><a href="" class="syl">Syllabus</a></li>
             <li><a href="{% url 'student_notesbase' %}">Notes</a></li>
           </ul>
         </nav>
@@ -79,7 +79,7 @@
         >
           <div class="post-content">
             <h1 class="title">Syllabus</h1>
-            <a href="{{syllabus.my_file.url}}">
+            <a href="" class="syl">
               <p class="description">
                 <button class="btn">Continue</button>
               </p>
@@ -105,5 +105,22 @@
       </div>
     </div>
   </body>
+  <script>
+    var syllabus_url = "{{syllabus.my_file.url}}";
+    var syl = document.getElementsByClassName("syl");
+    Array.from(syl).forEach((s)=>{
+      s.addEventListener('click',(evt)=>{
+      evt.preventDefault();
+      if (syllabus_url == "") {
+        alert("No Syllabus Exsist");
+      }
+      else
+      {
+        window.location.href = syllabus_url;
+      }
+      });
+    });
+
+  </script>
   <script src="{% static '\features\js\features.js' %}"></script>
 </html>
