@@ -32,7 +32,7 @@
             <li><a href="">Courses</a></li>
             <li><a href="{% url 'suggestedvideos' %}">Refrences</a></li>
             <li><a href="{% url 'student_quizbase' %}">Quiz</a></li>
-            <li><a href="{{syllabus.my_file.url}}">Syllabus</a></li>
+            <li><a href="" class="syl">Syllabus</a></li>
             <li><a href="{% url 'student_notesbase' %}">Notes</a></li>
           </ul>
         </nav>
@@ -82,5 +82,22 @@
     $(document).ready(function () {
       $(".alert").hide(4000);
     });
+  </script>
+  <script>
+    var syllabus_url = "{{syllabus.my_file.url}}";
+    var syl = document.getElementsByClassName("syl");
+    Array.from(syl).forEach((s)=>{
+      s.addEventListener('click',(evt)=>{
+      evt.preventDefault();
+      if (syllabus_url == "") {
+        alert("No Syllabus Exsist");
+      }
+      else
+      {
+        window.location.href = syllabus_url;
+      }
+      });
+    });
+
   </script>
 </html>
