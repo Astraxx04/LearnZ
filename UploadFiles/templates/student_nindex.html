@@ -2,6 +2,15 @@
 <html>
     <head>
         <title>File Upload</title>
+        <link
+      href="{% static 'css/studentupload.css' %}"
+      rel="stylesheet"
+    />
+    
+    <link
+    href="{% static 'css/upload.css' %}"
+    rel="stylesheet"
+  />
         <script src="{% static 'jquery/jquery.min.js'%}"></script>
         
 <script>
@@ -11,30 +20,58 @@
 </script>
     </head>
     <body>
-        <div class="container-fluid" style="margin-top:50px">
-            <div class="col-md-6">
-                {% if mydata %}
-                <h3 class="page-header text-primary text-center">View File</h3>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th style="text-align:center">S.No</th>
-                            <th>File Name</th>
-                            <th>File</th>                     
-                        </tr>                    
-                    </thead>
-                    {% for data in mydata %}
-                        <tbody>
-                            <tr>
-                                <td style="text-align:center">{{forloop.counter}}</td>
-                                <td>{{data.file_name}}</td>
-                                <td><a href="{{data.my_file.url}}">View</a></td>
-                            </tr>
-                        </tbody>
-                    {% endfor %}
-                </table>
-                {% endif %}
+        <header id="header">
+            <div class="inner flex">
+              <div class="logo">
+                <a href="{% url 'index' %}">
+                  <img
+                    src="{% static './features/images/logo_full.png' %}"
+                    alt="logo"
+                /></a>
+              </div>
+              <nav>
+                <ul
+                  id="primary-navigation"
+                  data-visible="false"
+                  class="primary-navigation flex"
+                >
+                  <li><a href="{% url 'suggestedvideos' %}">Refrences</a></li>
+                  <li><a href="{% url 'student_quizbase' %}">Quiz</a></li>
+                  <li><a href="{{syllabus.my_file.url}}">Syllabus</a></li>
+                  <li><a href="{% url 'student_notesbase' %}">Notes</a></li>
+                </ul>
+              </nav>
+              <a href="{% url 'student_signin' %}">
+                <ul class="get-started">
+                  <li>Sign Out</li>
+                </ul>
+              </a>
             </div>
+          </header>
+        <div class="container-fluid single" style="margin-top: 50px">
+        <div class="view">
+            {% if mydata %}
+            <h3>View File</h3>
+            <table class="styled-table nodelete">
+                <thead>
+                    <tr>
+                        <th style="text-align:center">S.No</th>
+                        <th>Note Name</th>
+                        <th>File</th>                 
+                    </tr>                    
+                </thead>
+                {% for data in mydata %}
+                    <tbody>
+                        <tr>
+                            <td style="text-align:center">{{forloop.counter}}</td>
+                            <td>{{data.file_name}}</td>
+                            <td><a href="{{data.my_file.url}}">{{data.my_file}}</a></td>
+                        </tr>
+                    </tbody>
+                {% endfor %}
+            </table>
+            {% endif %}
+        </div>
         </div>
     </body>
 </html>

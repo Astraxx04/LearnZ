@@ -94,7 +94,12 @@ nav li a:hover {
     align-items: center;
     margin-inline: 2rem;
 }
+.container-fluid.single{
+  justify-content: center;
+  display: flex;
+  align-items: center;
 
+}
 h3{
     text-align: center;
     text-transform: capitalize;
@@ -173,6 +178,9 @@ h3{
     font-family: sans-serif;
     min-width: 1100px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table.nodelete{
+  min-width: 700px !important;
 }
 .styled-table thead tr {
     background-color: var(--getStartedHoverColor);
