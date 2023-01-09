@@ -18,6 +18,18 @@
               alt="logo"
           /></a>
         </div>
+        <nav>
+          <ul
+            id="primary-navigation"
+            data-visible="false"
+            class="primary-navigation flex"
+          >
+            <li><a href="{% url 'suggestedvideos' %}">Refrences</a></li>
+            <li><a href="{% url 'quizbase' %}">Quiz</a></li>
+            <li><a href="{% url 'sylbase' %}">Syllabus</a></li>
+            <li><a href="{% url 'notesbase' %}">Notes</a></li>
+          </ul>
+        </nav>
         <a href="{% url 'teacher_signin' %}">
           <ul class="get-started">
             <li>Sign Out</li>
