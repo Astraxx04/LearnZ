@@ -180,9 +180,6 @@ h1 {
 	font-family: 'Laila';
 	font-size: 50px;
 	color: #ff735d;
-	text-decoration: underline;
-	text-decoration-color: #27a9a6;
-
 }
 .headname{
 	text-align: center;
@@ -214,7 +211,6 @@ section {
 
 .container .card {
 	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-
 	margin-bottom: 2rem;
 	margin-inline: 2.75rem;
 	border-radius: 15px;
@@ -222,8 +218,10 @@ section {
 	justify-content: center;
 	flex-direction: row;
 	align-items: center;
+	flex-wrap: wrap;
 	backdrop-filter: blur(10px);
 	background-color: var(--cardBackground);
+	
 }
 
 
@@ -243,9 +241,8 @@ section {
 	background-color: var(--getStartedHoverColor);
 	color: #fff;
 	padding: 30px;
-
-	width: 350px;
-	height: 8.2rem;
+	width:25rem;
+	height:8.75rem;
 	border-radius: 15px;
 
 }

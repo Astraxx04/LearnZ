@@ -74,7 +74,7 @@ def tcourse(request):
         username = request.user.username
         courses = getcourses()
         serialized_courses = json.dumps(courses)
-        return render(request, "courses/tea_course.html", {"username":username,"courses":serialized_courses})    
+        return render(request, "courses/tea_course.html", {"usn":username,"courses":serialized_courses})    
     else:
         messages.error(request, 'Login as Teacher to continue')
         return redirect('teacher_signin')
