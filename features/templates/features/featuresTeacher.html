@@ -30,7 +30,7 @@
             data-visible="false"
             class="primary-navigation flex"
           >
-            <li><a href="">Courses</a></li>
+            <li><a href="" class="cour">Courses</a></li>
             <li><a href="{% url 'suggestedvideos' %}">Refrences</a></li>
             <li><a href="{% url 'quizbase' %}">Quiz</a></li>
             <li><a href="{% url 'sylbase' %}">Syllabus</a></li>
@@ -118,4 +118,21 @@
     </div>
   </body>
   <script src="{% static '\features\js\features.js' %}"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    var cour = document.getElementsByClassName("cour");
+    Array.from(cour).forEach((c)=>{
+      c.addEventListener('click',(evt)=>{
+        evt.preventDefault();
+        $.ajax({
+        type: 'GET',
+        url: '/tcourse/',
+        success: function(response) {
+          window.location.href='/tcourse/';
+        }
+      });
+      });
+      
+    });
+  </script>
 </html>

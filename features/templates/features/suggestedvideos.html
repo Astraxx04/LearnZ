@@ -46,6 +46,7 @@
             data-visible="false"
             class="primary-navigation flex"
           >
+            <li><a class="cour">Courses</a></li>
             <li><a href="{% url 'suggestedvideos' %}">Refrences</a></li>
             <li><a href="{% url 'student_quizbase' %}">Quiz</a></li>
             <li><a href="{{syllabus.my_file.url}}">Syllabus</a></li>
@@ -73,4 +74,20 @@
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="{% static './features/js/suggestedvideos.js' %}"></script>
+  <script>
+    var cour = document.getElementsByClassName("cour");
+    Array.from(cour).forEach((c)=>{
+      c.addEventListener('click',(evt)=>{
+        evt.preventDefault();
+        $.ajax({
+        type: 'GET',
+        url: '/courses/',
+        success: function(response) {
+          window.location.href='/courses/';
+        }
+      });
+      });
+      
+    });
+  </script>
 </html>

@@ -40,7 +40,7 @@
                   data-visible="false"
                   class="primary-navigation flex"
                 >
-                  <li><a href="">Courses</a></li>
+                  <li><a href="" class="cour">Courses</a></li>
                   <li><a href="{% url 'suggestedvideos' %}">Refrences</a></li>
                   <li><a href="{% url 'student_quizbase' %}">Quiz</a></li>
                   <li><a href="" class="syl">Syllabus</a></li>
@@ -107,5 +107,21 @@
         });
       });
   
+    </script>
+    <script>
+      var cour = document.getElementsByClassName("cour");
+      Array.from(cour).forEach((c)=>{
+        c.addEventListener('click',(evt)=>{
+          evt.preventDefault();
+          $.ajax({
+          type: 'GET',
+          url: '/courses/',
+          success: function(response) {
+            window.location.href='/courses/';
+          }
+        });
+        });
+        
+      });
     </script>
 </html>

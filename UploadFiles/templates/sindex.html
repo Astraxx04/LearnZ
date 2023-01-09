@@ -34,7 +34,7 @@
               data-visible="false"
               class="primary-navigation flex"
             >
-            <li><a href="">Courses</a></li>
+            <li><a href="" class="cour">Courses</a></li>
 
               <li><a href="{% url 'quizbase' %}">Quiz</a></li>
               <li><a href="{% url 'sylbase' %}">Syllabus</a></li>
@@ -107,9 +107,26 @@
         </div>
     </div>
   </body>
+  <script>
+    $(document).ready(function () {
+      $(".alert").hide(4000);
+    });
+  </script>
+  <script>
+    var cour = document.getElementsByClassName("cour");
+    Array.from(cour).forEach((c)=>{
+      c.addEventListener('click',(evt)=>{
+        evt.preventDefault();
+        $.ajax({
+        type: 'GET',
+        url: '/tcourse/',
+        success: function(response) {
+          window.location.href='/tcourse/';
+        }
+      });
+      });
+      
+    });
+  </script>
 </html>
-<script>
-  $(document).ready(function () {
-    $(".alert").hide(4000);
-  });
-</script>
+
