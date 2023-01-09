@@ -113,8 +113,8 @@ def student_signup(request):
             messages.error(request, 'Email already registered!!')
             return redirect('student_signup')
 
-        if len(username) > 20:
-            messages.error(request, 'USN must be under 20 characters!!')
+        if len(username) > 10:
+            messages.error(request, 'USN must be under 10 characters!!')
             return redirect('student_signup')
 
         if pass1 != pass2:
@@ -134,7 +134,7 @@ def student_signup(request):
         #myuser.is_active = False
         myuser.save()
         # pyautogui.alert("Your Account has been created succesfully!!.")
-        messages.success(request, 'Signup Successful.')
+        messages.success(request, 'Signup Successful!!')
         return redirect('student_signin')
 
     return render(request, "authentication/StudentSignup.html")
@@ -151,19 +151,19 @@ def teacher_signup(request):
         pass2 = request.POST['ConfiPass']
 
         if models.Teacher.objects.filter(username=username):
-            messages.error(request, 'Teacherid already exist!!')
+            messages.error(request, 'TeacherId already exists!!')
             return redirect('teacher_signup')
 
         if models.Teacher.objects.filter(email=email).exists():
             messages.error(request, 'Email already registered!!')
             return redirect('teacher_signin')
 
-        if len(username) > 20:
-            messages.error(request, 'USN must be under 20 characters!!')
+        if len(username) > 10:
+            messages.error(request, 'ID must be under 10 characters!!')
             return redirect('teacher_signin')
 
         if pass1 != pass2:
-            messages.error(request, "Password didn't match!!")
+            messages.error(request, "Passwords didn't match!!")
             return redirect('teacher_signin')
 
         if not username.isalnum():
@@ -178,7 +178,7 @@ def teacher_signup(request):
         # myuser.is_active = False
         #myuser.is_active = False
         myuser.save()
-        messages.success(request, 'Signup Successful.')
+        messages.success(request, 'Signup Successful!!')
         return redirect('teacher_signin')
 
     return render(request, "authentication/TeacherSignup.html")
@@ -194,11 +194,11 @@ def student_signin(request):
         if user is not None and user.role == "STUDENT":
             login(request, user)
            # usn = user.get_username()
-            messages.success(request, 'Login Successful')
+            messages.success(request, 'Login Successful!!')
            # serialized_courses = json.dumps(courses)
             return redirect("courses/")
         else:
-            messages.error(request, 'Invalid USN/Password')
+            messages.error(request, 'Invalid USN/Password!!')
             return render(request, "authentication/StudentLogin.html")
 
     return render(request, "authentication/StudentLogin.html")
@@ -213,11 +213,11 @@ def teacher_signin(request):
         
         if user is not None and user.role == "TEACHER":
             login(request, user)
-            messages.success(request, 'Login Successful')
+            messages.success(request, 'Login Successful!!')
             #serialized_courses = json.dumps(courses)
             return redirect("tcourse/")
         else:
-            messages.error(request, 'Invalid TeacherID/Password')
+            messages.error(request, 'Invalid TeacherID/Password!!')
             return render(request, "authentication/TeacherLogin.html")
 
     return render(request, "authentication/TeacherLogin.html")
