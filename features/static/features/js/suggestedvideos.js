@@ -15,7 +15,7 @@ function videoSearch(apiKey,search,maxResults){
     $("#videos").empty()
 
     $.get("https://www.googleapis.com/youtube/v3/search?key=" + apiKey + "&type=video&part=snippet&maxResults=" + maxResults + "&q=" + search + "&sp=CAM%253D",(data) => {
-        console.log(data)
+        //console.log(data)
  
         let video = ''
  
@@ -44,7 +44,7 @@ function data_function(data){
         dat.push(da);
     });
     var lenmax = dat.length;
-    console.log(dat)
+    //console.log(dat)
     searchkey(0, lenmax, dat);
 }
   
@@ -53,9 +53,9 @@ function data_function(data){
 function searchkey(min, max, keyser){
     
     ranvar=getRandomNonRepeatingNumbers(min, max-1, 5);
-    console.log(ranvar);
+    //console.log(ranvar);
     for(let xx=0;xx<5;xx++){
-        console.log(keyser[ranvar[xx]]);
+        //console.log(keyser[ranvar[xx]]);
         videoSearch(apiKey,keyser[ranvar[xx]],2);
     }
 }

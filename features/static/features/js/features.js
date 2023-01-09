@@ -13,4 +13,4 @@ function getCookie(cname) {
     return "";
   }
 var course_name = (getCookie("course_name"));
-console.log(course_name);
+//console.log(course_name);

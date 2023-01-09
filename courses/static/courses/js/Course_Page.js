@@ -5,7 +5,7 @@ var NoOfSemester = 7;
 var currentSem = 1;
 const data = document.currentScript.dataset;
 const user_usn = data.usn;
-console.log(data.usn);
+//console.log(data.usn);
 
 //const from html
 const CourseContainer = document.getElementById("CourseContainer");
@@ -52,54 +52,54 @@ for (let index = 0; index < NoOfSemester; index++) {
 var sem_1 = document.getElementById('Sem_1');
 sem_1.addEventListener('click', function () {
   currentSem = 1;
-  console.log(currentSem);
+  //console.log(currentSem);
   remove_courses();
   add_courses();
 });
 var sem_2 = document.getElementById('Sem_2');
 sem_2.addEventListener('click', function () {
   currentSem = 2;
-  console.log(currentSem);
+  //console.log(currentSem);
   remove_courses();
   add_courses();
 });
 var sem_3 = document.getElementById('Sem_3');
 sem_3.addEventListener('click', function () {
   currentSem = 3;
-  console.log(currentSem);
+  //console.log(currentSem);
   remove_courses();
   add_courses();
 });
 var sem_4 = document.getElementById('Sem_4');
 sem_4.addEventListener('click', function () {
   currentSem = 4;
-  console.log(currentSem);
+  //console.log(currentSem);
   remove_courses();
   add_courses();
 });
 var sem_5 = document.getElementById('Sem_5');
 sem_5.addEventListener('click', function () {
   currentSem = 5;
-  console.log(currentSem);
+  //console.log(currentSem);
   remove_courses();
   add_courses();
 }); var sem_5 = document.getElementById('Sem_5');
 sem_5.addEventListener('click', function () {
   currentSem = 5;
-  console.log(currentSem);
+  //console.log(currentSem);
   remove_courses();
   add_courses();
 }); var sem_6 = document.getElementById('Sem_6');
 sem_6.addEventListener('click', function () {
   currentSem = 6;
-  console.log(currentSem);
+  //console.log(currentSem);
   remove_courses();
   add_courses();
 });
 var sem_7 = document.getElementById('Sem_7');
 sem_7.addEventListener('click', function () {
   currentSem = 7;
-  console.log(currentSem);
+  //console.log(currentSem);
   remove_courses();
   add_courses();
 });
@@ -131,7 +131,7 @@ var cards = document.getElementsByClassName("card");
 Array.from(cards).forEach(function (card) {
   card.addEventListener('click',()=>{
     setCookie("course_name", card.getAttribute("course_name"), 1);
-    console.log(getCookie("course_name"));
+    //console.log(getCookie("course_name"));
   });
 })
 
