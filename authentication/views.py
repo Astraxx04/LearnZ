@@ -191,7 +191,7 @@ def student_signin(request):
         courses = getcourses()
         user = authenticate(username=username, password=pass1)
         
-        if user is not None:
+        if user is not None and user.role == "STUDENT":
             login(request, user)
             usn = user.get_username()
             messages.success(request, 'Login Successful')
@@ -211,7 +211,7 @@ def teacher_signin(request):
         courses = getcourses()
         user = authenticate(username=username, password=pass1)
         
-        if user is not None:
+        if user is not None and user.role == "TEACHER":
             login(request, user)
             messages.success(request, 'Login Successful')
             serialized_courses = json.dumps(courses)
