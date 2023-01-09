@@ -91,8 +91,7 @@ header button span,
 	letter-spacing: 1.2px;
 	border-radius: 15px;
 	padding: 0.7rem;
-	margin-right: 2.5rem;
-	transform: translateX(-3.5rem);
+	margin-right: 1.75rem;
 }
 
 .get-started:hover {

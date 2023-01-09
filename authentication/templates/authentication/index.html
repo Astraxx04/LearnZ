@@ -1,220 +1,281 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
+  <head>
+    <link
+      rel="shortcut icon"
+      type="png"
+      href="{% static 'authentication/images/icon/favicon.png' %}"
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Comaptible" content="IE=edge" />
+    <script
+      src="https://kit.fontawesome.com/36bed4b74a.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>LearnZ</title>
+    <meta name="desciption" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'authentication/css/style.css' %}"
+    />
+    <script
+      type="text/javascript"
+      src="{% static 'authentication/js/addmembers.js' %}"
+      defer
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
+  </head>
 
-<head>
-  <link rel="shortcut icon" type="png" href="{% static 'authentication/images/icon/favicon.png' %}" />
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Comaptible" content="IE=edge" />
-  <script src="https://kit.fontawesome.com/36bed4b74a.js" crossorigin="anonymous"></script>
-  <title>LearnZ</title>
-  <meta name="desciption" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" type="text/css" href="{% static 'authentication/css/style.css' %}" />
-  <script type="text/javascript" src="{% static 'authentication/js/addmembers.js' %}" defer></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <script>
-    $(window).on("scroll", function () {
-      if ($(window).scrollTop()) {
-        $("header").addClass("black");
-      } else {
-        $("header").removeClass("black");
-      }
-    });
-  </script>
-</head>
+  <body>
+    <!-- Header -->
+    <header id="header black">
+      <div class="inner flex">
+        <div class="logo">
+          <img
+            src="{% static 'authentication/images/icon/logo_full.png' %}"
+            alt="logo"
+          />
+        </div>
+        <button
+          class="mobile-nav-toggle"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Menu</span>
+        </button>
+        <nav>
+          <ul
+            id="primary-navigation"
+            data-visible="false"
+            class="primary-navigation flex"
+          >
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="#service-swipe">Services</a></li>
+            <li><a href="#contactus">Contact</a></li>
+            <li><a href="#aboutus">About Us</a></li>
+          </ul>
+        </nav>
+        <a href="{% url 'student_signin' %}">
+          <ul class="get-started">
+            <li>Get Started</li>
+          </ul>
+        </a>
+      </div>
+    </header>
+    <!--Info-->
+    {% for msg in messages %}
+    <script>
+      swal({
+        title: "{{ msg }}",
+        // title: "User Not Found",
+        // text: "Sign-up first or Recheck your credentials",
+        // icon: "error",
+      });
+    </script>
+    {% endfor %}
 
-<body>
-  <!-- Header -->
-  <header id="header">
-    <div class="inner flex">
-      <div class="logo"><img src="{% static 'authentication/images/icon/logo_full.png' %}" alt="logo" /></div>
-      <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-        <span class="sr-only">Menu</span>
-      </button>
-      <nav>
-        <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
-          <li><a href="{% url 'index' %}">Home</a></li>
-          <li><a href="#service-swipe">Services</a></li>
-          <li><a href="#contactus">Contact</a></li>
-          <li><a href="#aboutus">About Us</a></li>
-        </ul>
-      </nav>
-      <a href="{% url 'student_signin' %}">
-        <ul class="get-started">
-          <li>
-            Get Started
-          </li>
-        </ul>
-      </a>
-    </div>
-  </header>
-  <!--Info-->
-  {% for msg in messages %}
-  <script>
-    swal({
-      title: "{{ msg }}",
-      // title: "User Not Found",
-      // text: "Sign-up first or Recheck your credentials",
-      // icon: "error",
-    });
-  </script>
-  {% endfor %}
-
-  <div class="head-container">
-    <div class="quote">
-      <p>
-        The beautiful thing about learning is that nobody can take it away
-        from you
-      </p>
-      <h5>
-        Education is the process of facilitating learning, or the acquisition
-        of knowledge, skills, values, beliefs, and habits. Educational methods
-        include teaching, training, storytelling, discussion and directed
-        research!
-      </h5>
-    </div>
-    <div class="svg-image">
-      <img src="{% static 'authentication/images/extra/svg1.jpg' %}" alt="svg" />
-    </div>
-  </div>
-
-  <!-- SERVICES -->
-  <div class="service-swipe" id="service-swipe">
-    <h1 class="SubTopc">Why Choose Us</h1>
-    <div class="cardContainer">
-      <div class="card">
-        <div class="content">
-          <div class="imgBx">
-            <img src="{% static 'authentication/images/extra/all in one.jpeg' %}" />
-          </div>
-          <div class="contentBx">
-            <h3>
-              all-in-one platform<br /><br /><span>An all-in-one E-Learning platform for students and teachers where
-                students can access materials posted by educators.
-              </span>
-            </h3>
-          </div>
-        </div>
+    <div class="head-container">
+      <div class="quote">
+        <p>
+          The beautiful thing about learning is that nobody can take it away
+          from you
+        </p>
+        <h5>
+          Education is the process of facilitating learning, or the acquisition
+          of knowledge, skills, values, beliefs, and habits. Educational methods
+          include teaching, training, storytelling, discussion and directed
+          research!
+        </h5>
       </div>
-      <div class="card">
-        <div class="content">
-          <div class="imgBx">
-            <img src="{% static 'authentication/images/extra/user friendly.jpeg' %}" />
-          </div>
-          <div class="contentBx">
-            <h3>User friendly and intuitive learner interface<br /><br /><span>A well structured educational environment
-                with a pleasant user experience.
-              </span></h3>
-          </div>
-        </div>
+      <div class="svg-image">
+        <img
+          src="{% static 'authentication/images/extra/svg1.jpg' %}"
+          alt="svg"
+        />
       </div>
-      <div class="card">
-        <div class="content">
-          <div class="imgBx">
-            <img src="{% static 'authentication/images/extra/recomendation.jpeg' %}" />
-          </div>
-          <div class="contentBx">
-            <h3>Automatic Reference Materials Suggestions<br /><br /><span>Students will be able to obtain relevant
-                YouTube Video links for the selected course.
-              </span></h3>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="content">
-          <div class="imgBx">
-            <img src="{% static 'authentication/images/extra/variety.jpeg' %}" />
-          </div>
-          <div class="contentBx">
-            <h3>Variety of learning resources<br /><br /><span>Students can access resources like quizzes, syllabus,
-                online lectures etc.
-              </span></h3>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="content">
-          <div class="imgBx">
-            <img src="{% static 'authentication/images/extra/e-learning.jpeg' %}" />
-          </div>
-          <div class="contentBx">
-            <h3>E-Learning<br /><br /><span>Contributing to the advancement of<br />E-Learning</span></h3>
-          </div>
-        </div>
-      </div>
-
     </div>
 
-
-
-  </div>
-  <!-- CONTACT US -->
-  <div class="contactus" id="contactus">
-    <h2 class="SubTopc">Contact us</h2>
-    <div class="form-container">
-      <form action="" method="POST" class="form">
-        <div class="form-group">
-          <label for="name" class="form-label">Your Name</label>
-          <input type="text" class="form-control" id="name" name="name" placeholder="Name *" tabindex="1" required />
-        </div>
-        <div class="form-group"></div>
-        <div class="form-group">
-          <label for="email" class="form-label">Your Email</label>
-          <input type="email" class="form-control" id="email" name="email" placeholder="Email *" tabindex="2"
-            required />
-          <div class="form-group">
-            <label for="message" class="form-label">Message</label>
-            <textarea class="form-control message" rows="5" cols="50" id="message" name="message"
-              placeholder="Enter Message... " tabindex="3" required></textarea>
-            <div>
-              <button type="submit" class="btn">Send Message</button>
+    <!-- SERVICES -->
+    <div class="service-swipe" id="service-swipe">
+      <h1 class="SubTopc">Why Choose Us</h1>
+      <div class="cardContainer">
+        <div class="card">
+          <div class="content">
+            <div class="imgBx">
+              <img
+                src="{% static 'authentication/images/extra/all in one.jpeg' %}"
+              />
+            </div>
+            <div class="contentBx">
+              <h3>
+                all-in-one platform<br /><br /><span
+                  >An all-in-one E-Learning platform for students and teachers
+                  where students can access materials posted by educators.
+                </span>
+              </h3>
             </div>
           </div>
         </div>
-      </form>
-    </div>
-  </div>
-  <div class="aboutus" id="aboutus">
-    <h2 class="SubTopc">About us</h2>
-    <section>
-      <div class="container" id="CardContainer">
-      </div>
-    </section>
-  </div>
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-container">
-      <div class="left-col">
-        <h1 class="footer_header">Contact Us</h1>
-        <p><i class="fa-solid fa-phone"></i> +91-1234567890</p>
-        <p><i class="fa-solid fa-envelope"></i> learnz@gmail.com</p>
-        <p>
-          <i class="fa-solid fa-location-dot"></i> Dayananda Sagar College of
-          Engineering <br />Bangalore, Karnataka-560078
-        </p>
-      </div>
-      <div class="mid-col">
-        <h1 class="footer_header">Quick Links</h1>
-        <div class="links">
-          <p><a href="{% url 'index' %}">Home</a></p>
-          <p><a href="{% url 'student_signin' %}">Log in</a></p>
-          <p><a href="#aboutus">About us</a></p>
+        <div class="card">
+          <div class="content">
+            <div class="imgBx">
+              <img
+                src="{% static 'authentication/images/extra/user friendly.jpeg' %}"
+              />
+            </div>
+            <div class="contentBx">
+              <h3>
+                User friendly and intuitive learner interface<br /><br /><span
+                  >A well structured educational environment with a pleasant
+                  user experience.
+                </span>
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <div class="imgBx">
+              <img
+                src="{% static 'authentication/images/extra/recomendation.jpeg' %}"
+              />
+            </div>
+            <div class="contentBx">
+              <h3>
+                Automatic Reference Materials Suggestions<br /><br /><span
+                  >Students will be able to obtain relevant YouTube Video links
+                  for the selected course.
+                </span>
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <div class="imgBx">
+              <img
+                src="{% static 'authentication/images/extra/variety.jpeg' %}"
+              />
+            </div>
+            <div class="contentBx">
+              <h3>
+                Variety of learning resources<br /><br /><span
+                  >Students can access resources like quizzes, syllabus, online
+                  lectures etc.
+                </span>
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="content">
+            <div class="imgBx">
+              <img
+                src="{% static 'authentication/images/extra/e-learning.jpeg' %}"
+              />
+            </div>
+            <div class="contentBx">
+              <h3>
+                E-Learning<br /><br /><span
+                  >Contributing to the advancement of<br />E-Learning</span
+                >
+              </h3>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="right-col">
-        <h1 class="footer_header">Our Newsletter</h1>
-        <div class="border"></div>
-        <br />
-        <p>Enter Your Email to get our News and updates.</p>
-        <form class="newsletter-form">
-          <input class="txtb" type="email" placeholder="Enter Your Email" />
-          <input class="btn" type="submit" value="Submit" />
+    </div>
+    <!-- CONTACT US -->
+    <div class="contactus" id="contactus">
+      <h2 class="SubTopc">Contact us</h2>
+      <div class="form-container">
+        <form action="" method="POST" class="form">
+          <div class="form-group">
+            <label for="name" class="form-label">Your Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              placeholder="Name *"
+              tabindex="1"
+              required
+            />
+          </div>
+          <div class="form-group"></div>
+          <div class="form-group">
+            <label for="email" class="form-label">Your Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              placeholder="Email *"
+              tabindex="2"
+              required
+            />
+            <div class="form-group">
+              <label for="message" class="form-label">Message</label>
+              <textarea
+                class="form-control message"
+                rows="5"
+                cols="50"
+                id="message"
+                name="message"
+                placeholder="Enter Message... "
+                tabindex="3"
+                required
+              ></textarea>
+              <div>
+                <button type="submit" class="btn">Send Message</button>
+              </div>
+            </div>
+          </div>
         </form>
       </div>
     </div>
-  </footer>
-</body>
-
+    <div class="aboutus" id="aboutus">
+      <h2 class="SubTopc">About us</h2>
+      <section>
+        <div class="container" id="CardContainer"></div>
+      </section>
+    </div>
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-container">
+        <div class="left-col">
+          <h1 class="footer_header">Contact Us</h1>
+          <p><i class="fa-solid fa-phone"></i> +91-1234567890</p>
+          <p><i class="fa-solid fa-envelope"></i> learnz@gmail.com</p>
+          <p>
+            <i class="fa-solid fa-location-dot"></i> Dayananda Sagar College of
+            Engineering <br />Bangalore, Karnataka-560078
+          </p>
+        </div>
+        <div class="mid-col">
+          <h1 class="footer_header">Quick Links</h1>
+          <div class="links">
+            <p><a href="{% url 'index' %}">Home</a></p>
+            <p><a href="{% url 'student_signin' %}">Log in</a></p>
+            <p><a href="#aboutus">About us</a></p>
+          </div>
+        </div>
+        <div class="right-col">
+          <h1 class="footer_header">Our Newsletter</h1>
+          <div class="border"></div>
+          <br />
+          <p>Enter Your Email to get our News and updates.</p>
+          <form class="newsletter-form">
+            <input class="txtb" type="email" placeholder="Enter Your Email" />
+            <input class="btn" type="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

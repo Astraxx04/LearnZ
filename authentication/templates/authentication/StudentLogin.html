@@ -15,7 +15,7 @@
       src="https://kit.fontawesome.com/36bed4b74a.js"
       crossorigin="anonymous"
     ></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
       $(window).on("scroll", function () {
         if ($(window).scrollTop()) {
@@ -38,14 +38,6 @@
               alt="logo"
           /></a>
         </div>
-
-        <button
-          class="mobile-nav-toggle"
-          aria-controls="primary-navigation"
-          aria-expanded="false"
-        >
-          <span class="sr-only">Menu</span>
-        </button>
         <a href="{% url 'student_signup' %}">
           <ul class="get-started">
             <li>Sign Up</li>
