@@ -1,4 +1,4 @@
-let apiKey = "AIzaSyCC5ewMqBnYXGeOL0Cu1Gi2N6gE3hSzvy0.."
+let apiKey = "AIzaSyCC5ewMqBnYXGeOL0Cu1Gi2N6gE3hSzvy0"
 $(document).ready(function(){
     //let apiKey = "AIzaSyCC5ewMqBnYXGeOL0Cu1Gi2N6gE3hSzvy0"
  
@@ -17,13 +17,13 @@ function videoSearch(apiKey,search,maxResults){
     $.get("https://www.googleapis.com/youtube/v3/search?key=" + apiKey + "&type=video&part=snippet&maxResults=" + maxResults + "&q=" + search + "&sp=CAM%253D",(data) => {
         //console.log(data)
  
-        let video = ''
+        let video = '';
  
         data.items.forEach(item => {
             video = `
-            <iframe width="512" height="288" src="http://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allowfullscreen></iframe>
-            `
-            $("#videos").append(video)
+            <iframe class = "video" src="http://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allowfullscreen></iframe>
+            `;
+            $("#videos").append(video);
         });
     })
 }
