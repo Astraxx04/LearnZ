@@ -1,4 +1,5 @@
 from django.shortcuts import redirect, render
+from django.contrib.auth.decorators import login_required
 from .forms import MyFileForm,MyQuizForm
 from .models import notes,sylabus,quiz
 from django.contrib import messages
@@ -17,42 +18,61 @@ import json
 
 lastsyl=""
 
+@login_required
 def quizbase(request):
-    cur_course = request.COOKIES.get('course_name')
-    mydata=quiz.objects.filter(course_name = cur_course)    
-    myform=MyQuizForm()
-    if mydata!='':
-        context={'form':myform,'mydata':mydata}
-        return render(request,'qindex.html',context)
-    else:
-        context={'form':myform}
-        return render(request,"qindex.html",context)
+    if request.user.role == "TEACHER":
 
+        cur_course = request.COOKIES.get('course_name')
+        mydata=quiz.objects.filter(course_name = cur_course)    
+        myform=MyQuizForm()
+        if mydata!='':
+            context={'form':myform,'mydata':mydata}
+            return render(request,'qindex.html',context)
+        else:
+            context={'form':myform}
+            return render(request,"qindex.html",context)
+    else:
+        messages.error(request, 'Login as Teacher to continue')
+        return redirect('teacher_signin')
+
+@login_required
 def student_quizbase(request):
     cur_course = request.COOKIES.get('course_name')
     mydata=quiz.objects.filter(course_name = cur_course) 
     context={'mydata':mydata}
     return render(request,'student_qindex.html',context)
     
-
+@login_required
 def quizupload(request):
-    if request.method=="POST":
-        myform=MyQuizForm(request.POST,request.FILES)        
-        if myform.is_valid():
-            quizName = request.POST.get('quiz_name') 
-            courseName = request.COOKIES.get('course_name') 
-            link = request.POST.get('link')
-            quiz.objects.create(quiz_name=quizName,link=link,course_name = courseName).save()
-            messages.success(request,"Quiz link uploaded successfully.")
-        return redirect("quizbase")
+    if request.user.role == "TEACHER":
 
+        if request.method=="POST":
+            myform=MyQuizForm(request.POST,request.FILES)        
+            if myform.is_valid():
+                quizName = request.POST.get('quiz_name') 
+                courseName = request.COOKIES.get('course_name') 
+                link = request.POST.get('link')
+                quiz.objects.create(quiz_name=quizName,link=link,course_name = courseName).save()
+                messages.success(request,"Quiz link uploaded successfully.")
+            return redirect("quizbase")
+    else:
+        messages.error(request, 'Login as Teacher to continue')
+        return redirect('teacher_signin')
+
+@login_required
 def quizdelete(request,id):
-    mydata=quiz.objects.get(id=id)    
-    mydata.delete()    
-    #os.remove(mydata.my_file.path)
-    messages.success(request,'File deleted successfully.')  
-    return redirect('quizbase')    
+    if request.user.role == "TEACHER":
 
+        mydata=quiz.objects.get(id=id)    
+        mydata.delete()    
+        #os.remove(mydata.my_file.path)
+        messages.success(request,'File deleted successfully.')  
+        return redirect('quizbase')  
+    else:
+        messages.error(request, 'Login as Teacher to continue')
+        return redirect('teacher_signin')  
+
+@login_required
 def student_notesbase(request):
     cur_course = request.COOKIES.get('course_name')
     mydata=notes.objects.filter(course_name = cur_course)
@@ -60,79 +80,117 @@ def student_notesbase(request):
     return render(request,'student_nindex.html',context)
     
 
-
-
+@login_required
 def notesbase(request):
-    cur_course = request.COOKIES.get('course_name')
-    mydata=notes.objects.filter(course_name = cur_course)    
-    myform=MyFileForm()
-    if mydata!='':
-        context={'form':myform,'mydata':mydata}
-        return render(request,'nindex.html',context)
-    else:
-        context={'form':myform}
-        return render(request,"nindex.html",context)
+    if request.user.role == "TEACHER":
 
+        cur_course = request.COOKIES.get('course_name')
+        mydata=notes.objects.filter(course_name = cur_course)    
+        myform=MyFileForm()
+        if mydata!='':
+            context={'form':myform,'mydata':mydata}
+            return render(request,'nindex.html',context)
+        else:
+            context={'form':myform}
+            return render(request,"nindex.html",context)
+    else:
+        messages.error(request, 'Login as Teacher to continue')
+        return redirect('teacher_signin')
+
+
+@login_required
 def notesuploadfile(request):
-    if request.method=="POST":
-        myform=MyFileForm(request.POST,request.FILES)        
-        if myform.is_valid():
-            MyFileName = request.POST.get('file_name') 
-            MyFile = request.FILES.get('file')
-            courseName = request.COOKIES.get('course_name') 
-            exists=notes.objects.filter(my_file=MyFile).exists()
+    if request.user.role == "TEACHER":
 
-            if exists:
-                messages.error(request,'The file %s is already exists...!!!'% MyFile)
-            else:
-                notes.objects.create(file_name=MyFileName,my_file=MyFile,course_name=courseName).save()
-                messages.success(request,"File uploaded successfully.")
-        return redirect("notesbase")
+        if request.method=="POST":
+            myform=MyFileForm(request.POST,request.FILES)        
+            if myform.is_valid():
+                MyFileName = request.POST.get('file_name') 
+                MyFile = request.FILES.get('file')
+                courseName = request.COOKIES.get('course_name') 
+                exists=notes.objects.filter(my_file=MyFile).exists()
 
-def notesdeleteFile(request,id):
-    mydata=notes.objects.get(id=id)    
-    mydata.delete()    
-    os.remove(mydata.my_file.path)
-    messages.success(request,'File deleted successfully.')  
-    return redirect('notesbase')
-
-def sylbase(request):
-    cur_course = request.COOKIES.get('course_name')
-    mydata=sylabus.objects.filter(course_name = cur_course)        
-    myform=MyFileForm()
-    if mydata!='':
-        context={'form':myform,'mydata':mydata}
-        return render(request,'sindex.html',context)
+                if exists:
+                    messages.error(request,'The file %s is already exists...!!!'% MyFile)
+                else:
+                    notes.objects.create(file_name=MyFileName,my_file=MyFile,course_name=courseName).save()
+                    messages.success(request,"File uploaded successfully.")
+            return redirect("notesbase")
     else:
-        context={'form':myform}
-        return render(request,"sindex.html",context)
+        messages.error(request, 'Login as Teacher to continue')
+        return redirect('teacher_signin')
+        
 
+@login_required
+def notesdeleteFile(request,id):
+    if request.user.role == "TEACHER":
+
+        mydata=notes.objects.get(id=id)    
+        mydata.delete()    
+        os.remove(mydata.my_file.path)
+        messages.success(request,'File deleted successfully.')  
+        return redirect('notesbase')
+    else:
+        messages.error(request, 'Login as Teacher to continue')
+        return redirect('teacher_signin')
+
+@login_required
+def sylbase(request):
+    if request.user.role == "TEACHER":
+
+        cur_course = request.COOKIES.get('course_name')
+        mydata=sylabus.objects.filter(course_name = cur_course)        
+        myform=MyFileForm()
+        if mydata!='':
+            context={'form':myform,'mydata':mydata}
+            return render(request,'sindex.html',context)
+        else:
+            context={'form':myform}
+            return render(request,"sindex.html",context)
+    else:
+        messages.error(request, 'Login as Teacher to continue')
+        return redirect('teacher_signin')
+    
+
+@login_required
 def syluploadfile(request):
-    if request.method=="POST":
-        myform=MyFileForm(request.POST,request.FILES)        
-        if myform.is_valid():
-            MyFileName = request.POST.get('file_name') 
-            MyFile = request.FILES.get('file')
-            courseName = request.COOKIES.get('course_name')
-            exists=sylabus.objects.filter(course_name = courseName).count()
+    if request.user.role == "TEACHER":
 
-            if exists > 0:
-                messages.error(request,'The syllabus already exists...!!!')
-            else:
-                sylabus.objects.create(file_name=MyFileName,my_file=MyFile,course_name=courseName).save()
-                messages.success(request,"File uploaded successfully.")
-            lastsyl="upload/"+MyFile.name
-            loc="upload/"+MyFile.name
-            print(lastsyl)
-            suggestfun(loc)
-        return redirect("sylbase")
+        if request.method=="POST":
+            myform=MyFileForm(request.POST,request.FILES)        
+            if myform.is_valid():
+                MyFileName = request.POST.get('file_name') 
+                MyFile = request.FILES.get('file')
+                courseName = request.COOKIES.get('course_name')
+                exists=sylabus.objects.filter(course_name = courseName).count()
 
+                if exists > 0:
+                    messages.error(request,'The syllabus already exists...!!!')
+                else:
+                    sylabus.objects.create(file_name=MyFileName,my_file=MyFile,course_name=courseName).save()
+                    messages.success(request,"File uploaded successfully.")
+                lastsyl="upload/"+MyFile.name
+                loc="upload/"+MyFile.name
+                print(lastsyl)
+                suggestfun(loc)
+            return redirect("sylbase")
+    else:
+        messages.error(request, 'Login as Teacher to continue')
+        return redirect('teacher_signin')
+
+@login_required
 def syldeleteFile(request,id):
-    mydata=sylabus.objects.get(id=id)    
-    mydata.delete()    
-    os.remove(mydata.my_file.path)
-    messages.success(request,'File deleted successfully.')  
-    return redirect('sylbase')
+    if request.user.role == "TEACHER":
+
+        mydata=sylabus.objects.get(id=id)    
+        mydata.delete()    
+        os.remove(mydata.my_file.path)
+        messages.success(request,'File deleted successfully.')  
+        return redirect('sylbase')
+    
+    else:
+        messages.error(request, 'Login as Teacher to continue')
+        return redirect('teacher_signin')
 
 
 def suggestfun(locat):

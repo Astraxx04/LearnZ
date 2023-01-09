@@ -1,7 +1,7 @@
 from django.views.decorators.csrf import csrf_exempt
 from . tokens import generate_token
 from django.contrib.auth import authenticate, login, logout
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib import messages
@@ -188,15 +188,15 @@ def student_signin(request):
     if request.method == 'POST':
         username = request.POST.get('usn',False)
         pass1 = request.POST.get('password','')
-        courses = getcourses()
+        #courses = getcourses()
         user = authenticate(username=username, password=pass1)
         
         if user is not None and user.role == "STUDENT":
             login(request, user)
-            usn = user.get_username()
+           # usn = user.get_username()
             messages.success(request, 'Login Successful')
-            serialized_courses = json.dumps(courses)
-            return render(request, "courses/Course_Page.html",{"usn":usn,"courses":serialized_courses})
+           # serialized_courses = json.dumps(courses)
+            return redirect("courses/")
         else:
             messages.error(request, 'Invalid USN/Password')
             return render(request, "authentication/StudentLogin.html")
@@ -208,14 +208,14 @@ def teacher_signin(request):
     if request.method == 'POST':
         username = request.POST.get('teachid',False)
         pass1 = request.POST.get('password','')
-        courses = getcourses()
+        #courses = getcourses()
         user = authenticate(username=username, password=pass1)
         
         if user is not None and user.role == "TEACHER":
             login(request, user)
             messages.success(request, 'Login Successful')
-            serialized_courses = json.dumps(courses)
-            return render(request, "courses/tea_course.html", {"username":username,"courses":serialized_courses})
+            #serialized_courses = json.dumps(courses)
+            return redirect("tcourse/")
         else:
             messages.error(request, 'Invalid TeacherID/Password')
             return render(request, "authentication/TeacherLogin.html")
