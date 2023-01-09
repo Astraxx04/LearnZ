@@ -2,10 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link
-      href="{% static 'features/css/featuresStudent.css' %}"
-      rel="stylesheet"
-    />
+    <link href="{% static 'features/css/featuresStudent.css' %}" rel="stylesheet"/>
   </head>
 
   <body>
@@ -17,7 +14,7 @@
           /></a>
         </div>
         <div class="userloggedin flex">
-          <a href="{% url 'index' %}">
+          <a href="{% url 'student_signin' %}">
             <ul class="get-started">
               <li>Sign Out</li>
             </ul>
@@ -33,7 +30,7 @@
             <h1 class="title">Reference</h1>
             <a href="{% url 'suggestedvideos' %}" >
               <p class="description">
-                <button class="btn">View<i class="fas fa-arrow-up"></i></button>
+                <button class="btn">View</button>
               </p>
             </a>
           </div>
@@ -59,11 +56,11 @@
         <div class="card-module"
           style="background-image: url('./static/features/images/syllabus.svg')">
           <div class="post-content">
-            <h1 class="title">syllabus</h1>
+            <h1 class="title">Syllabus</h1>
             <a href = "{{syllabus.my_file.url}}">
             <p class="description">
               <button class="btn">
-                Continue
+                View
               </button>
             </p>
           </a>
@@ -81,7 +78,7 @@
             <a href="{% url 'student_notesbase' %}">
             <p class="description">
               <button class="btn">
-                continue
+                Continue
               </button>
             </p>
           </a>

@@ -2,14 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link
-      href="{% static 'features/css/featuresTeacher.css' %}"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      rel="stylesheet"
-    />
+    <link href="{% static 'features/css/featuresTeacher.css' %}" rel="stylesheet" />
   </head>
   <body>
     <header id="header">
@@ -20,7 +13,7 @@
           /></a>
         </div>
         <div class="userloggedin flex">
-          <a href="{% url 'index' %}">
+          <a href="{% url 'teacher_signin' %}">
             <ul class="get-started">
               <li>Sign Out</li>
             </ul>
@@ -36,7 +29,7 @@
             <h1 class="title">Reference</h1>
             <a href="{% url 'suggestedvideos' %}">
               <p class="description">
-                <button class="btn">View<i class="fas fa-arrow-up"></i></button>
+                <button class="btn">View</i></button>
               </p>
             </a>
           </div>
@@ -49,7 +42,7 @@
             <h1 class="title">Quiz</h1>
             <a href="{% url 'quizbase' %}">
               <p class="description">
-                <button class="btn"> Upload<i class="fas fa-arrow-up"></i></button>
+                <button class="btn">Upload<i class="fas fa-arrow-up"></i></button>
               </p>
             </a>
           </div>

@@ -4,7 +4,8 @@
 var NoOfSemester = 7;
 var currentSem = 1;
 const data = document.currentScript.dataset;
-const user_usn = data.username;
+const user_id = data.username;
+console.log(data.username)
 
 //const from html
 const CourseContainer = document.getElementById("CourseContainer");
@@ -13,8 +14,8 @@ const useinfo = document.getElementById("useinfo");
 
 //User Usn
 var span = document.createElement('span');
-span.classList.add("user_usn");
-span.innerHTML = user_usn;
+span.classList.add("user_id");
+span.innerHTML = user_id;
 useinfo.appendChild(span);
 
 function setCookie(cname, cvalue, exdays) {
