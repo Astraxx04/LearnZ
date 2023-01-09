@@ -10,6 +10,11 @@
       type="text/css"
       href="{% static 'authentication/css/StudentSignUp.css' %}"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'authentication/css/SignUp.css' %}"
+    />
     <title>Student Signup</title>
     <script
       src="https://kit.fontawesome.com/36bed4b74a.js"
@@ -56,12 +61,15 @@
     </script>
     {% endfor %}
 
-  <!--Info-->
-  <div class="head-container">
-    <div class="svg-image">
-      <img src="{% static 'authentication/images/stu1_signup.svg' %}" alt="svg" />
-    </div>
-    
+    <!--Info-->
+    <div class="head-container">
+      <div class="svg-image">
+        <img
+          src="{% static 'authentication/images/stu1_signup.svg' %}"
+          alt="svg"
+        />
+      </div>
+
       <form
         action="{% url 'student_signup' %}"
         method="post"
