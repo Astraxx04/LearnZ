@@ -65,12 +65,15 @@
     </header>
     <h1 class="headname">Enrolled Courses</h1>
 
+    {% for msg in messages %}
     <script>
       swal({
         title: "{{ msg }}",
+        // title: "Login Successful",
+        // icon: "success",
       });
     </script>
-
+    {% endfor %}
     <section>
       <div class="container" id="CourseContainer"></div>
     </section>
