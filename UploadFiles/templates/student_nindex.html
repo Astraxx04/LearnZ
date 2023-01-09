@@ -51,7 +51,7 @@
           </header>
         <div class="container-fluid single" style="margin-top: 50px">
         <div class="view">
-            {% if mydata %}
+            
             <h3>View File</h3>
             <table class="styled-table nodelete">
                 <thead>
@@ -61,6 +61,7 @@
                         <th>File</th>                 
                     </tr>                    
                 </thead>
+                {% if mydata %}
                 {% for data in mydata %}
                     <tbody>
                         <tr>
@@ -70,7 +71,17 @@
                         </tr>
                     </tbody>
                 {% endfor %}
-            </table>
+                {% else %}
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td style="text-align: center;">No Data</td>
+                    
+                  </tr>
+                </tbody>
+                
+              </table>
+            
             {% endif %}
         </div>
         </div>
