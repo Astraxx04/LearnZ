@@ -25,6 +25,7 @@
             data-visible="false"
             class="primary-navigation flex"
           >
+            <li><a href="">Courses</a></li>
             <li><a href="{% url 'suggestedvideos' %}">Refrences</a></li>
             <li><a href="{% url 'student_quizbase' %}">Quiz</a></li>
             <li><a href="{{syllabus.my_file.url}}">Syllabus</a></li>
@@ -49,7 +50,7 @@
             <h1 class="title">Reference</h1>
             <a href="{% url 'suggestedvideos' %}">
               <p class="description">
-                <button class="btn">View</button>
+                <button class="btn">Continue</button>
               </p>
             </a>
           </div>
@@ -80,7 +81,7 @@
             <h1 class="title">Syllabus</h1>
             <a href="{{syllabus.my_file.url}}">
               <p class="description">
-                <button class="btn">View</button>
+                <button class="btn">Continue</button>
               </p>
             </a>
           </div>

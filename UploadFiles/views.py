@@ -38,8 +38,9 @@ def quizbase(request):
 @login_required
 def student_quizbase(request):
     cur_course = request.COOKIES.get('course_name')
-    mydata=quiz.objects.filter(course_name = cur_course) 
-    context={'mydata':mydata}
+    mydata=quiz.objects.filter(course_name = cur_course)
+    syllabus=sylabus.objects.filter(course_name = cur_course).first() 
+    context={'mydata':mydata,'syllabus':syllabus}
     return render(request,'student_qindex.html',context)
     
 @login_required
@@ -76,7 +77,8 @@ def quizdelete(request,id):
 def student_notesbase(request):
     cur_course = request.COOKIES.get('course_name')
     mydata=notes.objects.filter(course_name = cur_course)
-    context={'mydata':mydata}
+    syllabus=sylabus.objects.filter(course_name = cur_course).first() 
+    context={'mydata':mydata,"syllabus":syllabus}
     return render(request,'student_nindex.html',context)
     
 
