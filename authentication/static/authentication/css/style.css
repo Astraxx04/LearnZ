@@ -72,9 +72,8 @@ header button span,
 }
 
 .primary-navigation {
-	/*background: var(--getstartedColor);
 	backdrop-filter: blur(5rem);
-	border-radius: 11px;*/
+	border-radius: 11px;
 
 	padding: 1rem;
 }
@@ -86,8 +85,7 @@ header button span,
 	letter-spacing: 1.2px;
 	border-radius: 15px;
 	padding: 0.7rem;
-	margin-right: 2.5rem;
-	transform: translateX(-3.5rem);
+	margin-right: 1.75rem;
 }
 
 .get-started:hover {
@@ -145,21 +143,15 @@ nav li a,
 	font-weight: 600;
 	transition: 0.5s;
 	border-radius: 0.5rem;
+	padding: 0.45rem;
 }
 
 nav li a:hover {
 	letter-spacing: 2px;
-	transition: 1ms;
 	background-color: var(--headerNavHoverColor);
-	padding: 0.45rem;
 
 }
 
-.get-started li a:hover {
-	transition: 1s;
-
-	letter-spacing: 2px;
-}
 
 .head-container {
 	margin-top: 200px;
