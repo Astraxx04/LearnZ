@@ -10,6 +10,11 @@
       type="text/css"
       href="{% static 'authentication/css/TeacherLogin.css' %}"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'authentication/css/Login.css' %}"
+    />
     <title>Teacher Login</title>
     <script
       src="https://kit.fontawesome.com/36bed4b74a.js"
@@ -28,14 +33,6 @@
               alt="logo"
           /></a>
         </div>
-
-        <button
-          class="mobile-nav-toggle"
-          aria-controls="primary-navigation"
-          aria-expanded="false"
-        >
-          <span class="sr-only">Menu</span>
-        </button>
         <a href="{% url 'teacher_signup' %}">
           <ul class="get-started">
             <li>Sign Up</li>
