@@ -2,14 +2,47 @@
 <html>
     <head>
         <title>quiz Upload</title>
-    
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
-    <script src="{% static 'jquery/jquery.min.js'%}"></script>
+        <link
+        href="{% static 'css/teacherupload.css' %}"
+        rel="stylesheet"
+      />
+      <link
+        href="{% static 'css/upload.css' %}"
+        rel="stylesheet"
+      />
+      <script src="{% static 'jquery/jquery.min.js'%}"></script>
     </head>
     <body>
+      <header id="header">
+          <div class="inner flex">
+            <div class="logo">
+              <a href="{% url 'index' %}"
+                ><img
+                  src="{% static 'authentication/images/icon/logo_full.png' %}"
+                  alt="logo"
+              /></a>
+            </div>
+            <nav>
+              <ul
+                id="primary-navigation"
+                data-visible="false"
+                class="primary-navigation flex"
+              >
+                <li><a href="{% url 'quizbase' %}">Quiz</a></li>
+                <li><a href="{% url 'sylbase' %}">Syllabus</a></li>
+                <li><a href="{% url 'notesbase' %}">Notes</a></li>
+              </ul>
+            </nav>
+            <a href="{% url 'student_signin' %}">
+              <ul class="get-started">
+                <li>Sign Out</li>
+              </ul>
+            </a>
+          </div>
+        </header>
         <div class="container-fluid" style="margin-top:50px">
-            <div class="col-md-offset-1 col-md-4">
-                <h3 class="page-hader text-primary text-center">Upload Quiz links</h3>
+            <div class="upload">
+                <h3>Upload Quiz links</h3>
     
                 {% if messages %}
                 {% for message in messages %}
@@ -24,30 +57,31 @@
                     {% endif %}				
                     {% endfor %}
                 {% endif %} 
-    
+                        <div class="form-container">
                 <form action="{% url 'quizupload' %}" method="POST" enctype="multipart/form-data">
                     {% csrf_token %}
                     <div class="form-group">
-                        <label>Quiz Name</label>
+                        <label class="form-label">Quiz Name</label>
                         {{form.quiz_name}}
                     </div>
                     <div class="form-group">
-                        <label>Link</label>
+                        <label class="form-label">Link</label>
                         {{form.link}}
                     </div>
-                    <button type="submit" class="btn btn-primary pull-right">Submit</button>
+                    <button type="submit" class="btn">Submit</button>
                 </form>
             </div>
-            <div class="col-md-6">
+            </div>
+            <div class="view">
                 {% if mydata %}
-                <h3 class="page-header text-primary text-center">View Quizes</h3>
-                <table class="table table-bordered">
+                <h3>View Quizes</h3>
+                <table class="styled-table">
                     <thead>
                         <tr>
                             <th style="text-align:center">S.No</th>
                             <th>Quiz Name</th>
                             <th>Link</th>                    
-                            <th>Delete</th>                    
+                            <th>Delete Quiz</th>                    
                         </tr>                    
                     </thead>
                     {% for data in mydata %}

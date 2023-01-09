@@ -34,6 +34,18 @@
               alt="logo"
           /></a>
         </div>
+        <nav>
+          <ul
+            id="primary-navigation"
+            data-visible="false"
+            class="primary-navigation flex"
+          >
+            <li><a href="{% url 'suggestedvideos' %}">Refrences</a></li>
+            <li><a href="{% url 'student_quizbase' %}">Quiz</a></li>
+            <li><a href="{{syllabus.my_file.url}}">Syllabus</a></li>
+            <li><a href="{% url 'student_notesbase' %}">Notes</a></li>
+          </ul>
+        </nav>
         <a href="{% url 'student_signin' %}">
           <ul class="get-started">
             <li>Sign Out</li>
