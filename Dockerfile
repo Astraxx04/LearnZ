@@ -8,5 +8,3 @@ RUN pip install -r requirements.txt
 RUN python manage.py migrate
 
 CMD ["python","manage.py","runserver","0.0.0.0:5001"]
-
-RUN python selenium_scripts/test.py

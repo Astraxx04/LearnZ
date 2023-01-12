@@ -15,7 +15,7 @@ chrome_options.add_argument('--headless')
 
 driver = webdriver.Chrome(chrome_options =chrome_options)
 
-driver.get("http://127.0.0.1:8000/")
+driver.get("http://127.0.0.1:5001/")
 
 driver.maximize_window()
 driver.implicitly_wait(20)
