@@ -1,4 +1,4 @@
-let apiKey = "AIzaSyCC5ewMqBnYXGeOL0Cu1Gi2N6gE3hSzvy0.."
+let apiKey = "AIzaSyCvkzPpAD2b-_zcD_NLT07cUZTdYuk0XlU"
 $(document).ready(function(){
     //let apiKey = "AIzaSyCC5ewMqBnYXGeOL0Cu1Gi2N6gE3hSzvy0"
  
