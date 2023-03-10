@@ -14,7 +14,7 @@ driver.maximize_window()
 driver.implicitly_wait(20)
 
 #teacher login
-driver.get("http://127.0.0.1:8000/student_signin")
+driver.get("http://127.0.0.1:5001/student_signin")
 time.sleep(3)
 driver.find_element(By.XPATH,"//*[@id='sign-in-form']/div[3]/a").click()
 time.sleep(2)
@@ -43,7 +43,7 @@ driver.find_element(By.XPATH,"/html/body/div/div[1]/div/form/button").click()
 time.sleep(3)
 
 
-driver.get("http://127.0.0.1:8000/")
+driver.get("http://127.0.0.1:5001/")
 time.sleep(1)
 driver.find_element(By.XPATH, "//*[@id='header black']/div/a/ul/li").click()
 time.sleep(1)
