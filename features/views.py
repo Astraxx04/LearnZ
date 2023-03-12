@@ -25,4 +25,7 @@ def teacherFeatures(request):
 
 @login_required
 def suggestedvideos(request):
-    return render(request, "features/suggestedvideos.html")  
+    cur_course = request.COOKIES.get('course_name')
+    syllabus=sylabus.objects.filter(course_name = cur_course).first()
+    context = {"syllabus":syllabus}
+    return render(request, "features/suggestedvideos.html", context)  
