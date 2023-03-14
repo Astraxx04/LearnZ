@@ -12,7 +12,7 @@ Before you begin, run the following commands after opening the project folder in
 'python manage.py runserver'
 
 ## Walk through 
-The following video shows a demonstartion of the website.
+The following video gives a demonstartion of the website.
 
 
 
