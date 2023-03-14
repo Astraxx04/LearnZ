@@ -14,7 +14,6 @@ Before you begin, run the following commands after opening the project folder in
 ## Walk through 
 The following video shows a demonstration of the website.
 
-
 # Contributors
 This project is success because of the following people:
 Aditi Pandey
@@ -27,5 +26,3 @@ Gagan S
 Janesh Walia
 Konjeti Nidhi
 Lakshita R
-
-
