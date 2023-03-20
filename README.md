@@ -1,7 +1,5 @@
 # LearnZ 
-
-
-'pip manage.py migrate'
+An E-learing platform for Gen-Z
 
 
 This project is success because of the following people:
