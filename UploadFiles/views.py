@@ -1,4 +1,5 @@
 from django.shortcuts import redirect, render
+from werkzeug.utils import secure_filename
 from django.contrib.auth.decorators import login_required
 from .forms import MyFileForm,MyQuizForm
 from .models import notes,sylabus,quiz
@@ -172,7 +173,8 @@ def syluploadfile(request):
                     sylabus.objects.create(file_name=MyFileName,my_file=MyFile,course_name=courseName).save()
                     messages.success(request,"File uploaded successfully.")
                 lastsyl="upload/"+MyFile.name
-                loc="upload/"+MyFile.name
+                filename = secure_filename(MyFile.filename)
+                loc="upload/"+filename
                 print(lastsyl)
                 suggestfun(loc)
             return redirect("sylbase")
