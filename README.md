@@ -88,6 +88,22 @@ python manage.py createsuperuser
 
 Then visit http://127.0.0.1:8000/admin and login by the created credentials to access the administrator panel.
 
+### Running using docker
+Docker can also be used for execution. After Cloning the project Run the docker compose file.
+```
+docker-compose up -d --build 
+```
+Next access the website at http://127.0.0.1:5001
+
+After using, you can kill the docker-container using:
+```
+docker kill devops-my-container-1 
+```
+If you get any error such as 
+```
+port has already been allocated or address already in use
+```
+Then change the port number 5001 in both dockerfile and docker-compose file to any empty port number on your system. 
 ## Demo
 
 ## Screenshots
