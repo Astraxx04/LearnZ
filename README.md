@@ -3,6 +3,27 @@ E-learning platform to promote online learning. It acts as a connector between s
 
 ## Features
 
+- <b>All-In-One Platform:</b> 
+
+
+An all-in-one E-learning platform for students and teachers where students can access materials posted by educators.
+- <b>User friendly and intuitive learner interface:</b> 
+
+
+A well structured educational environment with a pleasant user experience. 
+- <b>Automatic reference materials suggestions:</b> 
+
+
+Students will be able to obtain relevant youtube video links for the selected course.
+- <b>Variety of learning resources:</b> 
+
+
+Students can access resources like quizzes, syllabus, online lectures etc.
+- <b>E-learning:</b>
+
+
+Contributing to the advancement of e-learning.
+
 ## Tech Stack
 
 ## Getting Started 
