@@ -35,7 +35,7 @@ Contributing to the advancement of e-learning.
 **Testing** : Selenium
 
 
-![My Skills](https://skills.thijs.gg/icons?i=html,css,tailwind,js,jquery,django,sqlite,git,docker,jenkins,aws,selenium&perline=3)
+![My Skills](https://skills.thijs.gg/icons?i=html,css,js,jquery,django,sqlite,git,docker,jenkins,aws,selenium&perline=3)
 
 ## Getting Started 
 
