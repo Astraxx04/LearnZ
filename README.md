@@ -26,7 +26,7 @@ Contributing to the advancement of e-learning.
 
 ## Tech Stack
 
-**Frontend** : HTML5, CSS3, Tailwind, JavaScript, JQuery.
+**Frontend** : HTML5, CSS3, JavaScript, JQuery.
 
 **Backend** : Django, SQLite3.
 
