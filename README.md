@@ -26,7 +26,67 @@ Contributing to the advancement of e-learning.
 
 ## Tech Stack
 
+**Frontend** : HTML5, CSS3, Tailwind, JavaScript, JQuery.
+
+**Backend** : Django, SQLite3.
+
+**Deployement** : Git, Docker, Jenkins, AWS.
+
+**Testing** : Selenium
+
+
+![My Skills](https://skills.thijs.gg/icons?i=html,css,tailwind,js,jquery,django,sqlite,git,docker,jenkins,aws,selenium&perline=3)
+
 ## Getting Started 
+
+Clone the project
+
+```
+git clone https://github.com/Astraxx04/LearnZ
+```
+
+Change directory to the LearnZ folder
+
+```
+cd LearnZ
+```
+
+Install required dependencies 
+
+```
+pip install -r requirements.txt 
+```
+- Make sure that dependencies are installed successfully.
+
+Migrate changes to sqlite3 db before running
+
+```
+python manage.py migrate
+```
+
+Run the django server locally
+
+```
+python manage.py runserver
+```
+
+Visit the webiste on local host using any web browser
+
+```
+http://127.0.0.1:8000/
+```
+
+##### Local Administration
+
+You need a superuser to access http://127.0.0.1:8000/admin which has the interface to administrative tasks.
+
+To create a new super user run
+
+```
+python manage.py createsuperuser
+```
+
+Then visit http://127.0.0.1:8000/admin and login by the created credentials to access the administrator panel.
 
 ## Demo
 
