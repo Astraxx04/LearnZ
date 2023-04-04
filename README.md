@@ -16,13 +16,14 @@ The following video shows a demonstration of the website.
 
 # Contributors
 This project is success because of the following people:
-Aditi Pandey
-Ahmed Fadil
-Akash Sil
-Anujna G K
-Ayushi Sah
-Bhawesh Agarwal
-Gagan S
-Janesh Walia
-Konjeti Nidhi
-Lakshita R
+
+- Aditi Pandey
+- Ahmed Fadil
+- Akash Sil
+- Anujna G K
+- Ayushi Sah
+- Bhawesh Agarwal
+- Gagan S
+- Janesh Walia
+- Konjeti Nidhi
+- Lakshita R
