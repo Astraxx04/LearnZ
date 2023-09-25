@@ -26,7 +26,7 @@ Contributing to the advancement of e-learning.
 
 ## Tech Stack
 
-**Frontend** : HTML5, CSS3, Tailwind, JavaScript, JQuery.
+**Frontend** : HTML5, CSS3, JavaScript, JQuery.
 
 **Backend** : Django, SQLite3.
 
@@ -35,7 +35,7 @@ Contributing to the advancement of e-learning.
 **Testing** : Selenium
 
 
-![My Skills](https://skills.thijs.gg/icons?i=html,css,js,jquery,django,sqlite,git,docker,jenkins,aws,selenium&perline=3)
+![My Skills](https://skills.thijs.gg/icons?i=html,css,js,jquery,django,python,sqlite,git,docker,jenkins,aws,selenium&perline=3)
 
 ## Getting Started 
 
