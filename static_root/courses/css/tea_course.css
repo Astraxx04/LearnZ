@@ -1,0 +1,23 @@
+:root {
+	--headerColor: #ffff;
+	--cardBackground: #ccc;
+	--courseBackground: #ff735d;
+	;
+	--courseContinueButton: #f7a699e4;
+	--semesterBorderColor: #ff735d;
+	;
+	--semesterHoverColor: #ff735d;
+	;
+	--semesterDropdownHoverColor: #ff735d;
+	;
+	--semesterDropdownBorderColor: #ff735d;
+	;
+	--semesterInDropdownBackgroundColor: #ccc;
+	--dropdownBackground: rgba(0, 0, 0, 0.4);
+	--userbBorderColor: #ff735d;
+	--getstartedColor: #f7a699e4;
+	/*Get started is signout*/
+	--getStartedHoverColor: #ff735d;
+	--continueBtnColor: var(--getstartedColor);
+	--continueBtnHoverColor: #fa5b3d;
+}
