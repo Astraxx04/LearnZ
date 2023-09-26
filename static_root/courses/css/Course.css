@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Laila&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+
+.flex {
+	display: flex;
+	gap: var(--gap, 5ex);
+}
+
+
+
+.flex {
+	display: flex;
+	gap: var(--gap, 5ex);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: #fff;
+	font-family: 'Open Sans', sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: #ffff;
+	font-family: 'Open Sans', sans-serif;
+}
+
+header {
+	top: 0;
+	left: 0;
+	position: fixed;
+	z-index: 99999;
+	width: 100%;
+	background-color: var(--headerColor);
+	align-items: center;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+header .inner {
+
+	align-items: center;
+	justify-content: space-between;
+}
+
+header .logo {
+	margin: 0.5rem;
+
+}
+
+header .logo img {
+	width: 8rem;
+}
+
+.userloggedin {
+	align-items: center;
+	position: absolute;
+	right: 1.75rem;
+}
+
+header .SemesterDropdown {
+	padding: 5px 20px;
+
+}
+
+/*Header for different size*/
+/*@media screen and (max-width: 2000px) {
+	header .SemesterDropdown{
+		margin-left: 75%;
+	}
+  }
+  @media screen and (max-width: 1540px) {
+	header .SemesterDropdown{
+		margin-left: 70%;
+	}
+  }
+  @media screen and (max-width: 1285px) {
+	header .SemesterDropdown{
+		margin-left: 65%;
+	}
+  }
+  @media screen and (max-width: 1110px) {
+	header .SemesterDropdown{
+		margin-left: 60%;
+	}
+  }
+  */
+header .Title {
+	padding: 5px 20px;
+	border-radius: 20px;
+	border: 2px var(--semesterBorderColor);
+	border-style: solid;
+}
+
+header .SemesterDropdown:hover .Title,
+header .SemesterDropdown:focus .Title {
+	background-color: var(--semesterHoverColor);
+}
+
+header .dropdown {
+	visibility: hidden;
+	opacity: 0;
+	top: 4.5rem;
+	position: absolute;
+	margin-left: 10px;
+	background-color: var(--headerColor);
+	box-shadow: 0 5px 45px rgb(1 1 1 / 75%);
+	border-radius: 2px;
+	padding: 5px;
+	transform: translateY(-3rem);
+	z-index: 10;
+	transition: all 0.3s ease 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+}
+
+header .SemesterDropdown:hover .dropdown,
+header .SemesterDropdown:focus .dropdown {
+	cursor: pointer;
+	visibility: visible;
+	opacity: 1;
+	transform: translateY(-0.7rem);
+	transition-delay: 0s, 0s, 0.3s;
+}
+
+.dropdown li {
+	margin-top: 7px;
+	padding: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.dropdown li:hover {
+	background-color: var(--semesterDropdownHoverColor);
+}
+
+.user_logo {
+	border-radius: 10px;
+	padding: 2px;
+	border: 2px solid var(--userbBorderColor);
+}
+
+.get-started {
+	background: var(--getstartedColor);
+	backdrop-filter: blur(5rem);
+	font-weight: bolder;
+	letter-spacing: 1.2px;
+	border-radius: 15px;
+	padding: 0.7rem;
+}
+
+.get-started:hover {
+	transition: 1s;
+	background: var(--getStartedHoverColor);
+}
+
+body {
+	background: #fff;
+	font-family: 'Muli', sans-serif;
+	overflow-x: hidden;
+
+}
+
+h1 {
+	text-align: center;
+	justify-content: center;
+	margin-top: 40px;
+	font-family: 'Laila';
+	font-size: 50px;
+	color: #ff735d;
+}
+.headname{
+	text-align: center;
+	justify-content: center;
+	margin-top: 10rem;
+	font-family:'Laila';
+	font-size:50px;
+	color: black;
+}
+
+
+/*cards*/
+
+
+section {
+	z-index: -1;
+	margin-top: 100px;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 10rem;
+	margin-inline: 2rem;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.container .card {
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+	margin-bottom: 2rem;
+	margin-inline: 2.75rem;
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	align-items: center;
+	flex-wrap: wrap;
+	backdrop-filter: blur(10px);
+	background-color: var(--cardBackground);
+	
+}
+
+
+.course h6 {
+	opacity: 0.6;
+	margin: 0;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.course h2 {
+	letter-spacing: 1px;
+	margin: 10px 0;
+}
+
+.course-preview {
+	background-color: var(--getStartedHoverColor);
+	color: #fff;
+	padding: 30px;
+	width:25rem;
+	height:8.75rem;
+	border-radius: 15px;
+
+}
+
+.course-preview h6 {
+	margin-top: 2.5rem;
+	transition: 1s;
+}
+
+.course-preview:hover h6 {
+	margin-top: 1.12rem;
+}
+
+.btn {
+	background-color: var(--continueBtnColor);
+	border: 0;
+	border-radius: 50px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	color: #fff;
+	margin-top: 1rem;
+	font-size: 16px;
+	padding: 12px 25px;
+	letter-spacing: 1px;
+	cursor: pointer;
+	transition: 1s;
+	opacity: 0;
+}
+
+.course-preview:hover .btn {
+	opacity: 1;
+}
+
+.btn:hover {
+	background-color: var(--continueBtnHoverColor);
+}
+
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+
+:root {
+	--cyan: #baf8f8;
+	--headerColor: #fff;
+
+	--formTitleColor: white;
+	--getstartedColor: rgba(0, 200, 200, 0.473);
+	--formTitleColor: #444;
+
+	--inputFieldBgColor: #f0f0f0;
+	--selectCollegeColor: #333;
+	--inputFieldPlaceHolder: #aaa;
+	--btnBgColor: #abbcef;
+	--btnTextColor: #fff;
+	--btnHoverColor: #527af6;
+	--getstartedColor: #abbcef;
+	/*Get started is signup*/
+	--getStartedHoverColor: #527af6;
+}

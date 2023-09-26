@@ -1,0 +1,34 @@
+
+:root{
+	--cyan:#baf8f8;
+	--headerColor:#fff;
+	--getstartedColor:rgba(0, 200, 200, 0.473);
+	--headerNavHoverColor:#baf8f8;
+	--getStartedHoverColor:#baf8f8;
+	--servicesText:black;
+	--contactusFormBgcolor:#fff;
+	--font-color:#555;
+ 	--font-hover-color:orange;
+}
+
+.container{
+	margin-top: 90px;
+}
+
+.container h1{
+	text-align: center;
+}
+
+#videos{
+	margin-top: 5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.video{
+	width:40%;
+	height:500px;
+	margin:2px;
+}
