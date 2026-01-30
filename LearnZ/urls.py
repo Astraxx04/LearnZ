@@ -16,12 +16,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
+from django.http import JsonResponse
 from courses.views import *
 from authentication.views import *
 from features.views import *
 
 
+def health_check(request):
+    """Simple health check endpoint"""
+    return JsonResponse({'status': 'ok'}, status=200)
+
+
 urlpatterns = [
+    path('health/', health_check, name='health_check'),
     path('admin/', admin.site.urls),
     path('', include('authentication.urls')),
     path('',include('courses.urls')),
